@@ -1,0 +1,256 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@font-face {
+    font-family: 'SF Pro Bold';
+    src: local('SF Pro Display Bold'),
+    url('./assets/fonts/SF Pro/SF-Pro-Display-Bold.otf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #f59e0b;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #f49802;
+}
+
+p{
+    font-family: "Poppins", sans-serif;
+}
+
+
+h1, h2, h3, h4 {
+    font-family: "SF Pro Bold", sans-serif;
+}
+.home-hero-container {
+    background: linear-gradient(to top, rgba(255, 158, 27, 0.2) 30%, rgba(255, 158, 27, 0.2) 30%, rgba(255, 158, 27, 0) 100%), url('./assets/bg5.jpg');
+    background-position: center top;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.home-hero-container2 {
+    background: linear-gradient(to top, rgba(255, 158, 27, 0.2) 30%, rgba(255, 158, 27, 0.2) 30%, rgba(255, 158, 27, 0) 100%), url('./assets/bg6.jpg');
+    background-position: center top;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.home-hero-container3 {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9)), url('./assets/bg4.jpg');
+    background-position: center top;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.stat-bg{
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.1)), url('./assets/img_11.png');
+    background-position: center top;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.navbar {
+    background-color: transparent;
+}
+
+.navbar.colorChange {
+    background-color: #fff;
+}
+
+.link-text {
+    color: #FF9E1B;
+}
+
+.link-text {
+    color: #ce7c11;
+}
+
+.ant-btn-primary {
+    background: #FF9E1B !important;
+    border-color: #FF9E1B !important;
+}
+
+
+
+.ant-btn-primary:hover {
+    background: #ce7c11;
+    border-color: #ce7c11;
+}
+
+.bio {
+    background-image: url(./assets/rect3.svg);
+  }
+
+video {
+    min-width: 100%;
+    position: fixed;
+    top:0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.5);
+    /* background-color: #000000cc; */
+}
+
+
+
+.news-card {
+    display: block;
+}
+
+.news-card a {
+    text-decoration: none;
+}
+
+.news-card-main {
+    margin-bottom: 1.875rem;
+}
+
+.news-card-main a {
+    text-decoration: none;
+}
+
+.news-card-main .news-card-img {
+    height: 540px;
+}
+
+.news-card-main .news-card-title {
+    margin-bottom: 1rem;
+    -webkit-line-clamp: 1;
+    height: 35px;
+    font-weight: 700;
+    font-size: 26px;
+}
+
+.news-card-main .news-card-description {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 130%;
+    color: #000;
+}
+
+.news-card-main:hover .news-card-title {
+    color: #000;
+}
+
+.news-card-img {
+
+    will-change: auto;
+    border-radius: 6px;
+    overflow: hidden;
+    margin-bottom: 1rem;
+}
+
+.news-card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.news-card-category {
+    font-family: "Poppins", sans-serif;
+    font-size: 14px; /* Adjust according to .font-regular-14 */
+    color: #000;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.news-card-body {
+    display: block;
+}
+
+.news-card-title {
+    font-family: "Poppins", sans-serif;
+    font-size: 18px; /* Adjust according to .font-medium-18 */
+    margin-bottom: 1rem;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    -webkit-line-clamp: 3;
+    height: 67px;
+}
+
+.news-card-description {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 130%;
+    color: #000;
+}
+
+.news-card-date {
+    font-family: "Poppins", sans-serif;
+    font-size: 14px; /* Adjust according to .font-regular-14 */
+    margin-bottom: 1rem;
+    color: #B2AEAB;
+}
+
+.news-card:hover .news-card-title {
+    color: #000;
+}
+
+.news-card.border-shadow {
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.news-card.border-shadow .news-card-img {
+    margin-bottom: 0;
+}
+
+.news-card.border-shadow .news-card-body {
+    padding: 18px;
+}
+
+.news-card.border-shadow .news-card-title {
+    height: auto;
+}
+
+.white-text {
+    color: #fff;
+}
+
+.white-text .section-green-link {
+    color: #fff;
+}
+
+.white-text .section-header-line {
+    background: #fff;
+}
