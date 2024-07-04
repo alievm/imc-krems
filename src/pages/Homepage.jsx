@@ -17,6 +17,7 @@ import {AiOutlineAlignRight} from "react-icons/ai";
 import {LuMoveRight} from "react-icons/lu";
 import {HiOutlineArrowLongRight} from "react-icons/hi2";
 import NewsCards from "../components/NewsCards.jsx";
+import BlogCards from "../components/BlogCards.jsx";
 const contentStyle = {
     height: '160px',
     color: '#fff',
@@ -112,145 +113,17 @@ const Homepage = () => {
 
                 </div>
 
-                <div className="flex my-16 max-w-7xl mx-auto flex-col  px-8 max-md:px-5">
-                    <h2 className="text-center text-2xl font-semibold leading-8 text-gray-900">
-                        Our recent blogs
-                    </h2>
-                    <div className="mt-8 max-md:max-w-full">
-                        <div className="flex flex-wrap lg:flex-nowrap gap-5 max-md:flex-col max-md:gap-0">
-                            <div className="flex flex-col w-full  lg:w-6/12 max-md:ml-0 max-md:w-full">
-                                <div className="flex flex-col grow justify-center max-md:mt-8 max-md:max-w-full">
-                                    <div className="max-md:max-w-full">
-                                        <div
-                                            className="flex flex-wrap lg:flex-nowrap gap-5 max-md:flex-col max-md:gap-0">
-                                            <div className="flex flex-col w-full lg:w-[56%] max-md:ml-0 max-md:w-full">
-                                                <img
-                                                    loading="lazy"
-                                                    src="/img_11.png"
-                                                    className="grow w-full aspect-[1.59] max-md:mt-6"
-                                                />
-                                            </div>
-                                            <div className="flex flex-col ml-5 w-full lg:w-[44%] max-md:ml-0 max-md:w-full">
-                                                <div
-                                                    className="flex flex-col text-sm font-semibold leading-5 max-md:mt-6">
-                                                    <div className="text-violet-700">November 16, 2024</div>
-                                                    <div className="mt-3 text-lg leading-7 text-gray-900">
-                                                        Lorem ipsum dolor.
-                                                    </div>
-                                                    <div className="mt-2 text-base font-light leading-6 text-gray-500">
-                                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit...
-                                                    </div>
-                                                    <div className="flex gap-2 mt-6 font-medium text-center">
-                                                        <div
-                                                            className="justify-center px-2.5 py-0.5 text-pink-700 whitespace-nowrap bg-pink-50 rounded-2xl">
-                                                            Research
-                                                        </div>
-                                                        <div
-                                                            className="justify-center px-2.5 py-0.5 text-emerald-700 bg-emerald-50 rounded-2xl">
-                                                            UI UX
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div className="mt-8 max-md:max-w-full">
-                                        <div
-                                            className="flex flex-wrap lg:flex-nowrap gap-5 max-md:flex-col max-md:gap-0">
-                                            <div className="flex  flex-col w-full lg:w-[56%] max-md:ml-0 max-md:w-full">
-                                                <img
-                                                    loading="lazy"
-                                                    src="/img_11.png"
-                                                    className="w-full aspect-[1.59] max-md:mt-6"
-                                                />
-                                            </div>
-                                            <div className="flex flex-col ml-5 w-full lg:w-[44%] max-md:ml-0 max-md:w-full">
-                                                <div
-                                                    className="flex flex-col grow text-sm font-semibold leading-5 max-md:mt-6">
-                                                    <div className="text-violet-700">September 24, 2024</div>
-                                                    <div className="mt-3 text-lg leading-7 text-gray-900">
-                                                        Lorem ipsum dolor.
-                                                    </div>
-                                                    <div className="mt-2 text-base font-light leading-6 text-gray-500">
-                                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit...
-                                                    </div>
-                                                    <div className="flex gap-2 mt-6 font-medium text-center">
-                                                        <div
-                                                            className="justify-center px-2.5 py-0.5 text-pink-700 whitespace-nowrap bg-pink-50 rounded-2xl">
-                                                            Research
-                                                        </div>
-                                                        <div
-                                                            className="justify-center px-2.5 py-0.5 text-sky-700 bg-sky-50 rounded-2xl">
-                                                            UI Design
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className="flex flex-col w-full lg:w-6/12  max-md:ml-0 max-md:w-full">
-                                <div
-                                    className="flex flex-col grow self-stretch text-sm font-semibold leading-5 max-md:mt-8 max-md:max-w-full">
-                                    <img
-                                        loading="lazy"
-                                        src="/img_11.png"
-                                        className="w-full object-cover aspect-[2.44] max-md:max-w-full"
-                                    />
-                                    <div className="mt-8 text-violet-700 max-md:max-w-full">
-                                        March 13, 2024
-                                    </div>
-                                    <div className="mt-3 text-2xl leading-8 text-gray-900 max-md:max-w-full">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing.
-                                    </div>
-                                    <div className="mt-3 text-base font-light leading-6 text-gray-500 max-md:max-w-full">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse ipsum nibh, iaculis vitae consectetur nec, pulvinar vel orci.
-                                    </div>
-                                    <div
-                                        className="flex gap-2 pr-20 mt-6 font-medium text-center whitespace-nowrap max-md:flex-wrap max-md:pr-5">
-                                        <div
-                                            className="justify-center px-2.5 py-0.5 text-violet-700 bg-purple-50 rounded-2xl">
-                                            University
-                                        </div>
-                                        <div
-                                            className="justify-center px-2.5 py-0.5 text-indigo-700 bg-indigo-50 rounded-2xl">
-                                            Students life
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <BlogCards/>
 
                 <section className="my-20 bg-white">
                     <h2 className="text-center my-10 text-2xl font-semibold leading-8 text-gray-900">
                         Pave Your Way to Achievement
                     </h2>
                     <div className="container mx-auto">
-                        <div className="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 text-center">
-                            <FadeInStagger>
-
-                                <div className="w-full  px-4 mb-8 md:mb-0">
-                                    <img src="/3.png" alt="Bring your ideas to life" className="mx-auto h-24 mb-4"/>
-                                    <FadeIn>
-                                        <h2 className="text-xl md:text-xl font-semibold mb-2">Discover Your Path to
-                                            Success</h2>
-                                    </FadeIn>
-                                    <FadeIn>
-                                        <p className="text-gray-600 mb-4">
-                                            Discover Programs, Faculty, Vibrant Campus Life.
-                                        </p>
-                                    </FadeIn>
-                                    {/* <a href="#" className="text-orange-300 hover:text-orange-300">
-              Browse extensions <i className='bx bx-right-arrow-alt align-bottom'></i>
-            </a> */}
-                                </div>
-                            </FadeInStagger>
+                        <div className="grid grid-cols-1 lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 text-center">
                             <FadeInStagger>
                                 <div className="w-full px-4 mb-8 md:mb-0">
-                                    <img src="/2.png" alt="Build designs that scale" className="mx-auto h-24 mb-4"/>
+                                    <img src="/Group-1.png" alt="Build designs that scale" className="mx-auto h-24 mb-4"/>
                                     <FadeIn>
                                         <h2 className="text-xl md:text-xl font-semibold mb-2">Seamless Application
                                             Process</h2>
@@ -267,7 +140,7 @@ const Homepage = () => {
                             </FadeInStagger>
                             <FadeInStagger>
                                 <div className="w-full px-4">
-                                    <img src="/1.png" alt="Customize your workflow" className="mx-auto h-24 mb-4"/>
+                                    <img src="/Layer1.png" alt="Customize your workflow" className="mx-auto h-24 mb-4"/>
                                     <FadeIn>
                                         <h2 className="text-xl md:text-xl font-semibold mb-2">Welcome to IMC Krems
                                             Tashkent</h2>
@@ -313,7 +186,7 @@ const Homepage = () => {
                                         always stays focused on discovering and shaping your unique skills.
                                     </div>
                                     <div className="flex flex-col self-end mt-6 mr-14 max-md:mr-2.5">
-                                        <div className="text-xl leading-7 text-[#FF9E1B]">
+                                        <div className="text-xl leading-7 text-[#798591]">
                                             IMC University of Applied Sciences
                                         </div>
                                     </div>
@@ -365,26 +238,13 @@ const Homepage = () => {
                 <StatsSection/>
 
 
-                <Carousel arrows autoplay>
-                    <Testimonials
-                        className="mt-24 sm:mt-32 lg:mt-40 px-10"
-                        client={{name: "DR. AHMED MOHAMMED AZIZ ISMAIL", position: "Dean", logo: deanPic}}
-                    >
+                <Testimonials
+                    className="mt-24 sm:mt-32 lg:mt-40 px-10"
+                    client={{name: "DR. AHMED MOHAMMED AZIZ ISMAIL", position: "Dean", logo: deanPic}}
+                >
                        <span className="text-3xl">Explore global opportunities with us at IMC Krems Tashkent, where we prepare you for success in
                         international business.</span>
-                    </Testimonials>
-
-                    <Testimonials
-                        className="mt-24 sm:mt-32 lg:mt-40"
-                        client={{name: "Farrukh Suleimanov", position: "Head of Foundation", logo: foundPic}}
-                    >
-                        <span className="text-3xl">
-                            Join us at IMC Krems Tashkent for an exciting academic journey where we focus on real-world
-                        skills.
-                        Our faculty is dedicated to fostering creative minds and global leaders.
-                        </span>
-                    </Testimonials>
-                </Carousel>
+                </Testimonials>
 
 
                 <div className="bg-white py-10 sm:py-12">

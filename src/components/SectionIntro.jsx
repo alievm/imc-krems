@@ -33,7 +33,7 @@ const SectionIntro = ({
               smaller
                 ? "text-2xl font-semibold"
                 : "text-4xl font-medium sm:text-5xl",
-              invert ? "text-white" : "text-orange-600"
+              invert ? "text-white" : "text-gray-800"
             )}
           >
             {title}

@@ -1,82 +1,54 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { HiOutlineArrowLongRight } from "react-icons/hi2";
-import { Button } from "antd";
+import {Alert, Button, Spin} from "antd";
+import {getNews} from "../service/newsService.js";
+import {Link} from "react-router-dom";
 
 // Define the news data array
-const newsData = [
-    {
-        id: 1,
-        href: "/news/8475",
-        imgSrc: "/img_11.png",
-        category: "post",
-        title: "IMC News Title Here",
-        date: "19 March 08:54",
-    },
-    {
-        id: 2,
-        href: "/news/8475",
-        imgSrc: "/img_11.png",
-        category: "post",
-        title: "IMC News Title Here",
-        date: "19 March 08:54",
-    },
-    {
-        id: 3,
-        href: "/news/8475",
-        imgSrc: "/img_11.png",
-        category: "post",
-        title: "IMC News Title Here",
-        date: "19 March 08:54",
-    },
-    {
-        id: 4,
-        href: "/news/8475",
-        imgSrc: "/img_11.png",
-        category: "post",
-        title: "IMC News Title Here",
-        date: "19 March 08:54",
-    },
-    {
-        id: 5,
-        href: "/news/8475",
-        imgSrc: "/img_11.png",
-        category: "post",
-        title: "IMC News Title Here",
-        date: "19 March 08:54",
-    },
-    {
-        id: 5,
-        href: "/news/8475",
-        imgSrc: "/img_11.png",
-        category: "post",
-        title: "IMC News Title Here",
-        date: "19 March 08:54",
-    },
-    // Add more news items as needed
-];
-
-export const NewsCards = () => {
+const NewsCards = () => {
+    const [newsData, setNewsData] = useState([]);
     const [visibleItems, setVisibleItems] = useState(3);
+    const [loading, setLoading] = useState(true);
+    const [error, setError] = useState(null);
+
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                setLoading(true);
+                const data = await getNews();
+                setNewsData(data.data); // Assuming news items are in the 'data' field
+            } catch (error) {
+                setError(error.message);
+            } finally {
+                setLoading(false);
+            }
+        };
+
+        fetchData();
+    }, []);
 
     const handleLoadMore = () => {
         setVisibleItems((prevVisibleItems) => prevVisibleItems + 3);
     };
 
+    if (loading) return <Spin size="large" className="flex justify-center mt-10" />;
+    if (error) return <Alert message="Error" description={error} type="error" showIcon className="mt-10" />;
+
     return (
         <>
             <div className="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-10 mt-6">
                 {newsData.slice(0, visibleItems).map((news) => (
-                    <div key={news.id} className="news-card">
+                    <div key={news.id} className="news-card p-4 bg-white rounded-lg">
                         <a href={news.href}>
-                            <div className="news-card-img mx-auto object-cover h-48 w-96">
-                                <img src={news.imgSrc} alt="news card image" />
+                            <div className="news-card-img mx-auto object-cover h-48 w-full mb-4">
+                                <img src={news.path} alt={news.title} className="h-full w-full object-cover rounded-lg" />
                             </div>
                         </a>
                         <div className="news-card-body">
-                            <a href={news.href}>
-                                <div className="news-card-category">{news.category}</div>
-                                <h3 className="news-card-title">{news.title}</h3>
-                                <div className="news-card-date icon-and-text flex items-center gap-3">
+                            <Link to={`/news/${news.id}`}>
+                                <div className="news-card-category text-gray-500 text-sm mb-2">{news.type}</div>
+                                <h3 className="news-card-title text-lg font-semibold mb-2">{news.title}</h3>
+                                <div className="news-card-date icon-and-text flex items-center text-gray-500 text-sm gap-2 mb-4">
                                     <svg
                                         width="16"
                                         height="16"
@@ -92,13 +64,19 @@ export const NewsCards = () => {
                                             strokeLinejoin="round"
                                         ></path>
                                     </svg>
-                                    {news.date}
+                                    {new Date(news.created_at).toLocaleDateString("en-US", {
+                                        year: "numeric",
+                                        month: "long",
+                                        day: "numeric",
+                                        hour: "2-digit",
+                                        minute: "2-digit",
+                                    })}
                                 </div>
-                            </a>
-                            <a href={news.href} className="section-green-link flex items-center gap-3">
+                            </Link>
+                            <Link to={`/news/${news.id}`} className="section-green-link flex items-center text-gray-600 hover:text-gray-800 cursor-pointer gap-3">
                                 See More
                                 <HiOutlineArrowLongRight className="link-text" />
-                            </a>
+                            </Link>
                         </div>
                     </div>
                 ))}

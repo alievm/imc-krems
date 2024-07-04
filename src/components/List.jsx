@@ -5,7 +5,7 @@ import Border from "./Border.jsx";
 const List = ({ className, children }) => {
     return (
         <FadeInStagger>
-            <ul role="list" className={clsx("text-xl text-neutral-600", className)}>
+            <ul role="list" className={clsx("text-xl text-gray-600", className)}>
                 {children}
             </ul>
         </FadeInStagger>
@@ -18,7 +18,7 @@ export const ListItem = ({ title, children }) => {
             <FadeIn>
                 <Border className="pt-10 group-first:pt-0 group-first:before:hidden group-first:after:hidden">
                     {title && (
-                        <strong className="font-semibold text-orange-600">{`${title}. `}</strong>
+                        <strong className="font-semibold text-gray-800">{`${title}. `}</strong>
                     )}
                     {children}
                 </Border>

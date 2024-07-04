@@ -5,7 +5,7 @@ import {
     UserGroupIcon,
     Bars4Icon,
     SunIcon,
-    GlobeAmericasIcon
+    GlobeAmericasIcon, BookOpenIcon, GlobeAltIcon
 } from "@heroicons/react/24/solid";
 
 export const navListMenuItems = [
@@ -39,6 +39,8 @@ export const navListMenuItems = [
         title: "Career",
         description: "Find career opportunities and join our team.",
         icon: GlobeAmericasIcon,
+        url: '/careers'
+
     },
 ];
 
@@ -48,6 +50,23 @@ export const navListMenuItems2 = [
         title: "International joint faculty between TSUE and IMC Krems",
         description: "Discover our collaborative international faculty.",
         icon: SquaresPlusIcon,
+        submenu: [
+            {
+                title: "Programs Offered",
+                description: "Explore the range of programs we offer.",
+                icon: BookOpenIcon,
+            },
+            {
+                title: "Global Opportunities",
+                description: "Learn about international exchange and study abroad options.",
+                icon: GlobeAltIcon,
+            },
+            {
+                title: "Faculty Members",
+                description: "Meet our distinguished faculty members.",
+                icon: UserGroupIcon,
+            }
+        ]
     },
     {
         title: "Foundation",
@@ -72,21 +91,13 @@ export const navListMenuItems3 = [
         title: "Internship",
         description: "Find internship programs and opportunities.",
         icon: Bars4Icon,
+        url: '/internships'
     },
     {
         title: "Exchange program",
         description: "Learn about our student exchange programs.",
         icon: SunIcon,
-    },
-    {
-        title: "Hostels",
-        description: "Discover our hostel facilities and services.",
-        icon: GlobeAmericasIcon,
-    },
-    {
-        title: "Medical center",
-        description: "Access health services at our medical center.",
-        icon: SunIcon,
+        url: '/exchange-program'
     },
     {
         title: "Library",
@@ -145,19 +156,9 @@ export const navListMenuItems5 = [
         icon: SquaresPlusIcon,
     },
     {
-        title: "Our Alumni",
-        description: "Meet our successful graduates.",
-        icon: UserGroupIcon,
-    },
-    {
         title: "Students Career centre",
         description: "Get career support and resources.",
         icon: Bars4Icon,
-    },
-    {
-        title: "Alumni achievements",
-        description: "Recognizing outstanding accomplishments.",
-        icon: SunIcon,
     },
 ];
 

@@ -20,7 +20,7 @@ const Careers = () => {
                                     <div
                                         className="flex h-10 w-10 items-center justify-center rounded-full border-2 border-orange-600">
                                         <svg
-                                            className="h-6 w-6 text-orange-600 dark:text-slate-200"
+                                            className="h-6 w-6 text-gray-800 dark:text-slate-200"
                                             fill="none"
                                             height="24"
                                             stroke="currentColor"
@@ -62,7 +62,7 @@ const Careers = () => {
                                     <div
                                         className="flex h-10 w-10 items-center justify-center rounded-full border-2 border-orange-600">
                                         <svg
-                                            className="h-6 w-6 text-orange-600 dark:text-slate-200"
+                                            className="h-6 w-6 text-gray-800 dark:text-slate-200"
                                             fill="none"
                                             height="24"
                                             stroke="currentColor"
@@ -97,7 +97,7 @@ const Careers = () => {
                                     <div
                                         className="flex h-10 w-10 items-center justify-center rounded-full border-2 border-orange-600">
                                         <svg
-                                            className="h-6 w-6 text-orange-600 dark:text-slate-200"
+                                            className="h-6 w-6 text-gray-800 dark:text-slate-200"
                                             fill="none"
                                             height="24"
                                             stroke="currentColor"
@@ -135,7 +135,7 @@ const Careers = () => {
                                     <div
                                         className="flex h-10 w-10 items-center justify-center rounded-full border-2 border-orange-600">
                                         <svg
-                                            className="h-6 w-6 text-orange-600 dark:text-slate-200"
+                                            className="h-6 w-6 text-gray-800 dark:text-slate-200"
                                             fill="none"
                                             height="24"
                                             stroke="currentColor"

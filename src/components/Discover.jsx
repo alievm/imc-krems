@@ -12,8 +12,8 @@ const Discover = () => {
         </p>
         <p>
           We are currently offering:<br/>
-          <strong className="text-orange-600">BA in Management (International Business Management)</strong>  <br/>
-          <strong className="text-orange-600"> BA in Management (Tourism and Leisure Management)</strong> <br/>
+          <strong className="text-gray-800">BA in Management (International Business Management)</strong>  <br/>
+          <strong className="text-gray-800"> BA in Management (Tourism and Leisure Management)</strong> <br/>
         </p>
       </div>
     </Section>
