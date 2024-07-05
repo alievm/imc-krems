@@ -194,7 +194,7 @@ const InternationalBusinessManagement = () => {
                                         <TbSchoolBell size="25" />
                                     </div>
                                 </div>
-                                <div className="mt-6 text-md leading-5">6 semesters</div>
+                                <div className="mt-6 text-md leading-5">2 semesters</div>
                                 <div className="mt-6 text-base leading-5">
                                     Duration
                                 </div>

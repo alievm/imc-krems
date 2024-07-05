@@ -147,6 +147,10 @@ h1, h2, h3, h4 {
     background-image: url(./assets/header-alumni.jpg);
     background-size: cover;
 }
+.profile-card-bg4 {
+    background-image: url(./assets/was-kann-das-imc-career-center-fuer-studierende-tun.jpg);
+    background-size: cover;
+}
 
 video {
     min-width: 100%;

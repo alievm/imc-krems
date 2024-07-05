@@ -26,6 +26,8 @@ import ExchangeProgram from "./pages/ExchangeProgram.jsx";
 import TLM from "./pages/TLM.jsx";
 import Scholarship from "./pages/Scholarship.jsx";
 import WhyChooseIMC from "./pages/WhyChooseIMC.jsx";
+import StudyFees from "./pages/StudyFees.jsx";
+import HowToApply from "./pages/HowToApply.jsx";
 
 function App() {
 
@@ -56,6 +58,8 @@ function App() {
               <Route path="/careers" element={<Careers/>} />
               <Route path="/contact"  element={<Contact/>} />
               <Route path="/internships"  element={<Internships/>} />
+              <Route path="/study-fees"  element={<StudyFees/>} />
+              <Route path="/how-to-apply"  element={<HowToApply/>} />
               <Route path="/exchange-program"  element={<ExchangeProgram/>} />
               <Route path="/news/:id" element={<NewsDetail/>} />
           </Route>
