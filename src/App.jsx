@@ -28,6 +28,9 @@ import Scholarship from "./pages/Scholarship.jsx";
 import WhyChooseIMC from "./pages/WhyChooseIMC.jsx";
 import StudyFees from "./pages/StudyFees.jsx";
 import HowToApply from "./pages/HowToApply.jsx";
+import FAQ from "./pages/FAQ.jsx";
+import EntryRequirements from "./pages/EntryRequirements.jsx";
+import KTATPage from "./pages/KTATPage.jsx";
 
 function App() {
 
@@ -60,6 +63,9 @@ function App() {
               <Route path="/internships"  element={<Internships/>} />
               <Route path="/study-fees"  element={<StudyFees/>} />
               <Route path="/how-to-apply"  element={<HowToApply/>} />
+              <Route path="/entry-requirements"  element={<EntryRequirements/>} />
+              <Route path="/faq"  element={<FAQ/>} />
+              <Route path="/ktat"  element={<KTATPage/>} />
               <Route path="/exchange-program"  element={<ExchangeProgram/>} />
               <Route path="/news/:id" element={<NewsDetail/>} />
           </Route>

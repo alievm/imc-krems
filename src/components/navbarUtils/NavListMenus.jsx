@@ -403,8 +403,8 @@ export function NavListMenu4() {
     const [isMenuOpen, setIsMenuOpen] = React.useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
     const renderItems = navListMenuItems4.map(
-        ({ icon, title, description }, key) => (
-            <a href="#" key={key}>
+        ({ icon, title, description, url }, key) => (
+            <Link to={url} key={key}>
                 <MenuItem className="flex items-center gap-3 rounded-lg">
                     <div className="flex items-center justify-center rounded-lg !bg-blue-gray-50 p-2 ">
                         {" "}
@@ -429,7 +429,7 @@ export function NavListMenu4() {
                         </Typography>
                     </div>
                 </MenuItem>
-            </a>
+            </Link>
         ),
     );
 
@@ -482,8 +482,8 @@ export function NavListMenu5() {
     const [isMenuOpen, setIsMenuOpen] = React.useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
     const renderItems = navListMenuItems5.map(
-        ({ icon, title, description }, key) => (
-            <a href="#" key={key}>
+        ({ icon, title, description, url }, key) => (
+            <Link to={url} key={key}>
                 <MenuItem className="flex items-center gap-3 rounded-lg">
                     <div className="flex items-center justify-center rounded-lg !bg-blue-gray-50 p-2 ">
                         {" "}
@@ -508,7 +508,7 @@ export function NavListMenu5() {
                         </Typography>
                     </div>
                 </MenuItem>
-            </a>
+            </Link>
         ),
     );
 
@@ -562,8 +562,8 @@ export function NavListMenu6() {
     const [isMenuOpen, setIsMenuOpen] = React.useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
     const renderItems = navListMenuItems6.map(
-        ({ icon, title, description }, key) => (
-            <a href="#" key={key}>
+        ({ icon, title, description, url }, key) => (
+            <Link to={url} key={key}>
                 <MenuItem className="flex items-center gap-3 rounded-lg">
                     <div className="flex items-center justify-center rounded-lg !bg-blue-gray-50 p-2 ">
                         {" "}
@@ -588,7 +588,7 @@ export function NavListMenu6() {
                         </Typography>
                     </div>
                 </MenuItem>
-            </a>
+            </Link>
         ),
     );
 

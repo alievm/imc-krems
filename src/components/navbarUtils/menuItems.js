@@ -86,6 +86,7 @@ export const navListMenuItems3 = [
         title: "Scholarship",
         description: "Explore scholarship opportunities.",
         icon: UserGroupIcon,
+        url: '/scholarships'
     },
     {
         title: "Internship",
@@ -111,31 +112,37 @@ export const navListMenuItems4 = [
         title: "Why IMC program",
         description: "Understand why the IMC program is right for you.",
         icon: SquaresPlusIcon,
+        url: '/why-choose-imc'
     },
     {
         title: "How to apply",
         description: "Learn about the application process.",
         icon: UserGroupIcon,
+        url: '/how-to-apply'
     },
     {
         title: "Entry requirements",
         description: "Check the entry requirements for the program.",
         icon: Bars4Icon,
+        url: '/entry-requirements'
     },
     {
         title: "Course fee",
         description: "Find information on course fees.",
         icon: SunIcon,
+        url: '/study-fees'
     },
     {
         title: "Scholarship",
         description: "Explore available scholarships.",
         icon: GlobeAmericasIcon,
+        url: '/scholarships'
     },
     {
         title: "About KTAT",
         description: "Learn about the KTAT initiative.",
         icon: SunIcon,
+        url: '/ktat'
     },
     {
         title: "Apply",
@@ -146,6 +153,7 @@ export const navListMenuItems4 = [
         title: "FAQ",
         description: "Find answers to frequently asked questions.",
         icon: Bars4Icon,
+        url: '/faq'
     },
 ];
 

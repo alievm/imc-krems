@@ -2,6 +2,8 @@ import React from 'react';
 import { Typography, Steps, Row, Col, Divider, Card } from 'antd';
 import { FormOutlined, FileTextOutlined, CloudUploadOutlined, CheckCircleOutlined, PhoneOutlined, MailOutlined } from '@ant-design/icons';
 import {FaBriefcase} from "react-icons/fa";
+import {RiHourglassLine} from "react-icons/ri";
+import {MdOutlineAttachEmail} from "react-icons/md";
 
 const { Title, Paragraph } = Typography;
 const { Step } = Steps;
@@ -146,7 +148,7 @@ const HowToApply = () => {
                                 <Col xs={24} sm={12} md={8}>
                                     <Card className="hover:shadow-lg p-6 rounded-lg border border-gray-300">
                                         <div className="bg-main p-3 max-w-min mx-auto rounded-md">
-                                            <MailOutlined className="text-3xl text-white"/>
+                                            <MdOutlineAttachEmail  className="text-3xl text-white"/>
                                         </div>
                                         <Paragraph className="my-1 text-xl"><strong>Email:</strong></Paragraph>
                                         <Paragraph><a href="mailto:info@imctashkent.uz"
@@ -156,8 +158,10 @@ const HowToApply = () => {
 
                                 <Col xs={24} sm={12} md={8}>
                                     <Card className="hover:shadow-lg p-6 rounded-lg border border-gray-300">
-                                        <MailOutlined className="text-3xl text-blue-600 mb-2"/>
-                                        <Paragraph className="mb-1"><strong>Office Hours:</strong></Paragraph>
+                                        <div className="bg-main p-3 max-w-min mx-auto rounded-md">
+                                            <RiHourglassLine className="text-3xl text-white"/>
+                                        </div>
+                                        <Paragraph className="my-1 text-xl"><strong>Office Hours:</strong></Paragraph>
                                         <Paragraph>Monday to Friday, 9 AM to 5 PM</Paragraph>
                                     </Card>
                                 </Col>
