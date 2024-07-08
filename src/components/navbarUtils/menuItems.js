@@ -72,6 +72,7 @@ export const navListMenuItems2 = [
         title: "Foundation",
         description: "Learn about our foundational principles and support.",
         icon: UserGroupIcon,
+        url: '/foundation'
     },
 ];
 
@@ -148,6 +149,7 @@ export const navListMenuItems4 = [
         title: "Apply",
         description: "Start your application here.",
         icon: GlobeAmericasIcon,
+        url: 'https://docs.google.com/forms/d/e/1FAIpQLSfslvtJO2i1Tfo2xFpebn_rQtX8GPVSpHGYKbAXj9a4s-YZ2Q/viewform'
     },
     {
         title: "FAQ",

@@ -31,6 +31,7 @@ import HowToApply from "./pages/HowToApply.jsx";
 import FAQ from "./pages/FAQ.jsx";
 import EntryRequirements from "./pages/EntryRequirements.jsx";
 import KTATPage from "./pages/KTATPage.jsx";
+import Foundation from "./pages/Foundation.jsx";
 
 function App() {
 
@@ -55,6 +56,7 @@ function App() {
               <Route path="/professors/usmanova"  element={<AzizaUsmanova/>} />
               <Route path="/ibm" element={<InternationalBusinessManagement/>} />
               <Route path="/tlm" element={<TLM/>} />
+              <Route path="/foundation" element={<Foundation/>} />
               <Route path="/partners" element={<Partners/>} />
               <Route path="/scholarships" element={<Scholarship/>} />
               <Route path="/why-choose-imc" element={<WhyChooseIMC/>} />

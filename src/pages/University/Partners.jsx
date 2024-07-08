@@ -1,14 +1,16 @@
 import React from 'react';
 import PageIntro from "../../components/PageIntro.jsx";
 import { Tooltip } from "@material-tailwind/react";
+import {useTranslation} from "react-i18next";
 
 const Partners = () => {
+    const {t} = useTranslation();
     return (
         <section>
-            <PageIntro eyebrow="Partners" title="Strategic Partnerships: Building Bridges with Global Leaders" />
+            <PageIntro eyebrow={t("Partners")} title={t("Strategic Partnerships: Building Bridges with Global Leaders")} />
             <div className="mx-auto max-w-7xl py-24 px-4 sm:px-6 lg:px-8">
                 <div className="mb-20 text-center">
-                    <h1 className="text-4xl text-gray-900 font-bold">Partner Universities</h1>
+                    <h1 className="text-4xl text-gray-900 font-bold">{t('Partner Universities')}</h1>
                 </div>
                 <div className="grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-4">
                     <Tooltip
@@ -118,7 +120,7 @@ const Partners = () => {
 
             <div className="mx-auto max-w-7xl py-24 px-4 sm:px-6 lg:px-8">
                 <div className="mb-20 text-center">
-                    <h1 className="text-4xl text-gray-900 font-bold">Partner Organizations</h1>
+                    <h1 className="text-4xl text-gray-900 font-bold">{t("Partner Organizations")}</h1>
                 </div>
                 <div className="grid grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-3">
                     {/* Partner Organization 1 */}

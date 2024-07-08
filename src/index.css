@@ -1,14 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 @font-face {
     font-family: 'SF Pro Bold';
     src: local('SF Pro Display Bold'),
     url('./assets/fonts/SF Pro/SF-Pro-Display-Bold.otf') format('truetype');
     font-weight: bold;
     font-style: normal;
+}
+
+* {
+    scroll-behavior: smooth;
 }
 
 /* width */
@@ -31,19 +33,23 @@
     background: #4e5661;
 }
 
-p{
-    font-family: "Poppins", sans-serif;
+p,*, .ant-typography{
+    font-family: "Roboto Slab", serif;
 }
 
 
 h1, h2, h3, h4 {
-    font-family: "SF Pro Bold", sans-serif;
+    font-family: "Roboto Slab", serif;
 }
 .home-hero-container {
     background: linear-gradient(to top, rgba(255, 158, 27, 0.2) 30%, rgba(255, 158, 27, 0.2) 30%, rgba(255, 158, 27, 0) 100%), url('./assets/bg5.jpg');
     background-position: center top;
     background-size: cover;
     background-repeat: no-repeat;
+}
+
+ant-collapse-header {
+    background-color: #798591 !important;
 }
 .home-hero-container2 {
     background: linear-gradient(to top, rgba(255, 158, 27, 0.2) 30%, rgba(255, 158, 27, 0.2) 30%, rgba(255, 158, 27, 0) 100%), url('./assets/bg6.jpg');
@@ -95,6 +101,7 @@ h1, h2, h3, h4 {
 }
 
 .text-col-2 {
+    font-size: 14px;
     column-count: 2;
     column-gap: 40px;
     text-align: justify;
@@ -151,6 +158,59 @@ h1, h2, h3, h4 {
     background-image: url(./assets/was-kann-das-imc-career-center-fuer-studierende-tun.jpg);
     background-size: cover;
 }
+.profile-card-bg5 {
+    background-image: url(./assets/AF1QipOgeGV2QQd9EN_3yK9VkOqjqGNqxdUUFxTW23HZ=w3003-h749.png);
+}
+.profile-card-bg6 {
+    background-image: url(./assets/header-incoming-exchange-studierende.jpg);
+}
+
+
+.frame-img {
+    border: solid 2px;
+    border-bottom-color: #ffe;
+    border-left-color: #eed;
+    border-right-color: #eed;
+    border-top-color: #ccb;
+    max-height: 130px !important;
+    max-width: 130px !important;
+}
+.frame {
+    background-color: #ddc;
+    border: solid 5vmin #eee;
+    border-bottom-color: #fff;
+    border-left-color: #eee;
+    border-radius: 2px;
+    border-right-color: #eee;
+    border-top-color: #ddd;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, .25) inset, 0 5px 10px 5px rgba(0, 0, 0, .25);
+    box-sizing: border-box;
+    display: inline-block;
+    height: 26vh;
+    padding: 1vmin;
+    position: relative;
+    text-align: center;
+}
+.frame:before {
+    border-radius: 2px;
+    bottom: -2vmin;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .25) inset;
+    content: "";
+    left: -2vmin;
+    position: absolute;
+    right: -2vmin;
+    top: -2vmin;
+}
+.frame:after {
+    border-radius: 2px;
+    bottom: -2.5vmin;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .25);
+    content: "";
+    left: -2.5vmin;
+    position: absolute;
+    right: -2.5vmin;
+    top: -2.5vmin;
+}
 
 video {
     min-width: 100%;
@@ -172,6 +232,39 @@ video {
     justify-content: center;
     align-items: center;
     color: white;
+}
+
+#section-nav {
+    margin-top: -67px;
+    margin-bottom: 20px;
+    position: relative;
+    top: 0px;
+    background: white;
+}
+
+#anchor-menu {
+    padding: 15px;
+}
+
+.h2-responsive {
+    font-size: 2rem;
+    text-align: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+#section-nav .nav-link:hover {
+    background: #768692 !important;
+    color: white !important;
+    opacity: 1 !important;
+}
+
+#section-nav .nav-link {
+    border: 1px solid rgba(47, 72, 102, 0) !important;
+    color: #000000 !important;
+    padding: 7px 10px;
+    font-size: 14px;
+    margin: 0px;
 }
 
 .overlay {

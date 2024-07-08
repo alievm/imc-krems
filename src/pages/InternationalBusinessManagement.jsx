@@ -11,6 +11,9 @@ import {GrLanguage} from "react-icons/gr";
 import {AiOutlineSwap} from "react-icons/ai";
 import {GiDuration} from "react-icons/gi";
 import {TbSchoolBell} from "react-icons/tb";
+import { HashLink as Link } from 'react-router-hash-link';
+import {AcademicCapIcon, BanknotesIcon, ClockIcon, GlobeAltIcon} from "@heroicons/react/24/solid/index.js";
+import {CalendarDaysIcon} from "@heroicons/react/16/solid/index.js";
 
 
 const CUSTOM_ANIMATION = {
@@ -47,8 +50,142 @@ const InternationalBusinessManagement = () => {
 
 
     const handleOpen = (value) => setOpen(open === value ? 0 : value);
+    const handleOpenStep = (index) => {
+        setOpenStep(openStep === index ? 0 : index);
+    };
     const handleOpenVideo = (value) => setOpenVideo(openVideo === value ? 0 : value);
 
+
+    const courseData = {
+        semester1: {
+            title: "SEMESTER 1",
+            courses: [
+                { course: "Principles of Management", sws: 2, ects: 3 },
+                { course: "Sustainability and Ethics in Leadership", sws: 1, ects: 1 },
+                { course: "Entrepreneurship", sws: 1, ects: 2 },
+                { course: "International Marketing and Sales", sws: 2, ects: 3 },
+                { course: "Doing Business Abroad: Exporting and Importing", sws: 2, ects: 3 },
+                { course: "Accounting I", sws: 2, ects: 4 },
+                { course: "Training Intercultural Competence and Self Reflection", sws: 2, ects: 2 },
+                { course: "Rhetoric and Presentation", sws: 1, ects: 1 },
+                { course: "Foundations of Empirical Social Research", sws: 1, ects: 1 },
+                { course: "Qualitative Research Methods", sws: 2, ects: 2 },
+                { course: "Business Mathematics - Theory", sws: 1, ects: 2 },
+                { course: "Business Mathematics - Exercises", sws: 1, ects: 2 },
+                { course: "French I (Level A1)", sws: 3, ects: 4 },
+                { course: "French I (Level B1)", sws: 3, ects: 4 },
+                { course: "Spanish I (Level A1)", sws: 3, ects: 4 },
+                { course: "Spanish I (Level B1)", sws: 3, ects: 4 },
+                { course: "Italian I (Level A1)", sws: 3, ects: 4 },
+                { course: "German I (Level B1)", sws: 3, ects: 4 },
+                { course: "Chinese I (Level A1)", sws: 3, ects: 4 },
+                { course: "German I (Level A1)", sws: 3, ects: 4 }
+            ]
+        },
+        semester2: {
+            title: "SEMESTER 2",
+            courses: [
+                { course: "Human Resource Management and Career Development", sws: 2, ects: 3 },
+                { course: "Group Dynamics", sws: 1, ects: 1 },
+                { course: "Procurement, Production and Logistics", sws: 2, ects: 3 },
+                { course: "Doing Business Abroad: FDI", sws: 2, ects: 3 },
+                { course: "Accounting II", sws: 2, ects: 3 },
+                { course: "Microeconomics", sws: 2, ects: 3 },
+                { course: "Quantitative Research Methods", sws: 2, ects: 3 },
+                { course: "Principles of Business Data Analysis", sws: 2, ects: 3 },
+                { course: "Business Statistics - Theory", sws: 1, ects: 2 },
+                { course: "Business Statistics - Exercises", sws: 1, ects: 2 },
+                { course: "French II (Level A2)", sws: 3, ects: 4 },
+                { course: "French II (Level B1)", sws: 3, ects: 4 },
+                { course: "Spanish II (Level A2)", sws: 3, ects: 4 },
+                { course: "Spanish II (Level B1)", sws: 3, ects: 4 },
+                { course: "Italian II (Level A2)", sws: 3, ects: 4 },
+                { course: "German II (Level A2)", sws: 3, ects: 4 },
+                { course: "German II (Level B1)", sws: 3, ects: 4 },
+                { course: "Chinese II (Level A1/A2)", sws: 3, ects: 4 }
+            ]
+        },
+        semester3: {
+            title: "SEMESTER 3",
+            courses: [
+                { course: "Organisational Theory and Development", sws: 2, ects: 3 },
+                { course: "Processes, Audits and Reports in Purpose Driven Organisations", sws: 1.5, ects: 2 },
+                { course: "International Project Management and Project Communication", sws: 2, ects: 3 },
+                { course: "International Marketing Research and Market Entry", sws: 2, ects: 3 },
+                { course: "Managerial Accounting/Controlling and Decision Making", sws: 2, ects: 3 },
+                { course: "Finance and Investment", sws: 1.5, ects: 3 },
+                { course: "Crowd Funding and Alternative Finance", sws: 2, ects: 3 },
+                { course: "Macroeconomics", sws: 3, ects: 3 },
+                { course: "Principles of Law", sws: 2, ects: 2 },
+                { course: "Establishing Contracts and Negotiation", sws: 1.5, ects: 3 },
+                { course: "French III (Level A2/A2+)", sws: 2, ects: 2 },
+                { course: "French III (Level B1/B2)", sws: 2, ects: 2 },
+                { course: "Spanish III (Level A2/A2+)", sws: 2, ects: 2 },
+                { course: "Spanish III (Level B1/B2)", sws: 2, ects: 2 },
+                { course: "Italian III (Level A2/A2+)", sws: 2, ects: 2 },
+                { course: "German III (Level A2/A2+)", sws: 2, ects: 2 },
+                { course: "German III (Level B1/B2)", sws: 2, ects: 2 },
+                { course: "Chinese III (Level A2)", sws: 2, ects: 2 }
+            ]
+        },
+        semester4: {
+            title: "SEMESTER 4",
+            courses: [
+                { course: "Practical Training (20 weeks à 32 hours per week)", sws: 0, ects: 26 },
+                { course: "Practical Training Coaching Seminar", sws: 1, ects: 2 },
+                { course: "Artificial Intelligence Applications in Business", sws: 2, ects: 2 }
+            ]
+        },
+        semester5: {
+            title: "SEMESTER 5",
+            courses: [
+                { course: "Entrepreneurship and Starting a Company", sws: 2, ects: 3 },
+                { course: "Budgeting and Financial Management", sws: 2, ects: 3 },
+                { course: "Key Account and Performance Management", sws: 2, ects: 2 },
+                { course: "Foreign Trade Techniques: Export Risk Management", sws: 2, ects: 3 },
+                { course: "Supply Chain Management and Simulation", sws: 3, ects: 3 },
+                { course: "Tender and Contracting", sws: 2, ects: 3 },
+                { course: "International Relations and Geopolitical Affairs", sws: 2, ects: 2 },
+                { course: "International Business Law", sws: 1.5, ects: 2 },
+                { course: "Bachelor Seminar I", sws: 1, ects: 3 },
+                { course: "French IV (Level A2/B1)", sws: 2, ects: 3 },
+                { course: "French IV (Level B2)", sws: 2, ects: 3 },
+                { course: "Spanish IV (Level A2/B1)", sws: 2, ects: 3 },
+                { course: "Spanish IV (Level B2)", sws: 2, ects: 3 },
+                { course: "Italian IV (Level A2/B1)", sws: 2, ects: 3 },
+                { course: "German IV (Level A2/B1)", sws: 2, ects: 3 },
+                { course: "German IV (Level B2)", sws: 2, ects: 3 },
+                { course: "Chinese IV (Level A2+)", sws: 2, ects: 3 },
+                { course: "Elective: Future Markets", sws: 1, ects: 3 },
+                { course: "Elective: Digitalisation of Business", sws: 1, ects: 3 },
+                { course: "Elective: Export Market Metrics", sws: 1, ects: 3 },
+                { course: "Elective: Sourcing and Customs Planning", sws: 1, ects: 3 },
+                { course: "Elective: Artificial Intelligence Applications and Visualisation of Data", sws: 1, ects: 3 }
+            ]
+        },
+        semester6: {
+            title: "SEMESTER 6",
+            courses: [
+                { course: "International Financial Management", sws: 2, ects: 3 },
+                { course: "Elective Case Seminar A: Export of Commodities and Goods", sws: 3, ects: 5 },
+                { course: "Elective Case Seminar B: Export of Services", sws: 3, ects: 5 },
+                { course: "Elective Case Seminar C: FDI and Engineering Projects abroad", sws: 3, ects: 5 },
+                { course: "International Economics", sws: 2, ects: 3 },
+                { course: "International Strategies for Sustainable Development", sws: 2, ects: 3 },
+                { course: "Community Management and Social Learning", sws: 1, ects: 3 },
+                { course: "Bachelor Seminar II and Bachelor Paper", sws: 1, ects: 8 },
+                { course: "Bachelor Exam", sws: 0, ects: 2 },
+                { course: "French V (Level B1)", sws: 2, ects: 3 },
+                { course: "French V (Level C1)", sws: 2, ects: 3 },
+                { course: "Spanish V (Level B1)", sws: 2, ects: 3 },
+                { course: "Spanish V (Level C1)", sws: 2, ects: 3 },
+                { course: "Italian V (Level B1)", sws: 2, ects: 3 },
+                { course: "German V (Level B1)", sws: 2, ects: 3 },
+                { course: "German V (Level C1)", sws: 2, ects: 3 },
+                { course: "Chinese V (Level A2/B1)", sws: 2, ects: 3 }
+            ]
+        }
+    };
 
     const sections = [
         {
@@ -117,6 +254,7 @@ const InternationalBusinessManagement = () => {
         }
     ];
 
+
     return (
         <>
             <motion.div
@@ -127,20 +265,98 @@ const InternationalBusinessManagement = () => {
             >
                 <div
                     className="absolute h-full w-full z-[-999] bg-[radial-gradient(#000_1px,transparent_1px)] [background-size:16px_16px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_70%,transparent_100%)]"></div>
-                <div className="max-w-7xl bg-white p-6 rounded-lg shadow-xl">
-                    <div className="flex lg:flex-nowrap relative items-center flex-wrap">
-
+                <div className="max-w-full w-full bg-white p-6 rounded-lg shadow-xl">
+                    <div className="lg:flex-nowrap relative items-center flex-wrap">
+                        <img className="h-[50vh] w-full object-cover z-[10]"
+                             src="/header-studium-export-oriented-management.jpg"/>
                         <div
-                            className="absolute z-[0] bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_110%)]"></div>
-
-                        <PageIntro eyebrow="International Join Faculty between TSUE & IMC UAS Krems "
+                            className="z-front text-center"
+                            id="section-nav"
+                            tabIndex="0"
+                        >
+                            <div className="container-fluid m-0 p-0">
+                                <div className="row m-0 p-0">
+                                    <div className="col-sm-12 m-0 p-0">
+        <span
+            className="icon-wrapper menu-open"
+            style={{}}
+            tabIndex="0"
+        >
+          <i className="icon fas fa-list"/>
+        </span>
+                                        <span
+                                            className="icon-wrapper menu-close"
+                                            style={{
+                                                display: 'none'
+                                            }}
+                                            tabIndex="0"
+                                        >
+          <i className="icon fas fa-times"/>
+        </span>
+                                        <ul
+                                            className="nav lg:flex  text-sm container mx-auto  items-center justify-around hidden smooth-scroll"
+                                            id="anchor-menu"
+                                        >
+                                            <li className="nav-item">
+                                                <Link   className="nav-link" to="/ibm#overview">Overview</Link>
+                                            </li>
+                                            <li className="nav-item">
+                                                <Link   className="nav-link" to="/ibm#curriculum">Curriculum</Link>
+                                            </li>
+                                            <li className="nav-item">
+                                                <Link   className="nav-link" to="/ibm#key-features">Key features</Link>
+                                            </li>
+                                            <li className="nav-item">
+                                                <Link   className="nav-link" to="/ibm#career-options">Career options</Link>
+                                            </li>
+                                            <li className="nav-item">
+                                                <Link   className="nav-link" to="/ibm#videos">Videos</Link>
+                                            </li>
+                                            <li className="nav-item">
+                                                <Link   className="nav-link" to="/ibm#information-events">Information events</Link>
+                                            </li>
+                                            <li className="nav-item">
+                                                <Link   className="nav-link" to="/ibm#application-and-admission"> Application and admission</Link>
+                                            </li>
+                                            <li className="nav-item">
+                                                <Link   className="nav-link" to="/ibm#advisory-service"> Advisory Service</Link>
+                                            </li>
+                                        </ul>
+                                        <a
+                                            className="gtm-subnav-btn-apply text-white btn border-radius-0 btn-warning waves-effect waves-light btn-lg"
+                                            href="https://onboarding.fh-krems.ac.at/en"
+                                            id="apply-online"
+                                            target="_blank"
+                                            title="Apply online now!"
+                                        >
+                                            Apply now
+                                            <i
+                                                aria-hidden="true"
+                                                className="fa fa-angle-right ml-1"
+                                            />
+                                        </a>
+                                    </div>
+                                </div>
+                                <div className="row m-0 p-0">
+                                    <div className="reading-progress-container">
+                                        <div
+                                            className="reading-progress-bar"
+                                            id="reading-progress-bar"
+                                            style={{
+                                                width: '2.52389%'
+                                            }}
+                                        />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <PageIntro  eyebrow="International Join Faculty between TSUE & IMC UAS Krems "
                                    title="International Business Management bachelor degree programme">
                         </PageIntro>
-                        <img className="h-80 w-96 object-cover z-[10]"
-                             src="/header-studium-export-oriented-management.jpg"/>
+
                     </div>
 
-                    <section className="mb-8">
+                    <section id="overview" className="mb-8 text-center max-w-5xl mx-auto">
                         <h2 className="text-xl lg:text-2xl font-semibold text-gray-800 mb-4">(formerly Export-oriented
                             Management)</h2>
                         <p className="text-gray-700 leading-relaxed">
@@ -158,13 +374,13 @@ const InternationalBusinessManagement = () => {
                     </section>
 
                     <section className="mb-8">
-                        <div className="grid grid-cols-5 gap-6">
+                        <div className="grid grid-cols-1 lg:grid-cols-5 gap-6 max-w-5xl mx-auto">
                             <div
                                 className="flex flex-col justify-center items-center pb-8 text-center text-black bg-white shadow-md h-full max-h-[220px] ">
                                 <div
                                     className="flex justify-center  px-9 py-5 w-full text-lg leading-5  bg-main text-slate-500">
-                                    <div className="justify-center items-center flex w-10 h-10 bg-white rounded-full">
-                                        <IoIosTimer size="25" />
+                                    <div className="justify-center items-center flex w-10 h-10 bg-white  rounded-md">
+                                        <ClockIcon className="w-6 h-6 link-text"/>
                                     </div>
                                 </div>
                                 <div className="mt-6 text-md leading-5">Full-time</div>
@@ -177,21 +393,21 @@ const InternationalBusinessManagement = () => {
                                 className="flex flex-col justify-center items-center pb-8 text-center text-black bg-white shadow-md h-full max-h-[220px] ">
                                 <div
                                     className="flex justify-center  px-9 py-5 w-full text-lg leading-5  bg-main text-slate-500">
-                                    <div className="justify-center items-center flex w-10 h-10 bg-white rounded-full">
-                                        <GrLanguage size="25" />
+                                    <div className="justify-center items-center flex w-10 h-10 bg-white r rounded-md">
+                                        <GlobeAltIcon className="w-6 h-6 link-text"/>
                                     </div>
                                 </div>
                                 <div className="mt-6 text-md leading-5">English</div>
                                 <div className="mt-6 text-base leading-5">
-                                   Language
+                                    Language
                                 </div>
                             </div>
                             <div
                                 className="flex flex-col justify-center items-center pb-8 text-center text-black bg-white shadow-md h-full max-h-[220px] ">
                                 <div
                                     className="flex justify-center  px-9 py-5 w-full text-lg leading-5  bg-main text-slate-500">
-                                    <div className="justify-center items-center flex w-10 h-10 bg-white rounded-full">
-                                        <TbSchoolBell size="25" />
+                                    <div className="justify-center items-center flex w-10 h-10 bg-white rounded-md">
+                                        <AcademicCapIcon className="w-6 h-6 link-text"/>
                                     </div>
                                 </div>
                                 <div className="mt-6 text-md leading-5">2 semesters</div>
@@ -203,8 +419,8 @@ const InternationalBusinessManagement = () => {
                                 className="flex flex-col justify-center items-center pb-8 text-center text-black bg-white shadow-md h-full max-h-[220px] ">
                                 <div
                                     className="flex justify-center  px-9 py-5 w-full text-lg leading-5  bg-main text-slate-500">
-                                    <div className="justify-center items-center flex w-10 h-10 bg-white rounded-full">
-                                        <AiOutlineSwap size="25" />
+                                    <div className="justify-center items-center flex w-10 h-10 bg-white rounded-md">
+                                        <CalendarDaysIcon className="w-6 h-6 link-text"/>
                                     </div>
                                 </div>
                                 <div className="mt-6 text-md leading-5">21 weeks</div>
@@ -216,8 +432,8 @@ const InternationalBusinessManagement = () => {
                                 className="flex flex-col justify-center items-center pb-8 text-center text-black bg-white shadow-md h-full max-h-[220px] ">
                                 <div
                                     className="flex justify-center  px-9 py-5 w-full text-lg leading-5  bg-main text-slate-500">
-                                    <div className="justify-center items-center flex w-10 h-10 bg-white rounded-full">
-                                        <FaRegMoneyBillAlt size="25" />
+                                    <div className="justify-center items-center flex w-10 h-10 bg-white  rounded-md">
+                                        <BanknotesIcon className="w-6 h-6 link-text"/>
                                     </div>
                                 </div>
                                 <div className="mt-6 text-md leading-5">2300$</div>
@@ -228,8 +444,8 @@ const InternationalBusinessManagement = () => {
                         </div>
                     </section>
 
-                    <section className="mb-8">
-                        <h2 className="text-xl lg:text-2xl font-semibold text-gray-800 mb-4">The degree programme</h2>
+                    <section className="mb-8 max-w-5xl mx-auto">
+                        <h2 className=" text-gray-800 mb-4 text-center h2-responsive">The degree programme</h2>
                         <div className="text-col-2">
                             {/* <h4>The degree programme</h4> */}
                             <p>
@@ -342,14 +558,12 @@ const InternationalBusinessManagement = () => {
             >
                 <div
                     className="absolute h-full w-full z-[-999] bg-[radial-gradient(#000_1px,transparent_1px)] [background-size:16px_16px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_70%,transparent_100%)]"></div>
-                <div className="max-w-7xl bg-white p-6 rounded-lg shadow-xl">
+                <div className="max-w-5xl bg-white p-6 rounded-lg shadow-xl">
 
                     <div className="flex lg:flex-nowrap relative items-center flex-wrap">
 
-                        <div
-                            className="absolute z-[0] bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_110%)]"></div>
-
-                        <PageIntro title="Business administration">
+                        <PageIntro>
+                            <h2 className=" text-gray-800 mb-4 text-center h2-responsive">Business administration</h2>
                         </PageIntro>
                     </div>
 
@@ -369,7 +583,7 @@ const InternationalBusinessManagement = () => {
                                     marketing, human resources and logistics.
                                 </p>
                                 <div className="no-break">
-                                    <h4>Core elements of the programme</h4>
+                                    <Typography variant="h4">Core elements of the programme</Typography>
                                     <p>
                                         In the International Business Management bachelor degree programme, we
                                         provide you with a broad range of business administration skills and
@@ -456,8 +670,133 @@ const InternationalBusinessManagement = () => {
                 </div>
             </section>
 
-
             <motion.div
+                initial={{opacity: 0}}
+                animate={{opacity: 1}}
+                exit={{opacity: 0}}
+                className="min-h-[40vh] max-w-7xl mx-auto relative  py-12 px-4 sm:px-6 lg:px-8 "
+            >
+                <PageIntro>
+                    <h2 className=" text-gray-800 mb-4 text-center h2-responsive">A formula for success: theoretical
+                        knowledge + practical experience</h2>
+                    <section className="mb-8 max-w-5xl mx-auto text-center">
+                        <p className="text-gray-700 w-full leading-relaxed">
+                            The programme is built on three pillars.
+                        </p>
+                    </section>
+                </PageIntro>
+                <li className="w-full list-none mb-5 p-4 bg-white text-gray-800 text-sm leading-7 font-roboto">
+                    <div className="lg:flex block flex-wrap lg:flex-wrap shadow-md">
+                        <div
+                            className="lg:w-1/6 w-full flex justify-center items-center bg-main transition-all duration-500 ease-in-out p-5">
+                            <div
+                                className="flex justify-center items-center w-16 h-16 bg-white text-4xl link-text rounded-full">
+                                <span className="relative ">1</span>
+                            </div>
+                        </div>
+                        <div className="w-5/6 p-5">
+                            <h4 className="font-roboto_slab text-2xl font-normal text-black">
+                                <span className="sr-only">1. </span>
+                                The basics
+                            </h4>
+                            <p className="text-base font-light mt-0 mb-4">
+                                Semesters 1-2
+                            </p>
+                            <p className="mt-0 mb-4">
+                                At the beginning of your studies, you will gain an overview of
+                                business administration and economics and how to act sustainably in
+                                business. You will deal with subjects such as marketing, human
+                                resources management, accounting, logistics and law. Always with the
+                                opportunities and challenges in mind that come with
+                                internationalisation and international trade. Thus, we will start
+                                with a virtual journey around the world, with a wide variety of
+                                products and business sectors already in the first semester.
+                            </p>
+                            <p className="mt-0 mb-4">
+                                Another important focus is developing an awareness of cultural
+                                differences. During the degree, you will acquire techniques for
+                                working as part of diverse teams. You can also select an additional
+                                foreign language, with a choice of Chinese, German, French, Italian
+                                or Spanish.
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                <li className="w-full list-none mb-5 p-4 bg-white text-gray-800 text-sm leading-7 font-roboto">
+                    <div className="lg:flex block flex-wrap lg:flex-wrap shadow-md">
+                        <div
+                            className="lg:w-1/6 w-full flex justify-center items-center bg-main transition-all duration-500 ease-in-out p-5">
+                            <div
+                                className="flex justify-center items-center w-16 h-16 bg-white text-4xl link-text rounded-full">
+                                <span className="relative ">2</span>
+                            </div>
+                        </div>
+                        <div className="w-5/6 p-5">
+                            <h4 className="font-roboto_slab text-2xl font-normal text-black">
+                                <span className="sr-only">1. </span>
+                                Gathering experience abroad
+                            </h4>
+                            <p className="text-base font-light mt-0 mb-4">
+                                Semesters 3-4
+                            </p>
+                            <p className="mt-0 mb-4">
+                                Advanced language skills and a good awareness of how practices can vary from culture to
+                                culture are important ingredients for a successful international career.
+                            </p>
+                            <p className="mt-0 mb-4">
+                                Over the course of the programme, you will learn or improve your skills in your chosen
+                                foreign language – on top of your regular lectures, which are taught in English. You
+                                will spend semester 4 abroad, when you gain practical insights into the working methods
+                                of successful companies and how they function. You will also have the option of doing a
+                                semester abroad at one of our 170+ partner universities in semester 3. Our international
+                                spirit runs right through the programme!
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                <li className="w-full list-none mb-5 p-4 bg-white text-gray-800 text-sm leading-7 font-roboto">
+                    <div className="lg:flex block flex-wrap lg:flex-wrap shadow-md">
+                        <div
+                            className="lg:w-1/6 w-full flex justify-center items-center bg-main transition-all duration-500 ease-in-out p-5">
+                            <div
+                                className="flex justify-center items-center w-16 h-16 bg-white text-4xl link-text rounded-full">
+                                <span className="relative ">3</span>
+                            </div>
+                        </div>
+                        <div className="w-5/6 p-5">
+                            <h4 className="font-roboto_slab text-2xl font-normal text-black">
+                                <span className="sr-only">1. </span>
+                                Advanced courses
+                            </h4>
+                            <p className="text-base font-light mt-0 mb-4">
+                                Semesters 5-6
+                            </p>
+                            <p className="mt-0 mb-4">
+                                The electives in semesters 5 and 6 are a major reason why graduates of this programme
+                                can look forward to such excellent career prospects. From entrepreneurship and
+                                digitalisation to trade, project management and foreign markets – you have the
+                                opportunity to tailor your degree to your personal interests through your choice of
+                                elective.
+                            </p>
+                            <p className="mt-0 mb-4">
+                                In the electives, you will look at the instruments and tools you have studied during the
+                                programme from an interdisciplinary perspective and apply them in projects and realistic
+                                case studies.
+                            </p>
+                            <p className="mt-0 mb-4">
+                                You will also choose one of three specialisations, which each deal with a different
+                                export scenario – export of raw materials and goods, export of services, or
+                                megaprojects.
+                                In courses which build on what you’ve already learned, you will study advanced aspects
+                                of business administration and law and improve your computer and software skills. You
+                                will also develop your soft skills, working on areas such as negotiation techniques.
+                            </p>
+                        </div>
+                    </div>
+                </li>
+            </motion.div>
+            <motion.div
+                id="curriculum"
                 initial={{opacity: 0}}
                 animate={{opacity: 1}}
                 exit={{opacity: 0}}
@@ -469,11 +808,9 @@ const InternationalBusinessManagement = () => {
 
                     <div className="flex lg:flex-nowrap relative items-center flex-wrap">
 
-                        <div
-                            className="absolute z-[0] bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_110%)]"></div>
-
-                        <PageIntro title="Curriculum">
-                            <section className="mb-8">
+                        <PageIntro>
+                            <h2 className=" text-gray-800 mb-4 text-center h2-responsive">Curriculum</h2>
+                            <section className="mb-8 max-w-5xl text-center">
                                 <p className="text-gray-700 leading-relaxed">
                                     What can you expect from your studies? The curriculum provides an overview.
                                     Click on the individual courses for further information.
@@ -483,267 +820,44 @@ const InternationalBusinessManagement = () => {
                     </div>
 
                     <section className="mb-8">
-                        <Accordion open={open === 1} animate={CUSTOM_ANIMATION} icon={<Icon id={1} open={open}/>}>
-                            <AccordionHeader className="bg-main text-white hover:text-white px-3"
-                                             onClick={() => handleOpen(1)}>
-                                <Typography variant="h5"> Semester 1</Typography>
-                            </AccordionHeader>
-                            <AccordionBody className="px-3">
-                                <ul className="">
-                                    <li className="mb-2 text-lg">Business English 1 (Intensive English 1)</li>
-                                    <li className="mb-2 text-lg">Mathematics</li>
-                                    <li className="mb-2 text-lg">Introduction To Economics</li>
-                                    <li className="mb-2 text-lg">Introduction to Management</li>
-                                    <li className="mb-2 text-lg">ICT</li>
-                                    <li className="mb-2 text-lg">Social Studies 1</li>
-                                </ul>
+                        {Object.entries(courseData).map(([semesterKey, semester], index) => (
+                            <Accordion
+                                key={semesterKey}
+                                open={openStep === index}
+                                animate={CUSTOM_ANIMATION}
+                                icon={<Icon open={openStep === index}/>}
+                            >
+                                <AccordionHeader
+                                    className="bg-main text-white hover:text-white px-3"
+                                    onClick={() => handleOpenStep(index)}
+                                >
+                                    <Typography variant="h6">{semester.title}</Typography>
+                                </AccordionHeader>
+                                <AccordionBody className="px-3">
+                                    <div className="flex justify-between p-2 border-b border-gray-300">
+                                        <span className="font-medium">Course</span>
+                                        <div className="flex items-center gap-3">
+                                            <span className="text-gray-600">SWS</span>
+                                            <span className="text-gray-600">ECTS</span>
+                                        </div>
+                                    </div>
 
-                            </AccordionBody>
-                        </Accordion>
-                        <Accordion open={open === 2} animate={CUSTOM_ANIMATION} icon={<Icon id={1} open={open}/>}>
-                            <AccordionHeader className="bg-main text-white hover:text-white px-3"
-                                             onClick={() => handleOpen(2)}>
-                                <Typography variant="h5"> Semester 2</Typography>
-                            </AccordionHeader>
-                            <AccordionBody className="px-3">
-                                <ul className="">
-                                    <li className="mb-2 text-lg">Business English 2 (Intensive English 2)</li>
-                                    <li className="mb-2 text-lg">Statistics</li>
-                                    <li className="mb-2 text-lg">Introduction To Finance and Accounting</li>
-                                    <li className="mb-2 text-lg">German 1</li>
-                                    <li className="mb-2 text-lg">Social Studies 2</li>
-                                    <li className="mb-2 text-lg">Academic Writing</li>
-                                </ul>
-                            </AccordionBody>
-                        </Accordion>
+                                    {semester.courses.map((course, courseIndex) => (
+                                        <div key={courseIndex}
+                                             className="flex justify-between p-2 border-b border-gray-300">
+                                            <span className="font-medium">{course.course}</span>
+                                            <span
+                                                className="text-gray-600">{`SWS: ${course.sws}, ECTS: ${course.ects}`}</span>
+                                        </div>
+                                    ))}
+                                </AccordionBody>
+                            </Accordion>
+                        ))}
                     </section>
 
-                    <section id="features"
-                             className="container mx-auto px-4 space-y-6 bg-slate-50 py-8 md:py-12 lg:py-20">
-
-                        <div className="mx-auto flex max-w-[58rem] flex-col items-center space-y-4 text-center">
-
-                            <h2 className="font-bold text-3xl leading-[1.1] sm:text-3xl md:text-3xl">Key features</h2>
-
-                            <p className="max-w-[85%] leading-normal sm:text-lg sm:leading-7">
-                                What makes our International Business Management programme so special? Here’s an
-                                overview.
-                            </p>
-
-                        </div>
-
-                        <div
-                            className="mx-auto grid justify-center gap-4 sm:grid-cols-2 md:max-w-[64rem] md:grid-cols-3">
-
-                            <div
-                                className="relative overflow-hidden rounded-lg border bg-white select-none hover:shadow hover:shadow-gray-200 p-2">
-                                <div className="flex h-[280px] flex-col justify-between rounded-md p-6">
-                                    <img className="w-36" src="/logo-dark.png"/>
-                                    <div className="space-y-2">
-                                        <h3 className="font-bold">Ideal preparation for the international stage</h3>
-                                        <p className="text-sm text-muted-foreground">You will receive a fundamental
-                                            education in business administration and acquire a detailed understanding of
-                                            economics and law.</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div
-                                className="relative overflow-hidden rounded-lg border bg-white select-none hover:shadow hover:shadow-gray-200 p-2">
-                                <div className="flex h-[280px] flex-col justify-between rounded-md p-6">
-                                    <img className="w-36" src="/logo-dark.png"/>
-                                    <div className="space-y-2">
-                                        <h3 className="font-bold">Explore the world</h3>
-                                        <p className="text-sm">On this programme you have the chance to spend one or two
-                                            semesters at one of our 170+ partner universities.</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div
-                                className="relative overflow-hidden rounded-lg border bg-white select-none hover:shadow hover:shadow-gray-200 p-2">
-                                <div className="flex h-[280px] flex-col justify-between rounded-md p-6">
-                                    <img className="w-36" src="/logo-dark.png"/>
-                                    <div className="space-y-2">
-                                        <h3 className="font-bold">Practical training</h3>
-                                        <p className="text-sm text-muted-foreground">The Practical Training Semester
-                                            (PTS) is a core element of the curriculum, and gives you the chance to apply
-                                            the knowledge you’ve acquired in a business environment.</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-
-                    </section>
-
-                    <section className="mb-8">
-                        <Accordion open={openVideo === 1} animate={CUSTOM_ANIMATION}
-                                   icon={<Icon id={1} open={openVideo}/>}>
-                            <AccordionHeader className="bg-main text-white hover:text-white px-3"
-                                             onClick={() => handleOpenVideo(1)}>
-                                <Typography variant="h6"> FAQ WITH OUR STUDENTS: INTERNATIONAL BUSINESS
-                                    MANAGEMENT</Typography>
-                            </AccordionHeader>
-                            <AccordionBody className="px-3">
-                                <div className="relative overflow-hidden w-full pb-[56.25%] h-0">
-                                    <iframe className="absolute top-0 left-0 w-full h-full"
-                                            src="https://www.youtube.com/embed/cdKroiL96Ys?si=Ov6iklr9ql_zL9Wf"
-                                            title="YouTube video player" frameBorder="0"
-                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                            referrerPolicy="strict-origin-when-cross-origin" allowFullScreen>
-                                    </iframe>
-                                </div>
-                            </AccordionBody>
-                        </Accordion>
-
-                        <Accordion open={openVideo === 2} animate={CUSTOM_ANIMATION}
-                                   icon={<Icon id={1} open={openVideo}/>}>
-                            <AccordionHeader className="bg-main text-white hover:text-white px-3"
-                                             onClick={() => handleOpenVideo(2)}>
-                                <Typography variant="h6"> TIPS FOR YOUR APPLICATION INTERVIEW: INTERNATIONAL BUSINESS
-                                    MANAGEMENT</Typography>
-                            </AccordionHeader>
-                            <AccordionBody className="px-3">
-                                <div className="relative overflow-hidden w-full pb-[56.25%] h-0">
-                                    <iframe className="absolute top-0 left-0 w-full h-full"
-                                            src="https://www.youtube.com/embed/R_GO5vpKd4w?si=N-j2qlnj1eVyHxoL"
-                                            title="YouTube video player" frameBorder="0"
-                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                            referrerPolicy="strict-origin-when-cross-origin" allowFullScreen>
-                                    </iframe>
-                                </div>
-                            </AccordionBody>
-                        </Accordion>
-                    </section>
-
-
-                    <div className="mx-auto flex max-w-[58rem] flex-col items-center space-y-4 text-center">
-
-                        <h2 className="font-bold text-3xl leading-[1.1] sm:text-3xl md:text-3xl">Career paths</h2>
-
-                        <p className="max-w-[85%] leading-normal sm:text-lg sm:leading-7">
-                            Our International Business Management bachelor degree programme opens the door to a whole
-                            world of opportunities. Whether you decide to go abroad or work in Austria, you will be
-                            qualified to assume entry-level positions in a wide-range of industries and departments.
-                        </p>
-
-                        <div className="flex flex-row gap-10 mt-10 flex-wrap lg:flex-nowrap">
-                            <div className="col-lg-6">
-                                <div className="mb-6 mt-0 text-left">
-                                    <p>
-                                        You have the choice of starting a career or enrolling for a full-time or
-                                        part-time master degree.
-                                    </p>
-                                    <p>
-                                        A wide range of options will be open to you – at IMC Krems, for
-                                        instance, you can register for the&nbsp;
-                                        <strong>master degree programmes</strong>:
-                                    </p>
-
-                                    <ul
-                                        className="my-5"
-                                        style={{
-                                            listStyleType: 'none',
-                                            padding: '0',
-                                            fontFamily: 'Arial, sans-serif',
-                                            backgroundColor: '#fafafa',
-                                            border: '1px solid #ccc',
-                                            borderRadius: '5px',
-                                            overflow: 'hidden'
-                                        }}>
-                                        <li style={{borderBottom: '1px solid #ddd', padding: '10px'}}>
-                                            <a
-                                                href="https://www.fh-krems.ac.at/en/study/master/part-time/international-business-and-economic-diplomacy/"
-                                                title="Master degree programme International Business and Economic Diplomacy"
-                                                style={{textDecoration: 'none', color: '#555', fontWeight: 'bold'}}
-                                            >
-                                                International Business and Economic Diplomacy
-                                            </a>
-                                        </li>
-                                        <li style={{borderBottom: '1px solid #ddd', padding: '10px'}}>
-                                            <a
-                                                href="https://www.fh-krems.ac.at/en/study/master/part-time/digital-business-innovation-and-transformation/"
-                                                title="Master degree programme Digital Business Innovation and Transformation"
-                                                style={{textDecoration: 'none', color: '#555', fontWeight: 'bold'}}
-                                            >
-                                                Digital Business Innovation and Transformation
-                                            </a>
-                                        </li>
-                                        <li style={{borderBottom: '1px solid #ddd', padding: '10px'}}>
-                                            <a
-                                                href="https://www.fh-krems.ac.at/en/study/master/full-time/marketing/"
-                                                style={{textDecoration: 'none', color: '#555', fontWeight: 'bold'}}
-                                            >
-                                                Marketing
-                                            </a> <br/>
-                                            with Major Tracks in Tourism & Hospitality Marketing, Fashion & Lifestyle
-                                            Marketing and Retail & Shopper Marketing
-                                        </li>
-                                        <li style={{borderBottom: '1px solid #ddd', padding: '10px'}}>
-                                            <a
-                                                href="https://www.fh-krems.ac.at/en/study/master/part-time/management/"
-                                                title="To the master degree programme Management"
-                                                target="_blank"
-                                                style={{textDecoration: 'none', color: '#555', fontWeight: 'bold'}}
-                                            >
-                                                Management
-                                            </a>
-                                        </li>
-                                        <li style={{borderBottom: '1px solid #ddd', padding: '10px'}}>
-                                            <a
-                                                href="https://www.fh-krems.ac.at/en/study/master/part-time/environmental-and-sustainability-management/"
-                                                title="Master degree programme Umwelt- und Nachhaltigkeitsmanagement"
-                                                style={{textDecoration: 'none', color: '#555', fontWeight: 'bold'}}
-                                            >
-                                                Umwelt- und Nachhaltigkeitsmanagement
-                                            </a>
-                                        </li>
-                                        <li style={{padding: '10px'}}>
-                                            <a
-                                                href="https://www.fh-krems.ac.at/en/study/master/part-time/management-of-health-institutions/"
-                                                title="Master degree programme Management von Gesundheitsunternehmen"
-                                                target="_blank"
-                                                style={{textDecoration: 'none', color: '#555', fontWeight: 'bold'}}
-                                            >
-                                                Management von Gesundheitsunternehmen
-                                            </a>
-                                        </li>
-                                    </ul>
-
-                                    <p>
-                                        Alternatively, you can take a master degree in business at another
-                                        Austrian or foreign university.
-                                    </p>
-                                </div>
-                            </div>
-                            <div className="col-lg-6 auflistung-liste text-right">
-                                <ul className="list-group">
-                                    <li className="list-group-item  card-header border-radius-0 bg-main text-white border-0 text-uppercase">
-                                        <h4>Potential entry-level&nbsp;positions</h4>
-                                    </li>
-                                    <li className="list-group-item">Marketing and sales</li>
-                                    <li className="list-group-item">Foreign trade</li>
-                                    <li className="list-group-item">Human resource management (HRM)</li>
-                                    <li className="list-group-item">Product and project management</li>
-                                    <li className="list-group-item">
-                                        Purchasing and supply chain management
-                                    </li>
-                                    <li className="list-group-item">Controlling</li>
-                                    <li className="list-group-item">Consulting</li>
-                                    <li className="list-group-item">Finance and risk management</li>
-                                    <li className="list-group-item">Public administration</li>
-                                    <li className="list-group-item">
-                                        International organisations/diplomatic service
-                                    </li>
-                                    <li className="list-group-item">Company foundation and start-ups</li>
-                                </ul>
-                            </div>
-                        </div>
-
-                    </div>
                 </div>
             </motion.div>
+
 
             <motion.div
                 initial={{opacity: 0}}
@@ -753,39 +867,40 @@ const InternationalBusinessManagement = () => {
             >
                 <div
                     className="absolute h-full w-full z-[-999] bg-[radial-gradient(#000_1px,transparent_1px)] [background-size:16px_16px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_70%,transparent_100%)]"></div>
-                <div className="max-w-7xl bg-white p-6 rounded-lg shadow-xl">
+                <div className="w-full bg-white p-6 rounded-lg shadow-xl">
 
                     <div className="flex lg:flex-nowrap relative items-center flex-wrap">
-
-                        <div
-                            className="absolute z-[0] bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_110%)]"></div>
-
-                        <PageIntro title="Application and admissions – the next steps">
-                            You've found a course that's a perfect fit? Great – you’ve already taken the most important step! We’ve put together an overview to guide you through the next steps.
+                        <PageIntro>
+                            <h2 className=" text-gray-800 mb-4 text-center h2-responsive">Application and admissions –
+                                the next steps</h2>
+                            <section className="mb-8 max-w-5xl mx-auto text-center">
+                                <p className="text-gray-700 leading-relaxed">
+                                    You've found a course that's a perfect fit? Great – you’ve already taken the most
+                                    important
+                                    step! We’ve put together an overview to guide you through the next steps.
+                                </p>
+                            </section>
                         </PageIntro>
                     </div>
 
-                    <section className="my-8">
-                        <section className="my-8">
-                            {sections.map((section) => (
-                                <Accordion
-                                    key={section.id}
-                                    open={expandedSectionId === section.id} // Используется expandedSectionId для открытия аккордеона
-                                    animate={CUSTOM_ANIMATION} // Настройте анимацию, если требуется
-                                    icon={<Icon id={section.id}
-                                                open={expandedSectionId}/>} // Проверьте, как вы используете иконку
-                                >
-                                    <AccordionHeader className="bg-main text-white hover:text-white px-3"
-                                                     onClick={() => toggleSection(section.id)}>
-                                        <Typography variant="h6">{section.title}</Typography>
-                                    </AccordionHeader>
-                                    <AccordionBody className="px-3 text-md">
-                                        {section.content}
-                                    </AccordionBody>
-                                </Accordion>
-                            ))}
-                        </section>
-
+                    <section className="my-8 max-w-5xl mx-auto">
+                        {sections.map((section) => (
+                            <Accordion
+                                key={section.id}
+                                open={expandedSectionId === section.id} // Используется expandedSectionId для открытия аккордеона
+                                animate={CUSTOM_ANIMATION} // Настройте анимацию, если требуется
+                                icon={<Icon id={section.id}
+                                            open={expandedSectionId}/>} // Проверьте, как вы используете иконку
+                            >
+                                <AccordionHeader className="bg-main text-white hover:text-white px-3"
+                                                 onClick={() => toggleSection(section.id)}>
+                                    <Typography variant="h6">{section.title}</Typography>
+                                </AccordionHeader>
+                                <AccordionBody className="px-3 text-md">
+                                    {section.content}
+                                </AccordionBody>
+                            </Accordion>
+                        ))}
                     </section>
                 </div>
             </motion.div>

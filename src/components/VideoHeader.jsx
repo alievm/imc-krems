@@ -1,7 +1,9 @@
 import React from 'react';
 import FadeIn, {FadeInStagger} from "./FadeIn.jsx";
+import {useTranslation} from "react-i18next";
 
 const VideoHeader = () => {
+    const {t} = useTranslation();
     return (
         <div className='main h-screen w-full relative'>
             <div className="overlay"></div>
@@ -10,12 +12,11 @@ const VideoHeader = () => {
                 <img className="h-28" src="/logo-light.png" />
                 <FadeInStagger>
                     <FadeIn>
-                        <h1 className="text-6xl">Empowering Global Minds</h1>
+                        <h1 className="text-6xl">{t('Empowering Global Minds')}</h1>
                     </FadeIn>
                     <FadeIn>
                         <p className="text-lg">
-                            Join IMC Krems Tashkent for an unparalleled international education experience in
-                            business and tourism management
+                            {t('Join IMC Krems Tashkent for an unparalleled international education experience in business and tourism management')}
                         </p>
                     </FadeIn>
                 </FadeInStagger>

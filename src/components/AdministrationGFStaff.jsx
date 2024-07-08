@@ -1,5 +1,6 @@
 import React from 'react';
 import {Link} from "react-router-dom";
+import {useTranslation} from "react-i18next";
 const people = [
     {
         name: 'Prof. Ahmed Mohamed Aziz Ismail',
@@ -25,6 +26,7 @@ const people = [
 
 
 const AdministrationGFStaff = () => {
+    const {t} = useTranslation();
     return (
         <div className="bg-white py-24 sm:py-32">
             <div className="mx-auto grid max-w-7xl gap-x-8 gap-y-20 px-6 lg:px-8 xl:grid-cols-3">

@@ -3,7 +3,6 @@ import {
     Navbar,
     Collapse,
     Typography,
-    Button,
     IconButton,
     List,
     ListItem,
@@ -17,6 +16,7 @@ import {
     Bars3Icon,
     XMarkIcon,
 } from "@heroicons/react/24/outline";
+import {Button} from "antd";
 import {
     NavListMenu,
     NavListMenu2,
@@ -26,6 +26,7 @@ import {
     NavListMenu6,
 } from "./navbarUtils/NavListMenus.jsx";
 import {Link} from "react-router-dom";
+import LanguageSelector from "./languageSelector.jsx";
 
 
 
@@ -34,8 +35,6 @@ function NavList() {
     return (
         <List className="mt-4 mb-6 p-0 lg:mt-0 lg:mb-0 lg:flex-row lg:p-1">
             <Typography
-                as="a"
-                href="#"
                 variant="small"
                 color="blue-gray"
                 className="font-medium"
@@ -60,11 +59,11 @@ function NavList() {
                 color="blue-gray"
                 className="font-medium"
             >
-                <Link to="/contact">
-                    <ListItem className="flex items-center gap-2 py-2 pr-4">
-                        Contact Us
-                    </ListItem>
-                </Link>
+                {/*<Link to="/contact">*/}
+                {/*    <ListItem className="flex items-center gap-2 py-2 pr-4">*/}
+                {/*        Contact Us*/}
+                {/*    </ListItem>*/}
+                {/*</Link>*/}
 
             </Typography>
         </List>
@@ -82,20 +81,22 @@ export function NavbarWithMegaMenu() {
     }, []);
 
     return (
-        <Navbar className="mx-auto z-[9999] sticky top-0 max-w-screen-4xl rounded-none px-4 py-1">
-            <div className="flex items-center justify-around text-blue-gray-900">
-               <img src="/logo-dark.png" width="150" height="150" />
-                <div className="hidden lg:block">
-                    <NavList />
+        <Navbar className="mx-auto z-[9999] sticky top-0 max-w-screen-4xl rounded-none px-2 py-1">
+            <div className="flex items-center justify-between p-2 text-blue-gray-900">
+                <div className="flex items-center gap-2">
+                    {/*<img src="/logo-oz.svg" width="60" height="60"/>*/}
+                    {/*<h1><span className="line-1">Tashkent State</span> <br/>University of Economics</h1>*/}
+                    <img src="/logo-dark.png" width="150" height="150"/>
                 </div>
-                {/*<div className="hidden gap-2 lg:flex">*/}
-                {/*    <Button variant="text" size="sm" color="blue-gray">*/}
-                {/*        Log In*/}
-                {/*    </Button>*/}
-                {/*    <Button variant="gradient" size="sm">*/}
-                {/*        Sign In*/}
-                {/*    </Button>*/}
-                {/*</div>*/}
+                <div className="hidden lg:block">
+                    <NavList/>
+                </div>
+                <div className="hidden gap-2 lg:flex">
+                   <LanguageSelector/>
+                    <Button type="primary" size="sm">
+                        Apply Now
+                    </Button>
+                </div>
                 <IconButton
                     variant="text"
                     color="blue-gray"
@@ -111,14 +112,14 @@ export function NavbarWithMegaMenu() {
             </div>
             <Collapse open={openNav}>
                 <NavList />
-                <div className="flex w-full flex-nowrap items-center gap-2 lg:hidden">
-                    <Button variant="outlined" size="sm" color="blue-gray" fullWidth>
-                        Log In
-                    </Button>
-                    <Button variant="gradient" size="sm" fullWidth>
-                        Sign In
-                    </Button>
-                </div>
+                {/*<div className="flex w-full flex-nowrap items-center gap-2 lg:hidden">*/}
+                {/*    <Button variant="outlined" size="sm" color="blue-gray" fullWidth>*/}
+                {/*        Log In*/}
+                {/*    </Button>*/}
+                {/*    <Button variant="gradient" size="sm" fullWidth>*/}
+                {/*        Sign In*/}
+                {/*    </Button>*/}
+                {/*</div>*/}
             </Collapse>
         </Navbar>
     );

@@ -2,9 +2,11 @@ import React, { useEffect, useState } from 'react';
 import { getNews} from "../service/newsService.js";// Импортируем функцию getNews из нашего API
 import { formatDistanceToNow, parseISO } from 'date-fns';
 import { enUS } from 'date-fns/locale';
+import {useTranslation} from "react-i18next";
 
 // Предположим, что news.created_at имеет формат даты-времени (например, '2024-06-28T10:30:00')
 const BlogCards = () => {
+    const {t} = useTranslation();
     const [newsData, setNewsData] = useState([]); // Состояние для хранения данных новостей
 
     useEffect(() => {
@@ -29,7 +31,7 @@ const BlogCards = () => {
     return (
         <div className="flex my-16 max-w-7xl mx-auto flex-col  px-8 max-md:px-5">
             <h2 className="text-center text-2xl font-semibold leading-8 text-gray-900">
-                Our recent blogs
+                {t('Our recent blogs')}
             </h2>
             <div className="mt-8 max-md:max-w-full">
                 <div className="flex flex-wrap lg:flex-nowrap gap-5 max-md:flex-col max-md:gap-0">

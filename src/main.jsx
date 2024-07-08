@@ -2,6 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import './index.css'
+import './service/i18n.js'
 import {BrowserRouter} from "react-router-dom";
 import {ConfigProvider} from "antd";
 
@@ -11,7 +12,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
           <ConfigProvider
               theme={{
                   token: {
-                      colorPrimary: '#ce7c11'
+                      colorPrimary: '#798591'
                   },
               }}
           >

@@ -174,7 +174,7 @@ export function NavListMenu2() {
                                                     <Typography
                                                         variant="h6"
                                                         color="blue-gray"
-                                                        className="flex items-center text-sm font-bold"
+                                                        className="flex items-center text-sm font-bold leading-tight"
                                                     >
                                                     International joint faculty between TSUE and IMC Krems {/* Название пункта */}{" "}
                                                     <ChevronDownIcon
@@ -199,13 +199,13 @@ export function NavListMenu2() {
                                                     {menuItems.map(({ title, description, link }) => (
                                                         <Link to={link} key={title}>
                                                             <MenuItem>
-                                                                <Typography variant="h6" color="blue-gray" className="mb-1">
+                                                                <Typography variant="h6" color="blue-gray" className="mb-1  leading-tight">
                                                                     {title}
                                                                 </Typography>
                                                                 <Typography
                                                                     variant="small"
                                                                     color="gray"
-                                                                    className="font-normal"
+                                                                    className="font-normal  leading-tight"
                                                                 >
                                                                     {description}
                                                                 </Typography>
@@ -219,7 +219,7 @@ export function NavListMenu2() {
                             </MenuItem>
                         </a>
                         {/* Другие пункты меню */}
-                        <a href="#">
+                        <Link to="/foundation">
                             <MenuItem className="flex items-center gap-3 rounded-lg">
                                 <div className="flex items-center justify-center rounded-lg !bg-blue-gray-50 p-2 ">
                                     {" "}
@@ -244,7 +244,7 @@ export function NavListMenu2() {
                                     </Typography>
                                 </div>
                             </MenuItem>
-                        </a>
+                        </Link>
                     </ul>
                 </MenuList>
             </Menu>
@@ -282,7 +282,7 @@ export function NavListMenu2() {
                         </MenuItem>
                     </a>
                     {/* Другие пункты мобильного меню */}
-                    <a href="#">
+                    <Link to="/foundation">
                         <MenuItem className="flex items-center gap-3 rounded-lg">
                             {/* Иконка и название пункта */}
                             <div className="flex items-center justify-center rounded-lg !bg-blue-gray-50 p-2 ">
@@ -310,7 +310,7 @@ export function NavListMenu2() {
                                 </Typography>
                             </div>
                         </MenuItem>
-                    </a>
+                    </Link>
                 </Collapse>
             </div>
         </React.Fragment>

@@ -18,6 +18,7 @@ import {LuMoveRight} from "react-icons/lu";
 import {HiOutlineArrowLongRight} from "react-icons/hi2";
 import NewsCards from "../components/NewsCards.jsx";
 import BlogCards from "../components/BlogCards.jsx";
+import {useTranslation} from "react-i18next";
 const contentStyle = {
     height: '160px',
     color: '#fff',
@@ -28,6 +29,7 @@ const contentStyle = {
 
 
 const Homepage = () => {
+    const {t} = useTranslation();
     return (
         <>
             <div className="relative">
@@ -37,7 +39,7 @@ const Homepage = () => {
                 <div className="bg-white  py-12 sm:py-12">
                     <div className="mx-auto max-w-7xl px-6 lg:px-8">
                         <h2 className="text-center text-2xl font-semibold leading-8 text-gray-900">
-                            Student exchange partner universities
+                            {t('Student exchange partner universities')}
                         </h2>
                         <div
                             className="mx-auto mt-10 grid max-w-xl grid-cols-4 items-center gap-x-20 gap-y-10 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-5">
@@ -106,7 +108,7 @@ const Homepage = () => {
 
                 <div className="mx-auto max-w-7xl px-6 lg:px-8">
                     <h2 className="text-center text-2xl font-semibold leading-8 text-gray-900">
-                        Student life events
+                        {t('Student life events')}
                     </h2>
 
                     <NewsCards/>
@@ -117,7 +119,7 @@ const Homepage = () => {
 
                 <section className="my-20 bg-white">
                     <h2 className="text-center my-10 text-2xl font-semibold leading-8 text-gray-900">
-                        Pave Your Way to Achievement
+                        {t('Pave Your Way to Achievement')}
                     </h2>
                     <div className="container mx-auto">
                         <div className="grid grid-cols-1 lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 text-center">
@@ -125,12 +127,11 @@ const Homepage = () => {
                                 <div className="w-full px-4 mb-8 md:mb-0">
                                     <img src="/Group-1.png" alt="Build designs that scale" className="mx-auto h-24 mb-4"/>
                                     <FadeIn>
-                                        <h2 className="text-xl md:text-xl font-semibold mb-2">Seamless Application
-                                            Process</h2>
+                                        <h2 className="text-xl md:text-xl font-semibold mb-2">{t('Seamless Application Process')}</h2>
                                     </FadeIn>
                                     <FadeIn>
                                         <p className="text-gray-600 mb-4">
-                                            Seamless Application Process with Expert Guidance.
+                                            {t('Seamless Application Process with Expert Guidance.')}
                                         </p>
                                     </FadeIn>
                                     {/* <a href="#" className="text-orange-300 hover:text-orange-300">
@@ -142,12 +143,11 @@ const Homepage = () => {
                                 <div className="w-full px-4">
                                     <img src="/Layer1.png" alt="Customize your workflow" className="mx-auto h-24 mb-4"/>
                                     <FadeIn>
-                                        <h2 className="text-xl md:text-xl font-semibold mb-2">Welcome to IMC Krems
-                                            Tashkent</h2>
+                                        <h2 className="text-xl md:text-xl font-semibold mb-2">{t('Welcome to IMC Krems Tashkent')}</h2>
                                     </FadeIn>
                                     <FadeIn>
                                         <p className="text-gray-600 mb-4">
-                                            Welcome! Transformative Education Awaits Your Journey.
+                                            {t('Welcome! Transformative Education Awaits Your Journey.')}
                                         </p>
                                     </FadeIn>
                                     {/* <a href="#" className="text-orange-300 hover:text-orange-500">
@@ -179,15 +179,11 @@ const Homepage = () => {
                                         className="max-w-full  w-[161px]"
                                     />
                                     <div className="mt-11 text-lg leading-7 text-black max-md:mt-10 max-md:max-w-full">
-                                        Since the very early days of its establishment, the Joint degree program between
-                                        TSUE and IMC Krems has been building its way up to the bright future. We care
-                                        about each student who wants to reach their goals. We support and guide you in
-                                        your path to the great success that you are yet to achieve. Our dedicated team
-                                        always stays focused on discovering and shaping your unique skills.
+                                        {t('Since the very early days of its establishment, the Joint degree program between TSUE and IMC Krems has been building its way up to the bright future. We care about each student who wants to reach their goals. We support and guide you in your path to the great success that you are yet to achieve. Our dedicated team always stays focused on discovering and shaping your unique skills.')}
                                     </div>
                                     <div className="flex flex-col self-end mt-6 mr-14 max-md:mr-2.5">
                                         <div className="text-xl leading-7 text-[#798591]">
-                                            IMC University of Applied Sciences
+                                            {t('IMC University of Applied Sciences')}
                                         </div>
                                     </div>
                                 </div>
@@ -204,18 +200,14 @@ const Homepage = () => {
                                  data-wow-duration="3s">
                                 <FadeInStagger>
                                     <FadeIn>
-                                        <h2 className="text-gray-700 text-lg md:text-lg mb-2">WHO WE ARE?</h2>
+                                        <h2 className="text-gray-700 text-lg md:text-lg mb-2">{t('WHO WE ARE?')}</h2>
                                     </FadeIn>
                                     <FadeIn>
-                                        <h2 className="text-2xl md:text-4xl font-bold mb-4">Discover IMC Krems
-                                            Tashkent</h2>
+                                        <h2 className="text-2xl md:text-4xl font-bold mb-4">{t('Discover IMC Krems Tashkent')}</h2>
                                     </FadeIn>
                                     <FadeIn>
                                         <p className="px-2 py-2 text-lg text-gray-600">
-                                            We pride ourselves on providing only the best for our students. Our
-                                            university
-                                            provides state-of-the-art infrastructure, a library, and world-renowned
-                                            professors.
+                                            {t('We pride ourselves on providing only the best for our students. Our university provides state-of-the-art infrastructure, a library, and world-renowned professors.')}
                                         </p>
                                     </FadeIn>
                                 </FadeInStagger>
@@ -242,8 +234,7 @@ const Homepage = () => {
                     className="mt-24 sm:mt-32 lg:mt-40 px-10"
                     client={{name: "DR. AHMED MOHAMMED AZIZ ISMAIL", position: "Dean", logo: deanPic}}
                 >
-                       <span className="text-3xl">Explore global opportunities with us at IMC Krems Tashkent, where we prepare you for success in
-                        international business.</span>
+                       <span className="text-3xl">{t('Explore global opportunities with us at IMC Krems Tashkent, where we prepare you for success in international business.')}</span>
                 </Testimonials>
 
 
