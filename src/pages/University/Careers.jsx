@@ -11,8 +11,10 @@ import {TbSchoolBell} from "react-icons/tb";
 import {AiOutlineSwap} from "react-icons/ai";
 import {FaRegMoneyBillAlt} from "react-icons/fa";
 import {Typography} from "@material-tailwind/react";
+import {useTranslation} from "react-i18next";
 
 const Careers = () => {
+    const {t} = useTranslation();
     const [vacancyData, setVacancyData] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
@@ -62,7 +64,7 @@ const Careers = () => {
                         <img className="h-[50vh] w-full object-cover z-[10]"
                              src="/header-career-center (1).jpg"/>
                         <PageIntro
-                                   title="IMC Krems available vacancies ">
+                                   title={t('imcKremsVacancies')}>
                         </PageIntro>
 
                     </div>
@@ -76,7 +78,7 @@ const Careers = () => {
                         <h2
                             className="header-title dark:text-gray-100 mb-8 text-3xl font-bold lg:text-4xl"
                         >
-                            Hiring process consists of 4 stages:
+                            {t('hiringProcess')}
                         </h2>
                         <div className="flex">
                             <div className="mr-4 flex flex-col items-center">
@@ -108,14 +110,14 @@ const Careers = () => {
                                     1
                                 </p>
                                 <p className="text-gray-600 dark:text-slate-400">
-                                    Required Application Documents: <br/>
-                                    • Cover letter <br/>
-                                    • CV<br/>
-                                    • Recommendation letter(s) <br/>
-                                    • Teaching portfolio <br/>
-                                    • Sample Syllabi <br/>
-                                    • Research Statement <br/>
-                                    • Statement of Teaching Philosophy <br/>
+                                    {t('requiredDocuments')}: <br/>
+                                    • {t('coverLetter')} <br/>
+                                    • {t('cv')}<br/>
+                                    • {t('recommendationLetters')} <br/>
+                                    • {t('teachingPortfolio')} <br/>
+                                    •  {t('sampleSyllabi')}<br/>
+                                    • {t('researchStatement')} <br/>
+                                    • {t('teachingPhilosophy')} <br/>
 
                                 </p>
                             </div>
@@ -150,8 +152,8 @@ const Careers = () => {
                                     2
                                 </p>
                                 <p className="text-gray-600 dark:text-slate-400">
-                                    • Committee creates a shortlist of candidates <br/>
-                                    • First round of interviews for shortlist of candidates <br/>
+                                    • {t('committeeShortlist')} <br/>
+                                    • {t('firstRoundInterviews')} <br/>
                                 </p>
                             </div>
                         </div>
@@ -185,10 +187,10 @@ const Careers = () => {
                                     3
                                 </p>
                                 <p className="text-gray-600 dark:text-slate-400">
-                                    • Campus interviews: <br/>
-                                    • Demo lesson to faculty and students <br/>
-                                    • Followed by Q&A <br/>
-                                    • Campus tour <br/>
+                                    • {t('campusInterviews')} <br/>
+                                    • {t('demoLesson')} <br/>
+                                    • {t('qaSession')} <br/>
+                                    • {t('campusTour')} <br/>
 
                                 </p>
                             </div>
@@ -223,8 +225,8 @@ const Careers = () => {
                                     4
                                 </p>
                                 <p className="text-gray-600 dark:text-slate-400">
-                                    • Making an offer <br/>
-                                    • Signing employment contract<br/>
+                                    • {t('makingOffer')} <br/>
+                                    • {t('signingContract')}<br/>
 
                                 </p>
                             </div>

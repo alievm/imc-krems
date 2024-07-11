@@ -9,13 +9,13 @@ const VideoHeader = () => {
             <div className="overlay"></div>
             <video src="/video.mp4" autoPlay loop muted/>
             <div className="content text-center">
-                <img className="h-28" src="/logo-light.png" />
+                <img className="h-24" src="/logo3.svg" />
                 <FadeInStagger>
                     <FadeIn>
-                        <h1 className="text-6xl">{t('Empowering Global Minds')}</h1>
+                        <h1 className="text-6xl font-bold ">{t('Empowering Global Minds')}</h1>
                     </FadeIn>
                     <FadeIn>
-                        <p className="text-lg">
+                        <p className="text-lg mt-5">
                             {t('Join IMC Krems Tashkent for an unparalleled international education experience in business and tourism management')}
                         </p>
                     </FadeIn>

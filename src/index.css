@@ -38,8 +38,8 @@ p,*, .ant-typography{
 }
 
 
-h1, h2, h3, h4 {
-    font-family: "Roboto Slab", serif;
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Roboto Slab", serif !important;
 }
 .home-hero-container {
     background: linear-gradient(to top, rgba(255, 158, 27, 0.2) 30%, rgba(255, 158, 27, 0.2) 30%, rgba(255, 158, 27, 0) 100%), url('./assets/bg5.jpg');

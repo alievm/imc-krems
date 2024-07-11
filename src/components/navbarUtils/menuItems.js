@@ -8,6 +8,7 @@ import {
     GlobeAmericasIcon, BookOpenIcon, GlobeAltIcon
 } from "@heroicons/react/24/solid";
 
+
 export const navListMenuItems = [
     {
         title: "About us",
@@ -82,12 +83,6 @@ export const navListMenuItems3 = [
         title: "Students union",
         description: "Get involved with the student union.",
         icon: SquaresPlusIcon,
-    },
-    {
-        title: "Scholarship",
-        description: "Explore scholarship opportunities.",
-        icon: UserGroupIcon,
-        url: '/scholarships'
     },
     {
         title: "Internship",

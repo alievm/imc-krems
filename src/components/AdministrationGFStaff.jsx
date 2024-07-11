@@ -1,40 +1,42 @@
 import React from 'react';
 import {Link} from "react-router-dom";
 import {useTranslation} from "react-i18next";
-const people = [
-    {
-        name: 'Prof. Ahmed Mohamed Aziz Ismail',
-        role: 'Dean of the International Joint Education Faculty of TSUE and IMC Krems',
-        imageUrl: '/dean.png',
-    },
-    {
-        name: 'Mr. Bahromjon Urmanov',
-        role: 'Head of International Business Management Department',
-        imageUrl: '/head.png',
-    },
-    {
-        name: 'Mr. Samandarboy Sulaymanov',
-        role: 'Deputy Dean of the International Joint Education Faculty of TSUE and IMC Krems',
-        imageUrl: '/anonym.jpg',
-    },
-    {
-        name: 'Ms. Durdona Uktamova',
-        role: 'Deputy Dean of the International Joint Education Faculty of TSUE and IMC Krems',
-        imageUrl: '/deanDep.jfif',
-    }
-];
+
 
 
 const AdministrationGFStaff = () => {
     const {t} = useTranslation();
+
+    const people = [
+        {
+            name: 'Prof. Ahmed Mohamed Aziz Ismail',
+            role: <>{t('deanTitle')}</>,
+            imageUrl: '/dean.png',
+        },
+        {
+            name: 'Mr. Bahromjon Urmanov',
+            role: <>{t('headOfDepartmentTitle')}</>,
+            imageUrl: '/head.png',
+        },
+        {
+            name: 'Mr. Samandarboy Sulaymanov',
+            role: <>{t('deputyDeanTitle')}</>,
+            imageUrl: '/anonym.jpg',
+        },
+        {
+            name: 'Ms. Durdona Uktamova',
+            role: <>{t('deputyDeanTitle2')}</>,
+            imageUrl: '/deanDep.jfif',
+        }
+    ];
+
     return (
         <div className="bg-white py-24 sm:py-32">
             <div className="mx-auto grid max-w-7xl gap-x-8 gap-y-20 px-6 lg:px-8 xl:grid-cols-3">
                 <div className="max-w-2xl">
-                    <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Meet our leadership</h2>
+                    <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">{t('meetOurLeadership')}</h2>
                     <p className="mt-6 text-lg leading-8 text-gray-600">
-                        Discover the distinguished leaders guiding the International Joint Education Faculty of TSUE and
-                        IMC Krems.
+                        {t('leadershipDescription')}
                     </p>
                 </div>
                 <ul role="list" className="grid gap-x-8 gap-y-12 sm:grid-cols-2 sm:gap-y-16 xl:col-span-2">
@@ -60,8 +62,8 @@ const AdministrationGFStaff = () => {
                         <div className="flex-auto block py-8 px-9">
                             <div>
                                 <div className="mb-9">
-                                    <h1 className="mb-2 text-[1.75rem] font-semibold text-dark">Faculty</h1>
-                                    <span className="text-[1.15rem] font-medium text-muted">Meet Our Professors: Leaders in Cross-Cultural Education </span>
+                                    <h1 className="mb-2 text-[1.75rem] font-semibold text-dark">{t('faculty')}</h1>
+                                    <span className="text-[1.15rem] font-medium text-muted">{t('meetOurProfessors')}</span>
                                 </div>
                                 <div className="grid grid-cols-1 lg:grid-cols-6 w-full">
                                     <Link target="_blank" to="/professors/bakhodirova">

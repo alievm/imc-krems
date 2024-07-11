@@ -1,24 +1,25 @@
 import React from 'react';
 import { Card, Typography } from "@material-tailwind/react";
 import FadeIn from "../components/FadeIn.jsx";
-import {FaCalendarAlt, FaGlobe, FaHandsHelping, FaLanguage, FaUniversity, FaUser} from "react-icons/fa"; // Ensure you have this component for the fade-in effect
+import {FaCalendarAlt, FaGlobe, FaHandsHelping, FaLanguage, FaUniversity, FaUser} from "react-icons/fa";
+import {useTranslation} from "react-i18next"; // Ensure you have this component for the fade-in effect
 
 const ExchangeProgram = () => {
+    const {t} = useTranslation();
     return (
         <div className="mx-5">
             <div className="relative mt-8 h-72 w-full overflow-hidden  profile-card-bg2 bg-cover bg-center">
                 <div className="absolute inset-0 h-full w-full bg-black opacity-50"/>
                 <div className="absolute inset-0 flex items-center justify-center text-center">
-                    <h1 className="text-5xl font-semibold text-white">Exchange Program</h1>
+                    <h1 className="text-5xl font-semibold text-white">{t('exchangeProgram')}</h1>
                 </div>
             </div>
             <div className="container mx-auto p-10">
                 <FadeIn>
                     <div className="text-center">
-                        <h2 className="text-4xl font-bold mb-6 text-gray-800">Program Overview</h2>
+                        <h2 className="text-4xl font-bold mb-6 text-gray-800">{t('programOverview')}</h2>
                         <p className="text-lg text-gray-700 mb-8 max-w-3xl mx-auto">
-                            Our exchange program enables students to spend a semester at one of our prestigious
-                            partner universities around the world. This immersive experience allows students to:
+                            {t('exchangeProgramIntro')}
                         </p>
                     </div>
                     <div className="grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
@@ -26,58 +27,49 @@ const ExchangeProgram = () => {
                             <div className="bg-main p-3 rounded-md">
                                 <FaGlobe className="text-4xl text-white"/>
                             </div>
-                            <Typography className="text-lg text-gray-800">Gain international academic
-                                exposure</Typography>
+                            <Typography className="text-lg text-gray-800">{t('gainInternationalAcademicExposure')}</Typography>
                         </div>
                         <div className="flex items-center space-x-4">
                             <div className="bg-main p-3 rounded-md">
                                 <FaUniversity className="text-4xl text-white"/>
                             </div>
-                            <Typography className="text-lg text-gray-800">Experience different teaching methods and
-                                educational systems</Typography>
+                            <Typography className="text-lg text-gray-800">{t('experienceDifferentTeachingMethods')}</Typography>
                         </div>
                         <div className="flex items-center space-x-4">
                             <div className="bg-main p-3 rounded-md">
                                 <FaGlobe className="text-4xl text-white"/>
                             </div>
-                            <Typography className="text-lg text-gray-800">Develop a global perspective on their
-                                field of study</Typography>
+                            <Typography className="text-lg text-gray-800">{t('developGlobalPerspective2')}</Typography>
                         </div>
                         <div className="flex items-center space-x-4">
                             <div className="bg-main p-3 rounded-md">
                                 <FaLanguage className="text-4xl text-white"/>
                             </div>
-                            <Typography className="text-lg text-gray-800">Improve language skills</Typography>
+                            <Typography className="text-lg text-gray-800">{t('improveLanguageSkills')}</Typography>
                         </div>
                         <div className="flex items-center space-x-4">
                             <div className="bg-main p-3 rounded-md">
                                 <FaUser className="text-4xl text-white"/>
                             </div>
-                            <Typography className="text-lg text-gray-800">Build a diverse, international network of
-                                peers and professionals</Typography>
+                            <Typography className="text-lg text-gray-800">{t('buildDiverseNetwork')}</Typography>
                         </div>
                     </div>
 
                     <div className="container mx-auto p-10">
                         <FadeIn>
                             <div className="text-center">
-                                <h2 className="text-4xl font-bold mb-6 text-gray-800">Partner Universities</h2>
+                                <h2 className="text-4xl font-bold mb-6 text-gray-800">{t('partnerUniversities')}</h2>
                                 <p className="text-lg text-gray-700 mb-8 max-w-3xl mx-auto">
-                                    We have established partnerships with a range of top universities across the
-                                    globe. Our partners are carefully selected to ensure that our students receive a
-                                    high-quality education and a rich cultural experience. Some of our esteemed
-                                    partner universities include:
+                                    {t('partnerUniversitiesIntro')}
                                 </p>
                             </div>
                             <ul className="list-none text-lg text-gray-800">
-                                <li className="p-4 border border-b-0">University of Lund (Sweden)</li>
-                                <li className="p-4 border border-b-0">University Malaya (Malaysia)</li>
-                                <li className="p-4 border border-b-0">Aristotle University of Thessaloniki (Greece)</li>
-                                <li className="p-4 border border-b-0">Hochschule Stralsund University of Applied Science
-                                    (Germany)
+                                <li className="p-4 border border-b-0">{t('universityOfLund')}</li>
+                                <li className="p-4 border border-b-0">{t('universityMalaya')}</li>
+                                <li className="p-4 border border-b-0">{t('aristotleUniversity')}</li>
+                                <li className="p-4 border border-b-0">{t('hochschuleStralsund')}
                                 </li>
-                                <li className="p-4 border ">HSB Hochschule Bremen City University of Applied Science
-                                    (Germany)
+                                <li className="p-4 border ">{t('hsbBremen')}
                                 </li>
                             </ul>
                         </FadeIn>
@@ -86,14 +78,9 @@ const ExchangeProgram = () => {
                     <div className="container mx-auto p-10">
                         <FadeIn>
                             <div className="text-center">
-                                <h2 className="text-4xl font-bold mb-6 text-gray-800">Academic and Cultural
-                                    Enrichment</h2>
+                                <h2 className="text-4xl font-bold mb-6 text-gray-800">{t('academicAndCulturalEnrichment')}</h2>
                                 <p className="text-lg text-gray-700 mb-8 max-w-3xl mx-auto">
-                                    During their time abroad, students will not only engage in academic activities
-                                    but also
-                                    immerse themselves in the local culture. They will have the opportunity to
-                                    participate
-                                    in:
+                                    {t('academicAndCulturalEnrichmentIntro')}
                                 </p>
                             </div>
                             <div className="grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
@@ -101,34 +88,30 @@ const ExchangeProgram = () => {
                                     <div className="bg-main p-3 rounded-md">
                                         <FaCalendarAlt className="text-4xl text-white"/>
                                     </div>
-                                    <Typography className="text-lg text-gray-800">Cultural excursions and
-                                        events</Typography>
+                                    <Typography className="text-lg text-gray-800">{t('culturalExcursionsAndEvents')}</Typography>
                                 </div>
                                 <div className="flex items-center space-x-4">
                                     <div className="bg-main p-3 rounded-md">
                                         <FaLanguage className="text-4xl text-white"/>
                                     </div>
-                                    <Typography className="text-lg text-gray-800">Language courses</Typography>
+                                    <Typography className="text-lg text-gray-800">{t('languageCourses')}</Typography>
                                 </div>
                                 <div className="flex items-center space-x-4">
                                     <div className="bg-main p-3 rounded-md">
                                         <FaUser className="text-4xl text-white"/>
                                     </div>
-                                    <Typography className="text-lg text-gray-800">Local student organizations and
-                                        clubs</Typography>
+                                    <Typography className="text-lg text-gray-800">{t('localStudentOrganizations')}</Typography>
                                 </div>
                                 <div className="flex items-center space-x-4">
                                     <div className="bg-main p-3 rounded-md">
                                         <FaHandsHelping className="text-4xl text-white"/>
                                     </div>
-                                    <Typography className="text-lg text-gray-800">Community service and volunteer
-                                        activities</Typography>
+                                    <Typography className="text-lg text-gray-800">{t('communityService')}</Typography>
                                 </div>
                             </div>
                             <div className="text-center mt-8">
                                 <p className="text-lg text-gray-700 max-w-3xl mx-auto">
-                                    These experiences help students to develop a deeper understanding of the host
-                                    country and its people, fostering a sense of global citizenship.
+                                    {t('deeperUnderstanding')}
                                 </p>
                             </div>
                         </FadeIn>

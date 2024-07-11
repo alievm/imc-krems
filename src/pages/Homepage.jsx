@@ -175,8 +175,8 @@ const Homepage = () => {
                                 <div className="flex flex-col self-stretch my-auto max-md:mt-10 max-md:max-w-full">
                                     <img
                                         loading="lazy"
-                                        src="/logo-dark.png"
-                                        className="max-w-full  w-[161px]"
+                                        src="/logo122.svg"
+                                        className="max-w-full  w-72"
                                     />
                                     <div className="mt-11 text-lg leading-7 text-black max-md:mt-10 max-md:max-w-full">
                                         {t('Since the very early days of its establishment, the Joint degree program between TSUE and IMC Krems has been building its way up to the bright future. We care about each student who wants to reach their goals. We support and guide you in your path to the great success that you are yet to achieve. Our dedicated team always stays focused on discovering and shaping your unique skills.')}

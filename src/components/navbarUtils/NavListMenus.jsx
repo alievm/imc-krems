@@ -8,7 +8,7 @@ import {
 } from "./menuItems.js";
 import {
     Button,
-    Card,
+    Card, CardBody,
     Collapse,
     ListItem,
     Menu,
@@ -20,8 +20,10 @@ import {
 import {ChevronDownIcon} from "@heroicons/react/24/outline/index.js";
 import {CursorArrowRaysIcon, SquaresPlusIcon, UserGroupIcon} from "@heroicons/react/24/solid";
 import {Link} from "react-router-dom";
+import {useTranslation} from "react-i18next";
 
 export function NavListMenu() {
+    const {t} = useTranslation();
     const [isMenuOpen, setIsMenuOpen] = React.useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
     const renderItems = navListMenuItems.map(
@@ -41,13 +43,13 @@ export function NavListMenu() {
                             color="blue-gray"
                             className="flex items-center text-sm font-bold"
                         >
-                            {title}
+                            {t(title)}
                         </Typography>
                         <Typography
                             variant="paragraph"
                             className="text-xs !font-medium text-blue-gray-500"
                         >
-                            {description}
+                            {t(description)}
                         </Typography>
                     </div>
                 </MenuItem>
@@ -102,11 +104,11 @@ export function NavListMenu() {
 }
 const menuItems = [
     {
-        title: "1.1 International Business Management",
+        title: "International Business Management",
         link: "/ibm"
     },
     {
-        title: "1.2 Tourism and Leisure Management bachelor degree programme",
+        title: "Tourism and Leisure Management bachelor degree programme",
         link: "/tlm"
     },
 
@@ -117,7 +119,11 @@ export function NavListMenu2() {
     const [isMenuOpen, setIsMenuOpen] = React.useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
     const [openMenu, setOpenMenu] = React.useState(false);
+    const {t} = useTranslation();
 
+    const [openSub, setOpenSub] = React.useState(false);
+
+    const toggleOpenSub = () => setOpenSub((cur) => !cur);
     return (
         <React.Fragment>
             {/* Главное меню */}
@@ -135,7 +141,7 @@ export function NavListMenu2() {
                             selected={isMenuOpen || isMobileMenuOpen}
                             onClick={() => setIsMobileMenuOpen((cur) => !cur)}
                         >
-                            Programs {/* Название основного пункта меню */}
+                            {t("Programs")}
                             <ChevronDownIcon
                                 strokeWidth={2.5}
                                 className={`hidden h-3 w-3 transition-transform lg:block ${
@@ -174,9 +180,9 @@ export function NavListMenu2() {
                                                     <Typography
                                                         variant="h6"
                                                         color="blue-gray"
-                                                        className="flex items-center text-sm font-bold leading-tight"
+                                                        className="flex gap-3 items-center capitalize  text-sm font-bold leading-tight"
                                                     >
-                                                    International joint faculty between TSUE and IMC Krems {/* Название пункта */}{" "}
+                                                        Bachelor proograms
                                                     <ChevronDownIcon
                                                         strokeWidth={2.5}
                                                         className={`h-3.5 w-3.5 transition-transform ${
@@ -200,18 +206,19 @@ export function NavListMenu2() {
                                                         <Link to={link} key={title}>
                                                             <MenuItem>
                                                                 <Typography variant="h6" color="blue-gray" className="mb-1  leading-tight">
-                                                                    {title}
+                                                                    {t(title)}
                                                                 </Typography>
                                                                 <Typography
                                                                     variant="small"
                                                                     color="gray"
                                                                     className="font-normal  leading-tight"
                                                                 >
-                                                                    {description}
+                                                                    {t(description)}
                                                                 </Typography>
                                                             </MenuItem>
                                                         </Link>
                                                     ))}
+
                                                 </ul>
                                             </MenuList>
                                         </Menu>
@@ -234,13 +241,13 @@ export function NavListMenu2() {
                                         color="blue-gray"
                                         className="flex items-center text-sm font-bold"
                                     >
-                                        Foundation {/* Название пункта */}
+                                        {t("Foundation")} {/* Название пункта */}
                                     </Typography>
                                     <Typography
                                         variant="paragraph"
                                         className="text-xs !font-medium text-blue-gray-500"
                                     >
-                                        Learn about our foundational principles and support. {/* Описание пункта */}
+                                        {t("Learn about our foundational principles and support.")} {/* Описание пункта */}
                                     </Typography>
                                 </div>
                             </MenuItem>
@@ -252,7 +259,7 @@ export function NavListMenu2() {
             <div className="block lg:hidden">
                 <Collapse open={isMobileMenuOpen}>
                     {/* Перечислите пункты для мобильного меню */}
-                    <a href="#">
+                    <button onClick={toggleOpenSub}>
                         <MenuItem className="flex items-center gap-3 rounded-lg">
                             {/* Иконка и название пункта */}
                             <div className="flex items-center justify-center rounded-lg !bg-blue-gray-50 p-2 ">
@@ -269,18 +276,44 @@ export function NavListMenu2() {
                                     color="blue-gray"
                                     className="flex items-center text-sm font-bold"
                                 >
-                                    International joint faculty between TSUE and IMC Krems
+                                    {t("International joint faculty between TSUE and IMC Krems")}
                                 </Typography>
                                 {/* Описание пункта */}
                                 <Typography
                                     variant="paragraph"
                                     className="text-xs !font-medium text-blue-gray-500"
                                 >
-                                    Discover our collaborative international faculty.
+                                    {t("Discover our collaborative international faculty.")}
                                 </Typography>
                             </div>
                         </MenuItem>
-                    </a>
+                    </button>
+                    <Collapse open={openSub}>
+                        {menuItems.map(({ title, description, link }) => (
+                            <Link to={link} key={title}>
+                                <MenuItem className="flex items-center gap-3 rounded-lg">
+                                    {/* Menu item content */}
+                                    <div className="flex items-center justify-center rounded-lg !bg-blue-gray-50 p-2">
+                                        <SquaresPlusIcon
+                                            strokeWidth={2}
+                                            className="h-6 text-gray-900 w-6"
+                                        />
+                                    </div>
+                                    <div>
+                                        {/* Menu item title */}
+                                        <Typography variant="h6" color="blue-gray" className="mb-1 text-sm leading-tight">
+                                            {t(title)}
+                                        </Typography>
+                                        {/* Menu item description */}
+                                        <Typography variant="small" color="gray" className="font-normal leading-tight">
+                                            {t(description)}
+                                        </Typography>
+                                    </div>
+                                </MenuItem>
+                            </Link>
+                        ))}
+                    </Collapse>
+
                     {/* Другие пункты мобильного меню */}
                     <Link to="/foundation">
                         <MenuItem className="flex items-center gap-3 rounded-lg">
@@ -299,14 +332,14 @@ export function NavListMenu2() {
                                     color="blue-gray"
                                     className="flex items-center text-sm font-bold"
                                 >
-                                    Foundation
+                                    {t("Foundation")}
                                 </Typography>
                                 {/* Описание пункта */}
                                 <Typography
                                     variant="paragraph"
                                     className="text-xs !font-medium text-blue-gray-500"
                                 >
-                                    Learn about our foundational principles and support.
+                                    {t("Learn about our foundational principles and support.")}
                                 </Typography>
                             </div>
                         </MenuItem>
@@ -322,6 +355,8 @@ export default NavListMenu2;
 export function NavListMenu3() {
     const [isMenuOpen, setIsMenuOpen] = React.useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
+    const {t} = useTranslation();
+
     const renderItems = navListMenuItems3.map(
         ({ icon, title, description, url }, key) => (
             <Link to={url} key={key}>
@@ -339,13 +374,13 @@ export function NavListMenu3() {
                             color="blue-gray"
                             className="flex items-center text-sm font-bold"
                         >
-                            {title}
+                            {t(title)}
                         </Typography>
                         <Typography
                             variant="paragraph"
                             className="text-xs !font-medium text-blue-gray-500"
                         >
-                            {description}
+                            {t(description)}
                         </Typography>
                     </div>
                 </MenuItem>
@@ -369,7 +404,7 @@ export function NavListMenu3() {
                             selected={isMenuOpen || isMobileMenuOpen}
                             onClick={() => setIsMobileMenuOpen((cur) => !cur)}
                         >
-                            Students
+                            {t("Students")}
                             <ChevronDownIcon
                                 strokeWidth={2.5}
                                 className={`hidden h-3 w-3 transition-transform lg:block ${
@@ -400,6 +435,7 @@ export function NavListMenu3() {
 
 
 export function NavListMenu4() {
+    const {t} = useTranslation();
     const [isMenuOpen, setIsMenuOpen] = React.useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
     const renderItems = navListMenuItems4.map(
@@ -419,13 +455,13 @@ export function NavListMenu4() {
                             color="blue-gray"
                             className="flex items-center text-sm font-bold"
                         >
-                            {title}
+                            {t(title)}
                         </Typography>
                         <Typography
                             variant="paragraph"
                             className="text-xs !font-medium text-blue-gray-500"
                         >
-                            {description}
+                            {t(description)}
                         </Typography>
                     </div>
                 </MenuItem>
@@ -449,7 +485,7 @@ export function NavListMenu4() {
                             selected={isMenuOpen || isMobileMenuOpen}
                             onClick={() => setIsMobileMenuOpen((cur) => !cur)}
                         >
-                            Admission
+                            {t("Admission")}
                             <ChevronDownIcon
                                 strokeWidth={2.5}
                                 className={`hidden h-3 w-3 transition-transform lg:block ${
@@ -479,6 +515,7 @@ export function NavListMenu4() {
 }
 
 export function NavListMenu5() {
+    const {t} = useTranslation();
     const [isMenuOpen, setIsMenuOpen] = React.useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
     const renderItems = navListMenuItems5.map(
@@ -498,13 +535,13 @@ export function NavListMenu5() {
                             color="blue-gray"
                             className="flex items-center text-sm font-bold"
                         >
-                            {title}
+                            {t(title)}
                         </Typography>
                         <Typography
                             variant="paragraph"
                             className="text-xs !font-medium text-blue-gray-500"
                         >
-                            {description}
+                            {t(description)}
                         </Typography>
                     </div>
                 </MenuItem>
@@ -528,7 +565,7 @@ export function NavListMenu5() {
                             selected={isMenuOpen || isMobileMenuOpen}
                             onClick={() => setIsMobileMenuOpen((cur) => !cur)}
                         >
-                            Alumni
+                            {t("Alumni")}
                             <ChevronDownIcon
                                 strokeWidth={2.5}
                                 className={`hidden h-3 w-3 transition-transform lg:block ${
@@ -559,6 +596,7 @@ export function NavListMenu5() {
 
 
 export function NavListMenu6() {
+    const {t} = useTranslation();
     const [isMenuOpen, setIsMenuOpen] = React.useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
     const renderItems = navListMenuItems6.map(
@@ -578,13 +616,13 @@ export function NavListMenu6() {
                             color="blue-gray"
                             className="flex items-center text-sm font-bold"
                         >
-                            {title}
+                            {t(title)}
                         </Typography>
                         <Typography
                             variant="paragraph"
                             className="text-xs !font-medium text-blue-gray-500"
                         >
-                            {description}
+                            {t(description)}
                         </Typography>
                     </div>
                 </MenuItem>
@@ -608,7 +646,7 @@ export function NavListMenu6() {
                             selected={isMenuOpen || isMobileMenuOpen}
                             onClick={() => setIsMobileMenuOpen((cur) => !cur)}
                         >
-                            News
+                            {t("News")}
                             <ChevronDownIcon
                                 strokeWidth={2.5}
                                 className={`hidden h-3 w-3 transition-transform lg:block ${

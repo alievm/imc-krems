@@ -261,13 +261,13 @@ const InternationalBusinessManagement = () => {
                 initial={{opacity: 0}}
                 animate={{opacity: 1}}
                 exit={{opacity: 0}}
-                className="min-h-screen relative py-12 px-4 sm:px-6 lg:px-8 flex justify-center items-center"
+                className="min-h-screen relative px-4 sm:px-6 lg:px-8 flex justify-center items-center"
             >
                 <div
                     className="absolute h-full w-full z-[-999] bg-[radial-gradient(#000_1px,transparent_1px)] [background-size:16px_16px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_70%,transparent_100%)]"></div>
                 <div className="max-w-full w-full bg-white p-6 rounded-lg shadow-xl">
                     <div className="lg:flex-nowrap relative items-center flex-wrap">
-                        <img className="h-[50vh] w-full object-cover z-[10]"
+                        <img className="h-[50vh] w-full object-cover z-[10]  mb-10"
                              src="/header-studium-export-oriented-management.jpg"/>
                         <div
                             className="z-front text-center"
@@ -322,19 +322,6 @@ const InternationalBusinessManagement = () => {
                                                 <Link   className="nav-link" to="/ibm#advisory-service"> Advisory Service</Link>
                                             </li>
                                         </ul>
-                                        <a
-                                            className="gtm-subnav-btn-apply text-white btn border-radius-0 btn-warning waves-effect waves-light btn-lg"
-                                            href="https://onboarding.fh-krems.ac.at/en"
-                                            id="apply-online"
-                                            target="_blank"
-                                            title="Apply online now!"
-                                        >
-                                            Apply now
-                                            <i
-                                                aria-hidden="true"
-                                                className="fa fa-angle-right ml-1"
-                                            />
-                                        </a>
                                     </div>
                                 </div>
                                 <div className="row m-0 p-0">

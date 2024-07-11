@@ -5,10 +5,11 @@ import PageIntro from "../components/PageIntro.jsx";
 import {MdOutlineAttachEmail} from "react-icons/md";
 import {PhoneOutlined} from "@ant-design/icons";
 import {RiHourglassLine} from "react-icons/ri";
+import {useTranslation} from "react-i18next";
 const { Title, Paragraph } = Typography;
 
 const EntryRequirements = () => {
-
+    const {t} = useTranslation();
     useEffect(() => {
         const handleScroll = () => {
             const cards = document.querySelectorAll('.entry-card');
@@ -40,7 +41,7 @@ const EntryRequirements = () => {
                             <img className="h-[50vh] w-full object-cover z-[10]"
                                  src="/header-online-bewerbung.jpg"/>
                             <PageIntro
-                                       title="Entry Requirements">
+                                       title={t('entryRequirements')}>
                             </PageIntro>
 
                         </div>
@@ -50,14 +51,14 @@ const EntryRequirements = () => {
                 <motion.div initial={{opacity: 0}} animate={{opacity: 1}} transition={{duration: 1}}>
                     <div className="space-y-8">
                         <EntryRequirementCard
-                            program="Foundation Program"
-                            englishRequirement="IELTS 5.0 or Above: Speaking Test<br>Below IELTS 5.0: KTAT (English, Math, Logic, Speaking Test)"
-                            additionalRequirements="Pass the KTAT or Speaking Test for admission"
+                            program={t('foundationProgram')}
+                            englishRequirement={t('ielts5OrAbove')}
+                            additionalRequirements={t('passKtatOrSpeakingTest')}
                         />
                         <EntryRequirementCard
-                            program="Second Year Program"
-                            englishRequirement="IELTS 5.5 or Above"
-                            additionalRequirements="Pass an interview with IMC University Program Directors"
+                            program={t('secondYearProgram')}
+                            englishRequirement={t('ielts5_5OrAbove')}
+                            additionalRequirements={t('passInterview')}
                         />
                     </div>
                 </motion.div>

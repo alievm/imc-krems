@@ -35,7 +35,7 @@ const Leadership = () => {
                                         <div className="inline-block mb-4 relative shrink-0 rounded-[.95rem]">
                                             <img
                                                 className="inline-block  object-cover shrink-0 rounded-[.95rem] w-[150px] h-[150px]"
-                                                src="/web.jens.ennen.jpg"
+                                                src="/web.udo.braendle.jpg"
                                                 alt={t("avatar image")}
                                             />
                                         </div>
@@ -92,7 +92,7 @@ const Leadership = () => {
                                         <div className="inline-block mb-4 relative shrink-0 rounded-[.95rem]">
                                             <img
                                                 className="inline-block  object-cover shrink-0 rounded-[.95rem] w-[150px] h-[150px]"
-                                                src="/web.udo.braendle.jpg"
+                                                src="/web.jens.ennen.jpg"
                                                 alt={t("avatar image")}
                                             />
                                         </div>

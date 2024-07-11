@@ -27,11 +27,13 @@ import {
 } from "./navbarUtils/NavListMenus.jsx";
 import {Link} from "react-router-dom";
 import LanguageSelector from "./languageSelector.jsx";
+import {useTranslation} from "react-i18next";
 
 
 
 
 function NavList() {
+    const {t} = useTranslation();
     return (
         <List className="mt-4 mb-6 p-0 lg:mt-0 lg:mb-0 lg:flex-row lg:p-1">
             <Typography
@@ -41,7 +43,7 @@ function NavList() {
             >
                 <Link to="/">
                     <ListItem className="flex items-center gap-2 py-2 pr-4">
-                        Home
+                        {t("Home")}
                     </ListItem>
                 </Link>
 
@@ -72,7 +74,7 @@ function NavList() {
 
 export function NavbarWithMegaMenu() {
     const [openNav, setOpenNav] = React.useState(false);
-
+    const {t} = useTranslation();
     React.useEffect(() => {
         window.addEventListener(
             "resize",
@@ -86,16 +88,18 @@ export function NavbarWithMegaMenu() {
                 <div className="flex items-center gap-2">
                     {/*<img src="/logo-oz.svg" width="60" height="60"/>*/}
                     {/*<h1><span className="line-1">Tashkent State</span> <br/>University of Economics</h1>*/}
-                    <img src="/logo-dark.png" width="150" height="150"/>
+                    <img src="/logo122.svg" className="w-56"  />
                 </div>
                 <div className="hidden lg:block">
                     <NavList/>
                 </div>
-                <div className="hidden gap-2 lg:flex">
+                <div className="hidden gap-2 lg:flex lg:items-center">
                    <LanguageSelector/>
+                    <Link to="https://docs.google.com/forms/d/e/1FAIpQLSfslvtJO2i1Tfo2xFpebn_rQtX8GPVSpHGYKbAXj9a4s-YZ2Q/viewform">
                     <Button type="primary" size="sm">
-                        Apply Now
+                        {t("applyNow")}
                     </Button>
+                    </Link>
                 </div>
                 <IconButton
                     variant="text"

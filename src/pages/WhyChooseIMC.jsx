@@ -9,63 +9,55 @@ import {
     GlobalOutlined,
     UserOutlined,
 } from '@ant-design/icons';
+import {useTranslation} from "react-i18next";
 
 const { Title, Paragraph } = Typography;
 
 const WhyChooseIMC = () => {
+    const {t} = useTranslation();
     return (
         <div className="mx-5">
             <div className="relative mt-8 h-72 w-full overflow-hidden  profile-card-bg6 bg-cover bg-center">
                 <div className="absolute inset-0 h-full w-full bg-black opacity-50"/>
                 <div className="absolute inset-0 flex items-center justify-center text-center">
-                    <h1 className="text-5xl font-semibold text-white">Why Choose IMC Programs</h1>
+                    <h1 className="text-5xl font-semibold text-white">{t('whyChooseIMCPrograms')}</h1>
                 </div>
             </div>
 
             <div className=" mx-auto p-10">
                 <div className="text-center my-5">
                     <Paragraph className="text-lg text-gray-700 mb-8 max-w-3xl mx-auto">
-                        Selecting the right faculty is a crucial decision that can shape your academic journey and
-                        future career. Here at TSUE, our faculty stands out for several compelling reasons that make
-                        it the ideal choice for ambitious and talented students.
+                        {t('whyChooseIMCProgramsIntro')}
                     </Paragraph>
 
                     <div className="bg-main py-12">
                         <div className="max-w-3xl mx-auto px-6 lg:px-8">
-                            <h2 className="text-3xl font-bold text-center text-white mb-8">Why Choose Our
-                                Faculty?</h2>
+                            <h2 className="text-3xl font-bold text-center text-white mb-8">{t('whyChooseOurFaculty')}</h2>
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
                                 <div
                                     className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition duration-300">
                                     <div className="p-6">
-                                        <h3 className="text-xl font-semibold text-gray-900 mb-4">Affiliation with
-                                            IMC University of Applied Sciences</h3>
+                                        <h3 className="text-xl font-semibold text-gray-900 mb-4">{t('affiliationWithIMC')}</h3>
                                         <p className="text-base text-gray-700 leading-7">
-                                            We are academically affiliated with IMC University of Applied Sciences,
-                                            ensuring rigorous standards in our curriculum, faculty, and academic
-                                            practices.
+                                            {t('affiliationWithIMCIntro')}
                                         </p>
                                     </div>
                                 </div>
                                 <div
                                     className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition duration-300">
                                     <div className="p-6">
-                                        <h3 className="text-xl font-semibold text-gray-900 mb-4">International
-                                            Faculty</h3>
+                                        <h3 className="text-xl font-semibold text-gray-900 mb-4">{t('internationalFaculty')}</h3>
                                         <p className="text-base text-gray-700 leading-7">
-                                            Over 50% of our professors are international, bringing diverse
-                                            perspectives and global expertise to the classroom.
+                                            {t('internationalFacultyIntro')}
                                         </p>
                                     </div>
                                 </div>
                                 <div
                                     className="bg-white col-span-1 lg:col-span-2 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition duration-300">
                                     <div className="p-6">
-                                        <h3 className="text-xl font-semibold text-gray-900 mb-4">Expert Faculty
-                                            Members</h3>
+                                        <h3 className="text-xl font-semibold text-gray-900 mb-4">{t('expertFacultyMembers')}</h3>
                                         <p className="text-base text-gray-700 leading-7">
-                                            Our faculty includes experienced professors with advanced degrees and
-                                            significant industry experience.
+                                            {t('expertFacultyMembersIntro')}
                                         </p>
                                     </div>
                                 </div>
@@ -82,18 +74,16 @@ const WhyChooseIMC = () => {
                                 <div className="bg-main max-w-min mx-auto mb-4 p-3 rounded-md">
                                     <TrophyOutlined className="text-4xl text-white  mx-auto"/>
                                 </div>
-                                <Title level={4}>Scholarships</Title>
+                                <Title level={4}>{t('scholarships')}</Title>
                                 <Divider/>
                                 <Paragraph>
-                                    We offer competitive scholarships to recognize and reward academic excellence.
+                                    {t('scholarshipsIntro')}
                                 </Paragraph>
                                 <ul className="list-disc list-inside">
-                                    <li>100% Scholarship: Full tuition fee waiver for top-performing students.</li>
-                                    <li>50% Scholarship: 50% tuition fee waiver for students with the second highest
-                                        GPA.
+                                    <li>{t('fullScholarship')}</li>
+                                    <li>{t('halfScholarship')}
                                     </li>
-                                    <li>30% Scholarship: 30% tuition fee waiver for students with the third highest
-                                        GPA.
+                                    <li>{t('partialScholarship')}
                                     </li>
                                 </ul>
                             </div>
@@ -106,16 +96,15 @@ const WhyChooseIMC = () => {
                                 <div className="bg-main max-w-min mx-auto mb-4 p-3 rounded-md">
                                     <BookOutlined className="text-4xl text-white  mx-auto"/>
                                 </div>
-                                <Title level={4}>Double Degree Diploma</Title>
+                                <Title level={4}>{t('doubleDegreeDiploma')}</Title>
                                 <Divider/>
                                 <Paragraph>
-                                    Earn degrees from both TSUE and IMC University, enhancing your job market prospects.
+                                    {t('doubleDegreeDiplomaIntro')}
                                 </Paragraph>
                                 <ul className="list-disc list-inside">
-                                    <li>TSUE: Leading university in Uzbekistan for economics and business education.
+                                    <li>{t('tsueLeadingUniversity')}
                                     </li>
-                                    <li>IMC University: European accreditation ensures global recognition of our
-                                        degrees.
+                                    <li>{t('imcEuropeanAccreditation')}
                                     </li>
                                 </ul>
                             </div>
@@ -128,14 +117,14 @@ const WhyChooseIMC = () => {
                                 <div className="bg-main max-w-min mx-auto mb-4 p-3 rounded-md">
                                     <LaptopOutlined className="text-4xl text-white  mx-auto"/>
                                 </div>
-                                <Title level={4}>Innovative Curriculum</Title>
+                                <Title level={4}>{t('innovativeCurriculum')}</Title>
                                 <Divider/>
                                 <Paragraph>
-                                    Our curriculum is designed to equip students with relevant and up-to-date skills.
+                                    {t('innovativeCurriculumIntro')}
                                 </Paragraph>
                                 <ul className="list-disc list-inside">
-                                    <li>Relevant and Up-to-Date Courses</li>
-                                    <li>Hands-On Learning Experiences</li>
+                                    <li>{t('relevantCourses')}</li>
+                                    <li>{t('handsOnLearning')}</li>
                                 </ul>
                             </div>
                         </Card>
@@ -147,14 +136,14 @@ const WhyChooseIMC = () => {
                                 <div className="bg-main max-w-min mx-auto mb-4 p-3 rounded-md">
                                     <ShopOutlined className="text-4xl text-white  mx-auto"/>
                                 </div>
-                                <Title level={4}>Strong Industry Connections</Title>
+                                <Title level={4}>{t('strongIndustryConnections2')}</Title>
                                 <Divider/>
                                 <Paragraph>
-                                    Benefit from extensive internship opportunities and career placements.
+                                    {t('strongIndustryConnectionsIntro')}
                                 </Paragraph>
                                 <ul className="list-disc list-inside">
-                                    <li>Internship Opportunities</li>
-                                    <li>Career Placement</li>
+                                    <li>{t('internshipOpportunities')}</li>
+                                    <li>{t('careerPlacement')}</li>
                                 </ul>
                             </div>
                         </Card>
@@ -166,14 +155,14 @@ const WhyChooseIMC = () => {
                                 <div className="bg-main max-w-min mx-auto mb-4 p-3 rounded-md">
                                     <SafetyOutlined className="text-4xl text-white  mx-auto"/>
                                 </div>
-                                <Title level={4}>State-of-the-Art Facilities</Title>
+                                <Title level={4}>{t('stateOfTheArtFacilities')}</Title>
                                 <Divider/>
                                 <Paragraph>
-                                    Enjoy modern facilities that support learning, research, and innovation.
+                                    {t('stateOfTheArtFacilitiesIntro')}
                                 </Paragraph>
                                 <ul className="list-disc list-inside">
-                                    <li>Advanced Laboratories</li>
-                                    <li>Modern Classrooms</li>
+                                    <li>{t('advancedLaboratories')}</li>
+                                    <li>{t('modernClassrooms')}</li>
                                 </ul>
                             </div>
                         </Card>
@@ -185,15 +174,15 @@ const WhyChooseIMC = () => {
                                 <div className="bg-main max-w-min mx-auto mb-4 p-3 rounded-md">
                                     <UserOutlined className="text-4xl text-white  mx-auto"/>
                                 </div>
-                                <Title level={4}>Comprehensive Support Services</Title>
+                                <Title level={4}>{t('comprehensiveSupportServices')}</Title>
                                 <Divider/>
                                 <Paragraph>
-                                    We provide personalized academic advising, career services, and counseling.
+                                    {t('comprehensiveSupportServicesIntro')}
                                 </Paragraph>
                                 <ul className="list-disc list-inside">
-                                    <li>Academic Advising</li>
-                                    <li>Career Services</li>
-                                    <li>Counseling and Well-being</li>
+                                    <li>{t('academicAdvising')}</li>
+                                    <li>{t('careerServices')}</li>
+                                    <li>{t('counselingAndWellBeing')}</li>
                                 </ul>
                             </div>
                         </Card>
@@ -205,14 +194,14 @@ const WhyChooseIMC = () => {
                                 <div className="bg-main max-w-min mx-auto mb-4 p-3 rounded-md">
                                     <GlobalOutlined className="text-4xl text-white  mx-auto"/>
                                 </div>
-                                <Title level={4}>Exchange Program</Title>
+                                <Title level={4}>{t('exchangeProgram2')}</Title>
                                 <Divider/>
                                 <Paragraph>
-                                    Gain international experience through our exchange program.
+                                    {t('exchangeProgramIntro2')}
                                 </Paragraph>
                                 <ul className="list-disc list-inside">
-                                    <li>Study Abroad Opportunities</li>
-                                    <li>Cultural Integration</li>
+                                    <li>{t('studyAbroadOpportunities')}</li>
+                                    <li>{t('culturalIntegration')}</li>
                                 </ul>
                             </div>
                         </Card>
