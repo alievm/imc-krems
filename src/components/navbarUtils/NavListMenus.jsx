@@ -197,8 +197,9 @@ export function NavListMenu2() {
                                                     shadow={false}
                                                     className="col-span-3 bg-[#798591] outline-none outline-0 text-white flex h-full w-full items-center justify-center rounded-lg p-4"
                                                 >
-                                                    <Typography className="mt-5 text-center" variant="h5">
-                                                        Programs Menu
+                                                    <img src="/university1.svg"/>
+                                                    <Typography className="mt-1 text-center" variant="h5">
+                                                        {t("Programs Menu")}
                                                     </Typography>
                                                 </Card>
                                                 <ul className="col-span-4 outline-none outline-0 flex w-full flex-col gap-1">

@@ -48,7 +48,7 @@ export const navListMenuItems = [
 
 export const navListMenuItems2 = [
     {
-        title: "International joint faculty between TSUE and IMC Krems",
+        title: "Bachelor programs",
         description: "Discover our collaborative international faculty.",
         icon: SquaresPlusIcon,
         submenu: [

@@ -21,7 +21,7 @@ const Footer = () => {
                     </div>
                     <iframe
                         src="https://yandex.ru/map-widget/v1/?um=constructor%3A0d66005c330fcfecfa8bd43d6741d26e68713377b7bd52e263224a977fb94dee&amp;source=constructor"
-                       className="w-full" height="284" frameBorder="0"></iframe>
+                        className="w-full" height="284" frameBorder="0"></iframe>
                 </div>
                 <div className="py-7 border-t border-gray-200">
                     <div className="flex items-center justify-center flex-col lg:justify-between lg:flex-row">

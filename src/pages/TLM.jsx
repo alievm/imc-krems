@@ -14,6 +14,7 @@ import {TbSchoolBell} from "react-icons/tb";
 import {HashLink as Link} from "react-router-hash-link";
 import {AcademicCapIcon, BanknotesIcon, ClockIcon, GlobeAltIcon} from "@heroicons/react/24/solid/index.js";
 import {CalendarDaysIcon} from "@heroicons/react/16/solid/index.js";
+import {useTranslation} from "react-i18next";
 
 
 const CUSTOM_ANIMATION = {
@@ -38,7 +39,7 @@ function Icon({ id, open }) {
 
 
 const TLM = () => {
-
+    const {t} = useTranslation();
     const [open, setOpen] = React.useState(1);
     const [openVideo, setOpenVideo] = React.useState(1)
     const [openStep, setOpenStep] = React.useState(null);
@@ -189,65 +190,65 @@ const TLM = () => {
     const sections = [
         {
             id: 1,
-            title: 'ADMISSION REQUIREMENTS',
+            title: <>{t('ADMISSION REQUIREMENTS')}</>,
             content: (
                 <>
-                    <p><strong>What are the admission requirements for bachelor programmes?</strong><br/>
-                        To qualify for admission to a university of applied sciences bachelor degree programme, you must have an Austrian school-leaving certificate or an equivalent qualification.</p>
-                    <p><strong>Do you have a school-leaving certificate issued outside Austria?</strong><br/>
-                        We’ll check to make sure it’s equivalent to an Austrian certificate in accordance with section 4 of the University of Applied Sciences Studies Act (FHG) when you’ve sent us all the relevant documentation via our online application tool. If it is not an equivalent, you’ll receive information on the supplementary examinations you’ll need to pass. In a nutshell, you will have the option of completing a summer school and the necessary supplementary examinations at IMC Krems or look for an external provider. In that case, you might consider our cooperation partner, the University of Applied Sciences Upper Austria: It offers a one-year International Foundation Programme which provides you with all the necessary qualifications you need in order to start your studies in Krems.</p>
-                    <p><strong>What proof of your language skills is required for our English-language bachelor degree programme?</strong><br/>
-                        We’ll assess your English language proficiency at your interview, so there is no need to provide additional evidence of your English skills.</p>
-                    <p><strong>Important</strong><br/>
-                        Do you still need to complete your military or alternative service? If you’re a male Austrian citizen, we strongly recommend completing your compulsory national service before beginning your studies. This will allow you to finish your degree with no interruptions and start your career without delay afterwards.</p>
+                    <p><strong>{t("What are the admission requirements for bachelor programmes?")}</strong><br/>
+                        {t("To qualify for admission to a university of applied sciences bachelor degree programme, you must have an Austrian school-leaving certificate or an equivalent qualification.")}</p>
+                    <p><strong>{t("Do you have a school-leaving certificate issued outside Austria?")}</strong><br/>
+                        {t("We’ll check to make sure it’s equivalent to an Austrian certificate in accordance with section 4 of the University of Applied Sciences Studies Act (FHG) when you’ve sent us all the relevant documentation via our online application tool. If it is not an equivalent, you’ll receive information on the supplementary examinations you’ll need to pass. In a nutshell, you will have the option of completing a summer school and the necessary supplementary examinations at IMC Krems or look for an external provider. In that case, you might consider our cooperation partner, the University of Applied Sciences Upper Austria: It offers a one-year International Foundation Programme which provides you with all the necessary qualifications you need in order to start your studies in Krems.")}</p>
+                    <p><strong>{t("What proof of your language skills is required for our English-language bachelor degree programme?")}</strong><br/>
+                        {t("We’ll assess your English language proficiency at your interview, so there is no need to provide additional evidence of your English skills.")}</p>
+                    <p><strong>{t("Important")}</strong><br/>
+                        {t("Do you still need to complete your military or alternative service? If you’re a male Austrian citizen, we strongly recommend completing your compulsory national service before beginning your studies. This will allow you to finish your degree with no interruptions and start your career without delay afterwards.")}</p>
                 </>
             )
         },
         {
             id: 2,
-            title: 'ADMISSIONS PROCEDURE',
+            title: <>{t('ADMISSIONS PROCEDURE')}</>,
             content: (
                 <>
-                    <p><strong>Application interview</strong><br/>
-                        We would like to get to know you as a person: As part of the online application you will have to write a statement of motivation and a short essay on a topic relevant to the degree programme. Predefined questions about your motivations as well as the requirements and topics for your essay can be found in the online application. You choose one of the suggested topics, conduct research to broaden your knowledge, deal with the issues and bring your own point of view to the essay. Your answers are to be entered in the fields provided.</p>
-                    <p>Your statement of motivation and your essay form the basis for your application interview. Every applicant has an opportunity to introduce themselves in a face-to-face discussion, usually with the degree programme director. In addition to the personal introduction and your motivation to study, the applicant and the interviewer discuss the topic selected and the arguments used in the essay, as well as the topic’s relevance for the degree programme.</p>
-                    <p>The application interview is held in the language of instruction of the degree programme and can take place either online via Microsoft Teams or in presence.</p>
-                    <p>After the application interview, your statement of motivation, the essay and your performance throughout the interview are assessed on the basis of the content-related remarks, the manner in which they express themselves and the arguments used.</p>
-                    <p><strong>Interview dates</strong><br/>
-                        There is usually a selection of dates to choose from, with quotas allocated for each date. You can select a preferred date and time slot for your admission interview during the online application process. In order to still benefit from the full selection of dates, we recommend that you submit your application in good time.</p>
-                    <p>Get an overview of the dates for your programme.<br/>
-                        No dates available at the moment.</p>
-                    <p>After you have successfully completed your online application, your application will be checked for completeness and correctness. As soon as this process is completed, we will inform you by e-mail and confirm the date for your admission interview. We will send you the Microsoft Teams Meeting Link in a separate e-mail a few days before the application interview date.</p>
+                    <p><strong>{t("Application interview")}</strong><br/>
+                        {t("We would like to get to know you as a person: As part of the online application you will have to write a statement of motivation and a short essay on a topic relevant to the degree programme. Predefined questions about your motivations as well as the requirements and topics for your essay can be found in the online application. You choose one of the suggested topics, conduct research to broaden your knowledge, deal with the issues and bring your own point of view to the essay. Your answers are to be entered in the fields provided.")}</p>
+                    <p>{t("Your statement of motivation and your essay form the basis for your application interview. Every applicant has an opportunity to introduce themselves in a face-to-face discussion, usually with the degree programme director. In addition to the personal introduction and your motivation to study, the applicant and the interviewer discuss the topic selected and the arguments used in the essay, as well as the topic’s relevance for the degree programme.")}</p>
+                    <p>{t("The application interview is held in the language of instruction of the degree programme and can take place either online via Microsoft Teams or in presence.")}</p>
+                    <p>{t("After the application interview, your statement of motivation, the essay and your performance throughout the interview are assessed on the basis of the content-related remarks, the manner in which they express themselves and the arguments used.")}</p>
+                    <p><strong>{t("Interview dates")}</strong><br/>
+                        {t("There is usually a selection of dates to choose from, with quotas allocated for each date. You can select a preferred date and time slot for your admission interview during the online application process. In order to still benefit from the full selection of dates, we recommend that you submit your application in good time.")}</p>
+                    <p>{t("Get an overview of the dates for your programme.")}<br/>
+                        {t("No dates available at the moment.")}</p>
+                    <p>{t("After you have successfully completed your online application, your application will be checked for completeness and correctness. As soon as this process is completed, we will inform you by e-mail and confirm the date for your admission interview. We will send you the Microsoft Teams Meeting Link in a separate e-mail a few days before the application interview date.")}</p>
                 </>
             )
         },
         {
             id: 3,
-            title: 'IMPORTANT DATES AND DEADLINES',
+            title: <>{t('IMPORTANT DATES AND DEADLINES')}</>,
             content: (
                 <>
-                    <p><strong>Application for the next study year possible from</strong> 01/12/2024</p>
-                    <p><strong>Application deadline for EU nationals / Extended application deadline</strong> 17/04/2024 / 28/06/2024</p>
-                    <p><strong>Application deadline for non-EU nationals</strong> 15/04/2024</p>
-                    <p>Please note that the IMC University of Applied Sciences Krems reserves the right to close the extended application period at any time without prior notice. We therefore recommend that you submit your application as soon as possible.</p>
+                    <p><strong>{t("Application for the next study year possible from 01/12/2024")}</strong></p>
+                    <p><strong>{t("Application deadline for EU nationals / Extended application deadline 17/04/2024 / 28/06/2024")}</strong></p>
+                    <p><strong>{t("Application deadline for non-EU nationals 15/04/2024")}</strong></p>
+                    <p>{t("Please note that the IMC University of Applied Sciences Krems reserves the right to close the extended application period at any time without prior notice. We therefore recommend that you submit your application as soon as possible.")}</p>
                 </>
             )
         },
         {
             id: 4,
-            title: 'APPLY ONLINE',
+            title: <>{t('APPLY ONLINE')}</>,
             content: (
                 <>
-                    <p>You've decided for one of our degree programmes? First of all: congratulations and thank you for choosing us! We’ll be happy to guide you step-by-step through your online application.</p>
+                    <p>{t("You've decided for one of our degree programmes? First of all: congratulations and thank you for choosing us! We’ll be happy to guide you step-by-step through your online application.")}</p>
                 </>
             )
         },
         {
             id: 5,
-            title: 'STUDY-RELEVANT DATES',
+            title: <>{t('STUDY-RELEVANT DATES')}</>,
             content: (
                 <>
-                    <p>You would like to plan ahead and would like to know when your degree programme starts? Here you will find the answer!</p>
+                    <p>{t("You would like to plan ahead and would like to know when your degree programme starts? Here you will find the answer!")}</p>
                 </>
             )
         }
@@ -296,33 +297,33 @@ const TLM = () => {
                                             id="anchor-menu"
                                         >
                                             <li className="nav-item">
-                                                <Link className="nav-link" to="/ibm#overview">Overview</Link>
+                                                <Link className="nav-link" to="/ibm#overview">{t("Overview")}</Link>
                                             </li>
                                             <li className="nav-item">
-                                                <Link className="nav-link" to="/ibm#curriculum">Curriculum</Link>
-                                            </li>
-                                            <li className="nav-item">
-                                                <Link className="nav-link" to="/ibm#key-features">Key features</Link>
-                                            </li>
-                                            <li className="nav-item">
-                                                <Link className="nav-link" to="/ibm#career-options">Career
-                                                    options</Link>
-                                            </li>
-                                            <li className="nav-item">
-                                                <Link className="nav-link" to="/ibm#videos">Videos</Link>
-                                            </li>
-                                            <li className="nav-item">
-                                                <Link className="nav-link" to="/ibm#information-events">Information
-                                                    events</Link>
+                                                <Link className="nav-link" to="/ibm#curriculum">{t("Curriculum")}</Link>
                                             </li>
                                             <li className="nav-item">
                                                 <Link className="nav-link"
-                                                      to="/ibm#application-and-admission"> Application and
-                                                    admission</Link>
+                                                      to="/ibm#key-features">{t("Key features")}</Link>
                                             </li>
                                             <li className="nav-item">
-                                                <Link className="nav-link" to="/ibm#advisory-service"> Advisory
-                                                    Service</Link>
+                                                <Link className="nav-link"
+                                                      to="/ibm#career-options">{t("Career options")}</Link>
+                                            </li>
+                                            <li className="nav-item">
+                                                <Link className="nav-link" to="/ibm#videos">{t("Videos")}</Link>
+                                            </li>
+                                            <li className="nav-item">
+                                                <Link className="nav-link"
+                                                      to="/ibm#information-events">{t("Information events")}</Link>
+                                            </li>
+                                            <li className="nav-item">
+                                                <Link className="nav-link"
+                                                      to="/ibm#application-and-admission"> {t("Application and admission")}</Link>
+                                            </li>
+                                            <li className="nav-item">
+                                                <Link className="nav-link"
+                                                      to="/ibm#advisory-service"> {t("Advisory Service")}</Link>
                                             </li>
                                         </ul>
                                     </div>
@@ -340,21 +341,16 @@ const TLM = () => {
                                 </div>
                             </div>
                         </div>
-                        <PageIntro eyebrow="International Join Faculty between TSUE & IMC UAS Krems "
-                                   title="Tourism and Leisure Management bachelor degree programme">
+                        <PageIntro eyebrow={t("International Join Faculty between TSUE & IMC UAS Krems")}
+                                   title={t("Tourism and Leisure Management bachelor degree programme")}>
                         </PageIntro>
 
                     </div>
 
                     <section id="overview" className="mb-8 text-center max-w-5xl mx-auto">
-                        <h2 className="text-xl lg:text-2xl font-semibold text-gray-800 mb-4">What are tourists’ top
-                            needs? What might tourism products look like in the future? How do you market a tourist
-                            destination? How do you stage an event and what challenges are involved?</h2>
+                        <h2 className="text-xl lg:text-2xl font-semibold text-gray-800 mb-4">{t("What are tourists’ top needs? What might tourism products look like in the future? How do you market a tourist destination? How do you stage an event and what challenges are involved?")}</h2>
                         <p className="text-gray-700 leading-relaxed">
-                            You’ll work on these and other business-related questions in our full-time bachelor
-                            programme. And on top of this, you'll learn a foreign language in addition to English, our
-                            language of instruction, allowing you to benefit from countless international connections
-                            and relationships. In three years, you'll be ready for an international career!
+                            {t("You’ll work on these and other business-related questions in our full-time bachelor programme. And on top of this, you'll learn a foreign language in addition to English, our language of instruction, allowing you to benefit from countless international connections and relationships. In three years, you'll be ready for an international career!")}
                         </p>
                         <br/>
                     </section>
@@ -369,10 +365,9 @@ const TLM = () => {
                                         <ClockIcon className="w-6 h-6 link-text"/>
                                     </div>
                                 </div>
-                                <div className="mt-6 text-md leading-5">Full-time</div>
+                                <div className="mt-6 text-md leading-5">{t("Full - time")}</div>
                                 <div className="mt-6 text-base leading-4">
-                                    Organisational <br/>
-                                    form
+                                    {t("Organisational form")}
                                 </div>
                             </div>
                             <div
@@ -383,9 +378,9 @@ const TLM = () => {
                                         <GlobeAltIcon className="w-6 h-6 link-text"/>
                                     </div>
                                 </div>
-                                <div className="mt-6 text-md leading-5">English</div>
+                                <div className="mt-6 text-md leading-5">{t("English")}</div>
                                 <div className="mt-6 text-base leading-5">
-                                    Language
+                                    {t("Language")}
                                 </div>
                             </div>
                             <div
@@ -396,9 +391,9 @@ const TLM = () => {
                                         <AcademicCapIcon className="w-6 h-6 link-text"/>
                                     </div>
                                 </div>
-                                <div className="mt-6 text-md leading-5">2 semesters</div>
+                                <div className="mt-6 text-md leading-5">{t("6 semesters")}</div>
                                 <div className="mt-6 text-base leading-5">
-                                    Duration
+                                    {t("Duration")}
                                 </div>
                             </div>
                             <div
@@ -409,9 +404,9 @@ const TLM = () => {
                                         <CalendarDaysIcon className="w-6 h-6 link-text"/>
                                     </div>
                                 </div>
-                                <div className="mt-6 text-md leading-5">21 weeks</div>
+                                <div className="mt-6 text-md leading-5">{t("21 weeks")}</div>
                                 <div className="mt-6 text-base leading-5">
-                                    Internship
+                                    {t("Internship")}
                                 </div>
                             </div>
                             <div
@@ -424,76 +419,51 @@ const TLM = () => {
                                 </div>
                                 <div className="mt-6 text-md leading-5">2300$</div>
                                 <div className="mt-6 text-base leading-5">
-                                    Study fee
+                                    {t("Study fee")}
                                 </div>
                             </div>
                         </div>
                     </section>
 
                     <section className="mb-8 max-w-5xl mx-auto">
-                        <h2 className=" text-gray-800 mb-4 text-center h2-responsive">The degree programme</h2>
+                        <h2 className=" text-gray-800 mb-4 text-center h2-responsive">{t("The degree programme")}</h2>
                         <div className="text-col-2">
                             {/* <h4>The degree programme</h4> */}
                             <p>
-                                In an age of rapidly changing global markets, prospective managers are constantly facing
-                                new challenges. The Tourism and Leisure Management bachelor degree programme provides
-                                you with the tools to succeed locally and internationally in this environment.
+                                {t("In an age of rapidly changing global markets, prospective managers are constantly facing new challenges. The Tourism and Leisure Management bachelor degree programme provides you with the tools to succeed locally and internationally in this environment.")}
                             </p> <br/>
                             <p>
-                                The aim of this English-language bachelor programme is to equip you with in-depth
-                                business administration expertise. The tourism and leisure industry is the centre of
-                                attention throughout the programme.
+                                {t("The aim of this English-language bachelor programme is to equip you with in-depth business administration expertise. The tourism and leisure industry is the centre of attention throughout the programme.")}
                             </p>
                             <br/>
                             <p>
-                                Tourism and Leisure Management was IMC Krems’ first degree programme. So we have
-                                maintained close contacts with the tourism sector for more than 25 years. You profit
-                                from this as well!
+                                {t("Tourism and Leisure Management was IMC Krems’ first degree programme. So we have maintained close contacts with the tourism sector for more than 25 years. You profit from this as well!")}
                             </p>
                             <br/>
                             <p>
-                                The degree features an ideal blend of theoretical elements with practical insights and
-                                discussions. It also stands out for its strong international focus. You study with
-                                fellow students from all over the world, and have the opportunity to spend semester 3
-                                abroad at one of our partner universities.
+                                {t("The degree features an ideal blend of theoretical elements with practical insights and discussions. It also stands out for its strong international focus. You study with fellow students from all over the world, and have the opportunity to spend semester 3 abroad at one of our partner universities.")}
                             </p>
                             <p>
-                                Learning and developing skills and abilities that will give you a clear
-                                advantage in your day-to-day work play an important role throughout the
-                                programme. The skills modules are closely aligned with the learning modules:
-                                you will learn about the theory and practice behind a range of activities,
-                                including negotiations and concluding contracts, conflict and receivables
-                                management, getting your business in shape for audits and budgeting
-                                processes, as well as receiving valuable inputs related to discussions on
-                                objectives, performance assessment and employee management.
+                                {t("Learning and developing skills and abilities that will give you a clear advantage in your day-to-day work play an important role throughout the programme. The skills modules are closely aligned with the learning modules: you will learn about the theory and practice behind a range of activities, including negotiations and concluding contracts, conflict and receivables management, getting your business in shape for audits and budgeting processes, as well as receiving valuable inputs related to discussions on objectives, performance assessment and employee management.")}
                                 <br/>
-                                Semester 4 has a particularly strong international flavour since you spend it abroad
-                                working at an internship provider of your choice.
+                                {t("Semester 4 has a particularly strong international flavour since you spend it abroad working at an internship provider of your choice.")}
                             </p>
                             <div className="no-break">
-                                <Typography variant="h4">Your previous knowledge counts!</Typography>
+                                <Typography variant="h4">{t("Your previous knowledge counts!")}</Typography>
                                 <p>
-                                    Did you attend a hotel management or a tourism school? Or have you already gained
-                                    some initial professional experience in tourism? In the bachelor programme Tourism
-                                    and Leisure Management you get the opportunity to have individual courses credited
-                                    after an unbureaucratic review.
+                                    {t("Did you attend a hotel management or a tourism school? Or have you already gained some initial professional experience in tourism? In the bachelor programme Tourism and Leisure Management you get the opportunity to have individual courses credited after an unbureaucratic review.")}
                                 </p>
                             </div>
 
                             <div className="no-break">
-                                <Typography variant="h4">Tip</Typography>
+                                <Typography variant="h4">{t("Tip")}</Typography>
 
                                 <p>
-                                    A particularly attractive option is the dual degree we offer in conjunction with the
-                                    Haaga-Helia University of Applied Sciences, Finland or the KEDGE Business School -
-                                    Campus Bordeaux, France. Besides obtaining a bachelor of arts at IMC Krems, you will
-                                    also be accredited with a degree from our partner institution.
+                                    {t("A particularly attractive option is the dual degree we offer in conjunction with the Haaga-Helia University of Applied Sciences, Finland or the KEDGE Business School - Campus Bordeaux, France. Besides obtaining a bachelor of arts at IMC Krems, you will also be accredited with a degree from our partner institution.")}
                                 </p>
                             </div>
                             <p>
-                                On top of that, you have the chance to spend a semester at one of our
-                                international locations – Tashkent in Uzbekistan, Sanya in China or Hanoi in
-                                Vietnam.
+                                {t("On top of that, you have the chance to spend a semester at one of our international locations – Tashkent in Uzbekistan, Sanya in China or Hanoi in Vietnam.")}
                             </p>
                         </div>
 
@@ -516,7 +486,7 @@ const TLM = () => {
                     <div className="flex lg:flex-nowrap relative items-center flex-wrap">
 
                         <PageIntro>
-                            <h2 className=" text-gray-800 mb-4 text-center h2-responsive">Business administration</h2>
+                            <h2 className=" text-gray-800 mb-4 text-center h2-responsive">{t("Business administration")}</h2>
                         </PageIntro>
                     </div>
 
@@ -525,40 +495,27 @@ const TLM = () => {
                             <div className=" ">
                                 {/*  */}
                                 <p>
-                                    Business administration focuses on how organisations and companies are
-                                    managed.
+                                    {t("Business administration focuses on how organisations and companies are managed.")}
                                 </p> <br/>
                                 <p>
-                                    In other words, it examines business processes with the aim of providing
-                                    insights into the planning, implementation and evaluation of
-                                    responsibility, approaches and objectives in different parts of a
-                                    business.
+                                    {t("In other words, it examines business processes with the aim of providing insights into the planning, implementation and evaluation of responsibility, approaches and objectives in different parts of a business.")}
                                 </p> <br/>
                                 <p className="mb-16">
-                                    Business administration topics include: accounting and finance, marketing,
-                                    human resources and logistics.
+                                    {t("Business administration topics include: accounting and finance, marketing, human resources and logistics.")}
                                 </p> <br/>
                                 <div className="no-break">
                                     <h4 className="text-2xl">
-                                        Core topics of the Tourism and Leisure Management degree programme
+                                        {t("Core topics of the Tourism and Leisure Management degree programme")}
                                     </h4> <br/>
                                     <p>
-                                        Tourism is an umbrella term for travel. It’s not only one of the
-                                        largest, but also one of the fastest growing industries worldwide.
-                                        Furthermore, it’s considered to be one of the world’s most significant
-                                        sectors for employment.
+                                        {t("Tourism is an umbrella term for travel. It’s not only one of the largest, but also one of the fastest growing industries worldwide. Furthermore, it’s considered to be one of the world’s most significant sectors for employment.")}
                                     </p>
                                 </div>
                                 <p>
-                                    In addition to the travel industry, the hospitality and leisure industries
-                                    are also elements of tourism.
+                                    {t("In addition to the travel industry, the hospitality and leisure industries are also elements of tourism.")}
                                 </p>
                                 <p>
-                                    There are a number of specialised areas in the tourism and leisure
-                                    industry as well. These are covered in our bachelor programme in the
-                                    Specialised Tourism Studies module. To give you a few examples: event
-                                    management, tourism with an emphasis on sport, culture and health, and
-                                    sustainable travel.
+                                    {t("There are a number of specialised areas in the tourism and leisure industry as well. These are covered in our bachelor programme in the Specialised Tourism Studies module. To give you a few examples: event management, tourism with an emphasis on sport, culture and health, and sustainable travel.")}
                                 </p>
                             </div>
                         </div>
@@ -593,17 +550,12 @@ const TLM = () => {
                                 fill="currentColor"/>
                         </svg>
                         <blockquote>
-                            <p className="text-2xl font-medium text-white dark:text-white">"One of the hallmarks of the
-                                tourism industry is its internationality. Learn new languages, study with classmates
-                                from different nations and take the opportunity to go on an exchange semester. You can
-                                also do your internship in a company abroad. In short: have the time of your life!"</p>
+                            <p className="text-2xl font-medium text-white dark:text-white">{t("One of the hallmarks of the tourism industry is its internationality. Learn new languages, study with classmates from different nations and take the opportunity to go on an exchange semester. You can also do your internship in a company abroad. In short: have the time of your life!")}</p>
                         </blockquote>
                         <figcaption className="flex items-center justify-center mt-6 space-x-3">
                             <div className="flex items-center divide-x-2 divide-gray-500 dark:divide-gray-700">
-                                <div className="pr-3 font-medium text-white dark:text-white">Claudia Bauer-Krösbacher
-                                </div>
-                                <div className="pl-3 text-sm font-light text-gray-200 dark:text-gray-400">Programme
-                                    director
+                                <div className="pr-3 font-medium text-white dark:text-white">
+                                    {t("Claudia Bauer-Krösbacher Programme director")}
                                 </div>
                             </div>
                         </figcaption>
@@ -625,11 +577,10 @@ const TLM = () => {
                     <div className="flex lg:flex-nowrap relative items-center flex-wrap">
 
                         <PageIntro>
-                            <h2 className=" text-gray-800 mb-4 text-center h2-responsive">Curriculum</h2>
+                            <h2 className=" text-gray-800 mb-4 text-center h2-responsive">{t("Curriculum")}</h2>
                             <section className="mb-8 max-w-5xl text-center">
                                 <p className="text-gray-700 leading-relaxed">
-                                    What can you expect from your studies? The curriculum provides an overview.
-                                    Click on the individual courses for further information.
+                                    {t("What can you expect from your studies? The curriculum provides an overview. Click on the individual courses for further information.")}
                                 </p>
                             </section>
                         </PageIntro>
@@ -647,7 +598,7 @@ const TLM = () => {
                                     className="bg-main text-white hover:text-white px-3"
                                     onClick={() => handleOpenStep(index)}
                                 >
-                                    <Typography variant="h6">{semester.title}</Typography>
+                                    <Typography variant="h6">{t(semester.title)}</Typography>
                                 </AccordionHeader>
                                 <AccordionBody className="px-3">
                                     <div className="flex justify-between p-2 border-b border-gray-300">
@@ -661,7 +612,7 @@ const TLM = () => {
                                     {semester.courses.map((course, courseIndex) => (
                                         <div key={courseIndex}
                                              className="flex justify-between p-2 border-b border-gray-300">
-                                            <span className="font-medium">{course.course}</span>
+                                            <span className="font-medium">{t(course.course)}</span>
                                             <span
                                                 className="text-gray-600">{`SWS: ${course.sws}, ECTS: ${course.ects}`}</span>
                                         </div>
@@ -676,11 +627,10 @@ const TLM = () => {
 
                         <div className="mx-auto flex max-w-[58rem] flex-col items-center space-y-4 text-center">
 
-                            <h2 className="font-bold text-3xl leading-[1.1] sm:text-3xl md:text-3xl">Key features</h2>
+                            <h2 className="font-bold text-3xl leading-[1.1] sm:text-3xl md:text-3xl">{t("Key features")}</h2>
 
                             <p className="max-w-[85%] leading-normal sm:text-lg sm:leading-7">
-                                What makes our Tourism and Leisure Management degree programme so special? Here’s an
-                                overview.
+                                {t("What makes our Tourism and Leisure Management degree programme so special? Here’s an overview.")}
                             </p>
 
                         </div>
@@ -693,11 +643,9 @@ const TLM = () => {
                                 <div className="flex h-[280px] flex-col justify-between rounded-md p-6">
                                     <img className="w-36" src="/logo-dark.png"/>
                                     <div className="space-y-2">
-                                        <h3 className="font-bold">Studying and working the international way</h3>
-                                        <p className="text-sm text-muted-foreground">Linguistically, you'll grow by
-                                            leaps and bounds by perfecting your English skills – after all, the lectures
-                                            are held in English and you’ll be studying with classmates from all over the
-                                            world.</p>
+                                        <h3 className="font-bold">{t("Studying and working the international way")}</h3>
+                                        <p className="text-sm text-muted-foreground">{t("Linguistically, you'll grow by leaps and bounds by perfecting your English skills – after all, the lectures are held in English and you’ll be studying with classmates from all over the world.")}
+                                        </p>
                                     </div>
                                 </div>
                             </div>
@@ -707,10 +655,8 @@ const TLM = () => {
                                 <div className="flex h-[280px] flex-col justify-between rounded-md p-6">
                                     <img className="w-36" src="/logo-dark.png"/>
                                     <div className="space-y-2">
-                                        <h3 className="font-bold">Ideally equipped for the globalised world</h3>
-                                        <p className="text-sm">Your training will be concluded with a sharp focus on an
-                                            increasingly important set of soft skills. They’ll help you to become a
-                                            confident and self-assured tourism professional. </p>
+                                        <h3 className="font-bold">{t("Ideally equipped for the globalised world")}</h3>
+                                        <p className="text-sm">{t("Your training will be concluded with a sharp focus on an increasingly important set of soft skills. They’ll help you to become a confident and self-assured tourism professional.")} </p>
                                     </div>
                                 </div>
                             </div>
@@ -720,11 +666,9 @@ const TLM = () => {
                                 <div className="flex h-[280px] flex-col justify-between rounded-md p-6">
                                     <img className="w-36" src="/logo-dark.png"/>
                                     <div className="space-y-2">
-                                        <h3 className="font-bold">Discover your interests</h3>
-                                        <p className="text-sm">One in ten jobs worldwide is directly linked to tourism –
-                                            a good argument for pursuing a career in this sector. The Krems bachelor
-                                            programme centres on the operational aspects of this fast-growing
-                                            industry.</p>
+                                        <h3 className="font-bold">{t("Discover your interests")}</h3>
+                                        <p className="text-sm">{t("One in ten jobs worldwide is directly linked to tourism – a good argument for pursuing a career in this sector. The Krems bachelor programme centres on the operational aspects of this fast-growing industry.")}
+                                        </p>
                                     </div>
                                 </div>
                             </div>
@@ -738,8 +682,7 @@ const TLM = () => {
                                    icon={<Icon id={1} open={openVideo}/>}>
                             <AccordionHeader className="bg-main text-white hover:text-white px-3"
                                              onClick={() => handleOpenVideo(1)}>
-                                <Typography variant="h6"> FAQ WITH OUR STUDENTS: TOURISM AND LEISURE
-                                    MANAGEMENT</Typography>
+                                <Typography variant="h6"> {t("FAQ WITH OUR STUDENTS: TOURISM AND LEISURE MANAGEMENT")}</Typography>
                             </AccordionHeader>
                             <AccordionBody className="px-3">
                                 <div className="relative overflow-hidden w-full pb-[56.25%] h-0">
@@ -756,8 +699,7 @@ const TLM = () => {
                                    icon={<Icon id={1} open={openVideo}/>}>
                             <AccordionHeader className="bg-main text-white hover:text-white px-3"
                                              onClick={() => handleOpenVideo(2)}>
-                                <Typography variant="h6">WHAT'S IT LIKE STUDYING TOURISM & LEISURE
-                                    MANAGEMENT?</Typography>
+                                <Typography variant="h6">{t("WHAT'S IT LIKE STUDYING TOURISM & LEISURE MANAGEMENT?")}</Typography>
                             </AccordionHeader>
                             <AccordionBody className="px-3">
                                 <div className="relative overflow-hidden w-full pb-[56.25%] h-0">
@@ -773,7 +715,7 @@ const TLM = () => {
                                    icon={<Icon id={1} open={openVideo}/>}>
                             <AccordionHeader className="bg-main text-white hover:text-white px-3"
                                              onClick={() => handleOpenVideo(3)}>
-                                <Typography variant="h6">TIPS FOR YOUR APPLICATION</Typography>
+                                <Typography variant="h6">{t("TIPS FOR YOUR APPLICATION")}</Typography>
                             </AccordionHeader>
                             <AccordionBody className="px-3">
                                 <div className="relative overflow-hidden w-full pb-[56.25%] h-0">
@@ -790,25 +732,20 @@ const TLM = () => {
 
                     <div className="mx-auto flex max-w-[58rem] flex-col items-center space-y-4 text-center">
 
-                        <h2 className="font-bold text-3xl leading-[1.1] sm:text-3xl md:text-3xl">Career paths</h2>
+                        <h2 className="font-bold text-3xl leading-[1.1] sm:text-3xl md:text-3xl">{t("Career paths")}</h2>
 
                         <p className="max-w-[85%] leading-normal sm:text-lg sm:leading-7">
-                            After completing the Tourism and Leisure Management bachelor degree programme, you'll have
-                            the world at your feet. Whether you decide to go abroad or work in Austria, you will be
-                            qualified to assume entry-level positions in a wide-range of industries and departments.
+                            {t("After completing the Tourism and Leisure Management bachelor degree programme, you'll have the world at your feet. Whether you decide to go abroad or work in Austria, you will be qualified to assume entry-level positions in a wide-range of industries and departments.")}
                         </p>
 
                         <div className="flex flex-row gap-10 mt-10 flex-wrap lg:flex-nowrap">
                             <div className="col-lg-6">
                                 <div className="mb-6 mt-0 text-left">
                                     <p>
-                                        You have the choice of starting a career or enrolling for a full-time or
-                                        part-time master degree.
+                                        {t("You have the choice of starting a career or enrolling for a full-time or part-time master degree.")}
                                     </p> <br/>
                                     <p>
-                                        A wide range of options will be open to you – at IMC Krems, for
-                                        instance, you can register for the&nbsp;
-                                        <strong>master degree programmes</strong>:
+                                        {t("A wide range of options will be open to you – at IMC Krems, for instance, you can register for the master degree programmes:")}
                                     </p>
 
                                     <ul className="my-5 bg-gray-100 border border-gray-300 rounded-lg shadow-sm overflow-hidden">
@@ -816,76 +753,72 @@ const TLM = () => {
                 <span
                     className="block p-4 text-gray-700 hover:text-gray-900 hover:bg-gray-50 transition-colors duration-200 ease-in-out font-semibold"
                 >
-                    Marketing with Major Tracks in Tourism & Hospitality Marketing, Fashion & Lifestyle Marketing and Retail & Shopper Marketing
+                    {t("Marketing with Major Tracks in Tourism & Hospitality Marketing, Fashion & Lifestyle Marketing and Retail & Shopper Marketing")}
                 </span>
                                         </li>
                                         <li className="border-b border-gray-200">
                 <span
                     className="block p-4 text-gray-700 hover:text-gray-900 hover:bg-gray-50 transition-colors duration-200 ease-in-out font-semibold"
                 >
-                    Umwelt- und Nachhaltigkeitsmanagement
+                    {t("Umwelt - und Nachhaltigkeitsmanagement")}
                 </span>
                                         </li>
                                         <li className="border-b border-gray-200">
                 <span
                     className="block p-4 text-gray-700 hover:text-gray-900 hover:bg-gray-50 transition-colors duration-200 ease-in-out font-semibold"
                 >
-                    International Business and Economic Diplomacy
+                    {t("International Business and Economic Diplomacy")}
                 </span>
                                         </li>
                                         <li className="border-b border-gray-200">
                 <span
                     className="block p-4 text-gray-700 hover:text-gray-900 hover:bg-gray-50 transition-colors duration-200 ease-in-out font-semibold"
                 >
-                    Digital Business Innovation and Transformation
+                    {t("Digital Business Innovation and Transformation")}
                 </span>
                                         </li>
                                         <li className="border-b border-gray-200">
                 <span
                     className="block p-4 text-gray-700 hover:text-gray-900 hover:bg-gray-50 transition-colors duration-200 ease-in-out font-semibold"
                 >
-                    Management
+                    {t("Management")}
                 </span>
                                         </li>
                                         <li>
                 <span
                     className="block p-4 text-gray-700 hover:text-gray-900 hover:bg-gray-50 transition-colors duration-200 ease-in-out font-semibold"
                 >
-                    Management von Gesundheitsunternehmen
+                    {t("Management von Gesundheitsunternehmen")}
                 </span>
                                         </li>
                                     </ul>
 
                                     <p>
-                                        Alternatively, you can take a master degree in business at another
-                                        Austrian or foreign university.
+                                        {t("Alternatively, you can take a master degree in business at another Austrian or foreign university.")}
                                     </p>
                                 </div>
                             </div>
                             <div className="col-lg-6 auflistung-liste text-right">
                                 <ul className="list-group">
                                     <li className="list-group-item card-header border-radius-0 bg-main text-white border-0 text-uppercase">
-                                        <h4>Potential entry-level&nbsp;positions</h4>
+                                        <h4>{t("Potential entry-level positions")}</h4>
                                     </li>
-                                    <li className="list-group-item">Hotel industry, system catering, and catering</li>
-                                    <li className="list-group-item">Travel agencies and tour operators</li>
-                                    <li className="list-group-item">Tourism travel operators such as airlines and bus
-                                        companies
+                                    <li className="list-group-item">{t("Hotel industry, system catering, and catering")}</li>
+                                    <li className="list-group-item">{t("Travel agencies and tour operators")}</li>
+                                    <li className="list-group-item">{t("Tourism travel operators such as airlines and bus companies")}
                                     </li>
-                                    <li className="list-group-item">Regional tourism planning and development
-                                        organisations
+                                    <li className="list-group-item">{t("Regional tourism planning and development organisations")}
                                     </li>
-                                    <li className="list-group-item">Tourism information and communication technology
-                                        companies
+                                    <li className="list-group-item">{t("Tourism information and communication technology companies")}
                                     </li>
-                                    <li className="list-group-item">Sports organisations and sports event management
+                                    <li className="list-group-item">{t("Sports organisations and sports event management")}
                                     </li>
-                                    <li className="list-group-item">Casinos and theme parks</li>
-                                    <li className="list-group-item">Event agencies</li>
-                                    <li className="list-group-item">Conference centres</li>
-                                    <li className="list-group-item">Arts and cultural institutions</li>
-                                    <li className="list-group-item">Spa and wellness facilities</li>
-                                    <li className="list-group-item">National park centres</li>
+                                    <li className="list-group-item">{t("Casinos and theme parks")}</li>
+                                    <li className="list-group-item">{t("Event agencies")}</li>
+                                    <li className="list-group-item">{t("Conference centres")}</li>
+                                    <li className="list-group-item">{t("Arts and cultural institutions")}</li>
+                                    <li className="list-group-item">{t("Spa and wellness facilities")}</li>
+                                    <li className="list-group-item">{t("National park centres")}</li>
                                 </ul>
                             </div>
                         </div>
@@ -902,41 +835,37 @@ const TLM = () => {
             >
                 <div
                     className="absolute h-full w-full z-[-999] bg-[radial-gradient(#000_1px,transparent_1px)] [background-size:16px_16px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_70%,transparent_100%)]"></div>
-                <div className="max-w-7xl bg-white p-6 rounded-lg shadow-xl">
+                <div className="w-full bg-white p-6 rounded-lg shadow-xl">
 
                     <div className="flex lg:flex-nowrap relative items-center flex-wrap">
                         <PageIntro>
-                            <h2 className=" text-gray-800 mb-4 text-center h2-responsive">Application and admissions – the next steps</h2>
-                            <section className="mb-8 max-w-5xl text-center">
+                            <h2 className=" text-gray-800 mb-4 text-center h2-responsive">{t("Application and admissions – the next steps")}</h2>
+                            <section className="mb-8 max-w-5xl mx-auto text-center">
                                 <p className="text-gray-700 leading-relaxed">
-                                    You've found a course that's a perfect fit? Great – you’ve already taken the most important
-                                    step! We’ve put together an overview to guide you through the next steps.
+                                    {t("You've found a course that's a perfect fit? Great – you’ve already taken the most important step! We’ve put together an overview to guide you through the next steps.")}
                                 </p>
                             </section>
                         </PageIntro>
                     </div>
 
-                    <section className="my-8">
-                        <section className="my-8">
-                            {sections.map((section) => (
-                                <Accordion
-                                    key={section.id}
-                                    open={expandedSectionId === section.id} // Используется expandedSectionId для открытия аккордеона
-                                    animate={CUSTOM_ANIMATION} // Настройте анимацию, если требуется
-                                    icon={<Icon id={section.id}
-                                                open={expandedSectionId}/>} // Проверьте, как вы используете иконку
-                                >
-                                    <AccordionHeader className="bg-main text-white hover:text-white px-3"
-                                                     onClick={() => toggleSection(section.id)}>
-                                        <Typography variant="h6">{section.title}</Typography>
-                                    </AccordionHeader>
-                                    <AccordionBody className="px-3 text-md">
-                                        {section.content}
-                                    </AccordionBody>
-                                </Accordion>
-                            ))}
-                        </section>
-
+                    <section className="my-8 max-w-5xl mx-auto">
+                        {sections.map((section) => (
+                            <Accordion
+                                key={section.id}
+                                open={expandedSectionId === section.id} // Используется expandedSectionId для открытия аккордеона
+                                animate={CUSTOM_ANIMATION} // Настройте анимацию, если требуется
+                                icon={<Icon id={section.id}
+                                            open={expandedSectionId}/>} // Проверьте, как вы используете иконку
+                            >
+                                <AccordionHeader className="bg-main text-white hover:text-white px-3"
+                                                 onClick={() => toggleSection(section.id)}>
+                                    <Typography variant="h6">{section.title}</Typography>
+                                </AccordionHeader>
+                                <AccordionBody className="px-3 text-md">
+                                    {section.content}
+                                </AccordionBody>
+                            </Accordion>
+                        ))}
                     </section>
                 </div>
             </motion.div>

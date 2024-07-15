@@ -14,6 +14,7 @@ import {TbSchoolBell} from "react-icons/tb";
 import { HashLink as Link } from 'react-router-hash-link';
 import {AcademicCapIcon, BanknotesIcon, ClockIcon, GlobeAltIcon} from "@heroicons/react/24/solid/index.js";
 import {CalendarDaysIcon} from "@heroicons/react/16/solid/index.js";
+import {useTranslation} from "react-i18next";
 
 
 const CUSTOM_ANIMATION = {
@@ -38,7 +39,7 @@ function Icon({ id, open }) {
 
 
 const InternationalBusinessManagement = () => {
-
+    const {t} = useTranslation();
     const [open, setOpen] = React.useState(1);
     const [openVideo, setOpenVideo] = React.useState(1)
     const [openStep, setOpenStep] = React.useState(1)
@@ -190,65 +191,65 @@ const InternationalBusinessManagement = () => {
     const sections = [
         {
             id: 1,
-            title: 'ADMISSION REQUIREMENTS',
+            title: <>{t('ADMISSION REQUIREMENTS')}</>,
             content: (
                 <>
-                    <p><strong>What are the admission requirements for bachelor programmes?</strong><br/>
-                        To qualify for admission to a university of applied sciences bachelor degree programme, you must have an Austrian school-leaving certificate or an equivalent qualification.</p>
-                    <p><strong>Do you have a school-leaving certificate issued outside Austria?</strong><br/>
-                        We’ll check to make sure it’s equivalent to an Austrian certificate in accordance with section 4 of the University of Applied Sciences Studies Act (FHG) when you’ve sent us all the relevant documentation via our online application tool. If it is not an equivalent, you’ll receive information on the supplementary examinations you’ll need to pass. In a nutshell, you will have the option of completing a summer school and the necessary supplementary examinations at IMC Krems or look for an external provider. In that case, you might consider our cooperation partner, the University of Applied Sciences Upper Austria: It offers a one-year International Foundation Programme which provides you with all the necessary qualifications you need in order to start your studies in Krems.</p>
-                    <p><strong>What proof of your language skills is required for our English-language bachelor degree programme?</strong><br/>
-                        We’ll assess your English language proficiency at your interview, so there is no need to provide additional evidence of your English skills.</p>
-                    <p><strong>Important</strong><br/>
-                        Do you still need to complete your military or alternative service? If you’re a male Austrian citizen, we strongly recommend completing your compulsory national service before beginning your studies. This will allow you to finish your degree with no interruptions and start your career without delay afterwards.</p>
+                    <p><strong>{t("What are the admission requirements for bachelor programmes?")}</strong><br/>
+                        {t("To qualify for admission to a university of applied sciences bachelor degree programme, you must have an Austrian school-leaving certificate or an equivalent qualification.")}</p>
+                    <p><strong>{t("Do you have a school-leaving certificate issued outside Austria?")}</strong><br/>
+                        {t("We’ll check to make sure it’s equivalent to an Austrian certificate in accordance with section 4 of the University of Applied Sciences Studies Act (FHG) when you’ve sent us all the relevant documentation via our online application tool. If it is not an equivalent, you’ll receive information on the supplementary examinations you’ll need to pass. In a nutshell, you will have the option of completing a summer school and the necessary supplementary examinations at IMC Krems or look for an external provider. In that case, you might consider our cooperation partner, the University of Applied Sciences Upper Austria: It offers a one-year International Foundation Programme which provides you with all the necessary qualifications you need in order to start your studies in Krems.")}</p>
+                    <p><strong>{t("What proof of your language skills is required for our English-language bachelor degree programme?")}</strong><br/>
+                        {t("We’ll assess your English language proficiency at your interview, so there is no need to provide additional evidence of your English skills.")}</p>
+                    <p><strong>{t("Important")}</strong><br/>
+                        {t("Do you still need to complete your military or alternative service? If you’re a male Austrian citizen, we strongly recommend completing your compulsory national service before beginning your studies. This will allow you to finish your degree with no interruptions and start your career without delay afterwards.")}</p>
                 </>
             )
         },
         {
             id: 2,
-            title: 'ADMISSIONS PROCEDURE',
+            title: <>{t('ADMISSIONS PROCEDURE')}</>,
             content: (
                 <>
-                    <p><strong>Application interview</strong><br/>
-                        We would like to get to know you as a person: As part of the online application you will have to write a statement of motivation and a short essay on a topic relevant to the degree programme. Predefined questions about your motivations as well as the requirements and topics for your essay can be found in the online application. You choose one of the suggested topics, conduct research to broaden your knowledge, deal with the issues and bring your own point of view to the essay. Your answers are to be entered in the fields provided.</p>
-                    <p>Your statement of motivation and your essay form the basis for your application interview. Every applicant has an opportunity to introduce themselves in a face-to-face discussion, usually with the degree programme director. In addition to the personal introduction and your motivation to study, the applicant and the interviewer discuss the topic selected and the arguments used in the essay, as well as the topic’s relevance for the degree programme.</p>
-                    <p>The application interview is held in the language of instruction of the degree programme and can take place either online via Microsoft Teams or in presence.</p>
-                    <p>After the application interview, your statement of motivation, the essay and your performance throughout the interview are assessed on the basis of the content-related remarks, the manner in which they express themselves and the arguments used.</p>
-                    <p><strong>Interview dates</strong><br/>
-                        There is usually a selection of dates to choose from, with quotas allocated for each date. You can select a preferred date and time slot for your admission interview during the online application process. In order to still benefit from the full selection of dates, we recommend that you submit your application in good time.</p>
-                    <p>Get an overview of the dates for your programme.<br/>
-                        No dates available at the moment.</p>
-                    <p>After you have successfully completed your online application, your application will be checked for completeness and correctness. As soon as this process is completed, we will inform you by e-mail and confirm the date for your admission interview. We will send you the Microsoft Teams Meeting Link in a separate e-mail a few days before the application interview date.</p>
+                    <p><strong>{t("Application interview")}</strong><br/>
+                        {t("We would like to get to know you as a person: As part of the online application you will have to write a statement of motivation and a short essay on a topic relevant to the degree programme. Predefined questions about your motivations as well as the requirements and topics for your essay can be found in the online application. You choose one of the suggested topics, conduct research to broaden your knowledge, deal with the issues and bring your own point of view to the essay. Your answers are to be entered in the fields provided.")}</p>
+                    <p>{t("Your statement of motivation and your essay form the basis for your application interview. Every applicant has an opportunity to introduce themselves in a face-to-face discussion, usually with the degree programme director. In addition to the personal introduction and your motivation to study, the applicant and the interviewer discuss the topic selected and the arguments used in the essay, as well as the topic’s relevance for the degree programme.")}</p>
+                    <p>{t("The application interview is held in the language of instruction of the degree programme and can take place either online via Microsoft Teams or in presence.")}</p>
+                    <p>{t("After the application interview, your statement of motivation, the essay and your performance throughout the interview are assessed on the basis of the content-related remarks, the manner in which they express themselves and the arguments used.")}</p>
+                    <p><strong>{t("Interview dates")}</strong><br/>
+                        {t("There is usually a selection of dates to choose from, with quotas allocated for each date. You can select a preferred date and time slot for your admission interview during the online application process. In order to still benefit from the full selection of dates, we recommend that you submit your application in good time.")}</p>
+                    <p>{t("Get an overview of the dates for your programme.")}<br/>
+                        {t("No dates available at the moment.")}</p>
+                    <p>{t("After you have successfully completed your online application, your application will be checked for completeness and correctness. As soon as this process is completed, we will inform you by e-mail and confirm the date for your admission interview. We will send you the Microsoft Teams Meeting Link in a separate e-mail a few days before the application interview date.")}</p>
                 </>
             )
         },
         {
             id: 3,
-            title: 'IMPORTANT DATES AND DEADLINES',
+            title: <>{t('IMPORTANT DATES AND DEADLINES')}</>,
             content: (
                 <>
-                    <p><strong>Application for the next study year possible from</strong> 01/12/2024</p>
-                    <p><strong>Application deadline for EU nationals / Extended application deadline</strong> 17/04/2024 / 28/06/2024</p>
-                    <p><strong>Application deadline for non-EU nationals</strong> 15/04/2024</p>
-                    <p>Please note that the IMC University of Applied Sciences Krems reserves the right to close the extended application period at any time without prior notice. We therefore recommend that you submit your application as soon as possible.</p>
+                    <p><strong>{t("Application for the next study year possible from 01/12/2024")}</strong></p>
+                    <p><strong>{t("Application deadline for EU nationals / Extended application deadline 17/04/2024 / 28/06/2024")}</strong></p>
+                    <p><strong>{t("Application deadline for non-EU nationals 15/04/2024")}</strong></p>
+                    <p>{t("Please note that the IMC University of Applied Sciences Krems reserves the right to close the extended application period at any time without prior notice. We therefore recommend that you submit your application as soon as possible.")}</p>
                 </>
             )
         },
         {
             id: 4,
-            title: 'APPLY ONLINE',
+            title: <>{t('APPLY ONLINE')}</>,
             content: (
                 <>
-                    <p>You've decided for one of our degree programmes? First of all: congratulations and thank you for choosing us! We’ll be happy to guide you step-by-step through your online application.</p>
+                    <p>{t("You've decided for one of our degree programmes? First of all: congratulations and thank you for choosing us! We’ll be happy to guide you step-by-step through your online application.")}</p>
                 </>
             )
         },
         {
             id: 5,
-            title: 'STUDY-RELEVANT DATES',
+            title: <>{t('STUDY-RELEVANT DATES')}</>,
             content: (
                 <>
-                    <p>You would like to plan ahead and would like to know when your degree programme starts? Here you will find the answer!</p>
+                    <p>{t("You would like to plan ahead and would like to know when your degree programme starts? Here you will find the answer!")}</p>
                 </>
             )
         }
@@ -298,28 +299,28 @@ const InternationalBusinessManagement = () => {
                                             id="anchor-menu"
                                         >
                                             <li className="nav-item">
-                                                <Link   className="nav-link" to="/ibm#overview">Overview</Link>
+                                                <Link   className="nav-link" to="/ibm#overview">{t("Overview")}</Link>
                                             </li>
                                             <li className="nav-item">
-                                                <Link   className="nav-link" to="/ibm#curriculum">Curriculum</Link>
+                                                <Link   className="nav-link" to="/ibm#curriculum">{t("Curriculum")}</Link>
                                             </li>
                                             <li className="nav-item">
-                                                <Link   className="nav-link" to="/ibm#key-features">Key features</Link>
+                                                <Link   className="nav-link" to="/ibm#key-features">{t("Key features")}</Link>
                                             </li>
                                             <li className="nav-item">
-                                                <Link   className="nav-link" to="/ibm#career-options">Career options</Link>
+                                                <Link   className="nav-link" to="/ibm#career-options">{t("Career options")}</Link>
                                             </li>
                                             <li className="nav-item">
-                                                <Link   className="nav-link" to="/ibm#videos">Videos</Link>
+                                                <Link   className="nav-link" to="/ibm#videos">{("Videos")}</Link>
                                             </li>
                                             <li className="nav-item">
-                                                <Link   className="nav-link" to="/ibm#information-events">Information events</Link>
+                                                <Link   className="nav-link" to="/ibm#information-events">{t("Information events")}</Link>
                                             </li>
                                             <li className="nav-item">
-                                                <Link   className="nav-link" to="/ibm#application-and-admission"> Application and admission</Link>
+                                                <Link   className="nav-link" to="/ibm#application-and-admission">{t("Application and admission")}</Link>
                                             </li>
                                             <li className="nav-item">
-                                                <Link   className="nav-link" to="/ibm#advisory-service"> Advisory Service</Link>
+                                                <Link   className="nav-link" to="/ibm#advisory-service"> {t("Advisory Service")}</Link>
                                             </li>
                                         </ul>
                                     </div>
@@ -337,26 +338,21 @@ const InternationalBusinessManagement = () => {
                                 </div>
                             </div>
                         </div>
-                        <PageIntro  eyebrow="International Join Faculty between TSUE & IMC UAS Krems "
-                                   title="International Business Management bachelor degree programme">
+                        <PageIntro  eyebrow={t("International Join Faculty between TSUE & IMC UAS Krems")}
+                                   title={t("International Business Management bachelor degree programme")}>
                         </PageIntro>
 
                     </div>
 
                     <section id="overview" className="mb-8 text-center max-w-5xl mx-auto">
-                        <h2 className="text-xl lg:text-2xl font-semibold text-gray-800 mb-4">(formerly Export-oriented
-                            Management)</h2>
+                        <h2 className="text-xl lg:text-2xl font-semibold text-gray-800 mb-4">{t("formerly Export-oriented Management")}</h2>
                         <p className="text-gray-700 leading-relaxed">
-                            International business in a nutshell: Do you enjoy communication? Do you like to travel? Are
-                            you open to other cultures? Are you interested in international business relations? Then
-                            this degree programme is the perfect choice for you.
+                            {t("International business in a nutshell: Do you enjoy communication? Do you like to travel? Are you open to other cultures? Are you interested in international business relations? Then this degree programme is the perfect choice for you.")}
                         </p>
                         <br/>
                         <p className="text-gray-700 leading-relaxed">
-                            We give you the skills and detailed knowledge of international business administration and
-                            economics that allow you to deal successfully with partners all over the world. It goes
-                            without saying that the programme is entirely taught in English, and on top of that you also
-                            study an additional foreign language.
+                            {t("We give you the skills and detailed knowledge of international business administration and economics that allow you to deal successfully with partners all over the world.")}
+                            {t("It goes without saying that the programme is entirely taught in English, and on top of that you also study an additional foreign language.")}
                         </p>
                     </section>
 
@@ -370,10 +366,9 @@ const InternationalBusinessManagement = () => {
                                         <ClockIcon className="w-6 h-6 link-text"/>
                                     </div>
                                 </div>
-                                <div className="mt-6 text-md leading-5">Full-time</div>
+                                <div className="mt-6 text-md leading-5">{t("Full - time")}</div>
                                 <div className="mt-6 text-base leading-4">
-                                    Organisational <br/>
-                                    form
+                                    {t("Organisational form")}
                                 </div>
                             </div>
                             <div
@@ -384,9 +379,9 @@ const InternationalBusinessManagement = () => {
                                         <GlobeAltIcon className="w-6 h-6 link-text"/>
                                     </div>
                                 </div>
-                                <div className="mt-6 text-md leading-5">English</div>
+                                <div className="mt-6 text-md leading-5">{t("English")}</div>
                                 <div className="mt-6 text-base leading-5">
-                                    Language
+                                    {t("Language")}
                                 </div>
                             </div>
                             <div
@@ -397,9 +392,9 @@ const InternationalBusinessManagement = () => {
                                         <AcademicCapIcon className="w-6 h-6 link-text"/>
                                     </div>
                                 </div>
-                                <div className="mt-6 text-md leading-5">2 semesters</div>
+                                <div className="mt-6 text-md leading-5">{t("6 semesters")}</div>
                                 <div className="mt-6 text-base leading-5">
-                                    Duration
+                                    {t("Duration")}
                                 </div>
                             </div>
                             <div
@@ -410,9 +405,9 @@ const InternationalBusinessManagement = () => {
                                         <CalendarDaysIcon className="w-6 h-6 link-text"/>
                                     </div>
                                 </div>
-                                <div className="mt-6 text-md leading-5">21 weeks</div>
+                                <div className="mt-6 text-md leading-5">{t("21 weeks")}</div>
                                 <div className="mt-6 text-base leading-5">
-                                    Internship
+                                    {t("Internship")}
                                 </div>
                             </div>
                             <div
@@ -425,99 +420,49 @@ const InternationalBusinessManagement = () => {
                                 </div>
                                 <div className="mt-6 text-md leading-5">2300$</div>
                                 <div className="mt-6 text-base leading-5">
-                                    Study fee
+                                    {t("Study fee")}
                                 </div>
                             </div>
                         </div>
                     </section>
 
                     <section className="mb-8 max-w-5xl mx-auto">
-                        <h2 className=" text-gray-800 mb-4 text-center h2-responsive">The degree programme</h2>
+                        <h2 className=" text-gray-800 mb-4 text-center h2-responsive">{t("The degree programme")}</h2>
                         <div className="text-col-2">
                             {/* <h4>The degree programme</h4> */}
                             <p>
-                                Nowadays, many companies operate in an international environment – their
-                                suppliers, business contacts, consultants and clients are increasingly
-                                located abroad, as are their competitors, who also have an international
-                                focus, offering new ideas and business models from other countries that are
-                                changing markets constantly.
+                                {t("Nowadays, many companies operate in an international environment – their suppliers, business contacts, consultants and clients are increasingly located abroad, as are their competitors, who also have an international focus, offering new ideas and business models from other countries that are changing markets constantly.")}
                             </p>
                             <p>
-                                This means more and more Austrian companies are looking for opportunities
-                                abroad. The export sector, often referred to as the engine of economic
-                                growth, has expanded from 10,000 companies to over 60,000 in the last 20
-                                years. This brings significant opportunities, but also some challenges.
+                                {t("This means more and more Austrian companies are looking for opportunities abroad. The export sector, often referred to as the engine of economic growth, has expanded from 10,000 companies to over 60,000 in the last 20 years. This brings significant opportunities, but also some challenges.")}
                             </p>
                             <div className="no-break">
-                                <Typography variant="h4">Ideally equipped for tomorrow’s job market</Typography>
+                                <Typography variant="h4">{t("Ideally equipped for tomorrow’s job market")}</Typography>
                                 <p>
-                                    The International Business Management bachelor degree programme has been
-                                    designed specifically with these requirements in mind. You will examine
-                                    ways in which you can head up and develop businesses with a view to
-                                    building a successful future and learn how to effectively manage national
-                                    and international projects and partnerships. Although the courses focus on
-                                    international business activities, it goes without saying that the skills
-                                    you develop can also be applied in the domestic market. We give our
-                                    students the tools they need to handle complex situations so that they can
-                                    skilfully address all kinds of challenges using the problem-solving
-                                    approaches and strategies at their disposal.
+                                    {t("The International Business Management bachelor degree programme has been designed specifically with these requirements in mind. You will examine ways in which you can head up and develop businesses with a view to building a successful future and learn how to effectively manage national and international projects and partnerships. Although the courses focus on international business activities, it goes without saying that the skills you develop can also be applied in the domestic market. We give our students the tools they need to handle complex situations so that they can skilfully address all kinds of challenges using the problem-solving approaches and strategies at their disposal.")}
                                 </p>
                             </div>
                             <p>
-                                Learning and developing skills and abilities that will give you a clear
-                                advantage in your day-to-day work play an important role throughout the
-                                programme. The skills modules are closely aligned with the learning modules:
-                                you will learn about the theory and practice behind a range of activities,
-                                including negotiations and concluding contracts, conflict and receivables
-                                management, getting your business in shape for audits and budgeting
-                                processes, as well as receiving valuable inputs related to discussions on
-                                objectives, performance assessment and employee management.
+                                {t("Learning and developing skills and abilities that will give you a clear advantage in your day-to-day work play an important role throughout the programme. The skills modules are closely aligned with the learning modules: you will learn about the theory and practice behind a range of activities, including negotiations and concluding contracts, conflict and receivables management, getting your business in shape for audits and budgeting processes, as well as receiving valuable inputs related to discussions on objectives, performance assessment and employee management.")}
                             </p>
                             <div className="no-break">
-                                <Typography variant="h4">International focus from day one</Typography>
+                                <Typography variant="h4">{t("International focus from day one")}</Typography>
                                 <p>
-                                    International and intercultural learning is also very important to us.
-                                    Here, the emphasis is on personal experience. This starts with the
-                                    international atmosphere at home – you will work with fellow students from
-                                    all over the world and regularly discuss international topics and best
-                                    practice during the courses.
+                                    {t("International and intercultural learning is also very important to us. Here, the emphasis is on personal experience. This starts with the international atmosphere at home – you will work with fellow students from all over the world and regularly discuss international topics and best practice during the courses.")}
                                 </p>
                             </div>
                             <p>
-                                In addition, you will have the opportunity to spend the third semester
-                                abroad at one of our 170+ partner universities without having to put your
-                                studies on hold. The fourth semester also has an international element: an
-                                internship at a company of your choice abroad.
+                                {t("In addition, you will have the opportunity to spend the third semester abroad at one of our 170+ partner universities without having to put your studies on hold. The fourth semester also has an international element: an internship at a company of your choice abroad.")}
                             </p>
                             <div className="no-break">
-                                <Typography variant="h4">Tip</Typography>
+                                <Typography variant="h4">{t("Tip")}</Typography>
 
                                 <p>
-                                    The dual degree we offer in conjunction either with the&nbsp;{" "}
-                                    <a
-                                        href="https://www.metropolia.fi/en"
-                                        title="Zur Website der Metropolia University of Applied Sciences"
-                                        target="_blank"
-                                    >
-                                        Metropolia University of Applied Sciences, Finland
-                                    </a>
-                                    &nbsp;or the{" "}
-                                    <a
-                                        href="https://student.kedge.edu/"
-                                        title="To the Website of KEDGE Business School"
-                                        target="_blank"
-                                    >
-                                        KEDGE Business School - Campus Bordeaux, France
-                                    </a>
-                                    &nbsp;is a particularly attractive option. Besides obtaining a Bachelor of
-                                    Arts from IMC Krems, you will also be awarded a degree from our partner
-                                    institution.
+                                    {t("The dual degree we offer in conjunction either with the Metropolia University of Applied Sciences, Finland or the KEDGE Business School - Campus Bordeaux, France is a particularly attractive option. Besides obtaining a Bachelor of Arts from IMC Krems, you will also be awarded a degree from our partner institution.")}
                                 </p>
                             </div>
                             <p>
-                                On top of that, you have the chance to spend a semester at one of our
-                                international locations – Tashkent in Uzbekistan, Sanya in China or Hanoi in
-                                Vietnam.
+                                {t("On top of that, you have the chance to spend a semester at one of our international locations – Tashkent in Uzbekistan, Sanya in China or Hanoi in Vietnam.")}
                             </p>
                             <p>
                                 <a
@@ -526,7 +471,7 @@ const InternationalBusinessManagement = () => {
                                     target="_blank"
                                     className="btn border-radius-0 btn-outline-primary fontcolor-grey waves-effect btn-sm no-boxshadow m-0 btn-rte"
                                 >
-                                    Student stories
+                                    {t("Student stories")}
                                     <i className="fa fa-angle-right ml-1"/>
                                 </a>
                             </p>
@@ -550,7 +495,7 @@ const InternationalBusinessManagement = () => {
                     <div className="flex lg:flex-nowrap relative items-center flex-wrap">
 
                         <PageIntro>
-                            <h2 className=" text-gray-800 mb-4 text-center h2-responsive">Business administration</h2>
+                            <h2 className=" text-gray-800 mb-4 text-center h2-responsive">{t("Business administration")}</h2>
                         </PageIntro>
                     </div>
 
@@ -559,53 +504,31 @@ const InternationalBusinessManagement = () => {
                             <div className=" ">
                                 {/*  */}
                                 <p>
-                                    Business administration focuses on how organisations and companies are
-                                    managed. In other words, it examines business processes with the aim of
-                                    providing insights into the planning, implementation and evaluation of
-                                    responsibilities, approaches and objectives in different parts of a
-                                    business.
+                                    {t("Business administration focuses on how organisations and companies are managed. In other words, it examines business processes with the aim of providing insights into the planning, implementation and evaluation of responsibilities, approaches and objectives in different parts of a business.")}
                                 </p>
                                 <p>
-                                    Business administration covers topics including accounting and finance,
-                                    marketing, human resources and logistics.
+                                    {t("Business administration covers topics including accounting and finance, marketing, human resources and logistics.")}
                                 </p>
                                 <div className="no-break">
-                                    <Typography variant="h4">Core elements of the programme</Typography>
+                                    <Typography variant="h4">{t("Core elements of the programme")}</Typography>
                                     <p>
-                                        In the International Business Management bachelor degree programme, we
-                                        provide you with a broad range of business administration skills and
-                                        know-how, with a focus on international activities.
+                                        {t("In the International Business Management bachelor degree programme, we provide you with a broad range of business administration skills and know-how, with a focus on international activities.")}
                                     </p>
                                 </div>
                                 <p>
-                                    This is the ideal preparation for capitalising on the opportunities and
-                                    addressing the challenges of increasingly dynamic markets by implementing
-                                    established and new business models, and adopting contemporary approaches.
+                                    {t("This is the ideal preparation for capitalising on the opportunities and addressing the challenges of increasingly dynamic markets by implementing established and new business models, and adopting contemporary approaches.")}
                                 </p>
                                 <p>
-                                    What are the most important steps for successful international expansion?
-                                    First of all, you have to ensure that you understand your counterparts,
-                                    and take into account any potential cross-cultural differences. Then it’s
-                                    all about building a relationship so that you can successfully conclude
-                                    contracts and agreements and manage risks systematically. Finally, you
-                                    need to actually run the business and solve problems.
+                                    {t("What are the most important steps for successful international expansion? First of all, you have to ensure that you understand your counterparts, and take into account any potential cross-cultural differences. Then it’s all about building a relationship so that you can successfully conclude contracts and agreements and manage risks systematically. Finally, you need to actually run the business and solve problems.")}
                                 </p>
                                 <p>
-                                    Statistics underline the importance of exports in our globalised world:
-                                    the number of exporters has increased from 12,500 in 2000 to over 60,000
-                                    today. Meanwhile, exports account for 60% of Austria’s gross domestic
-                                    product. What’s more, many companies export more than 90% of their goods
-                                    and services and could not exist if they operated solely on the Austrian
-                                    market.
+                                    {t("Statistics underline the importance of exports in our globalised world: the number of exporters has increased from 12,500 in 2000 to over 60,000 today. Meanwhile, exports account for 60% of Austria’s gross domestic product. What’s more, many companies export more than 90% of their goods and services and could not exist if they operated solely on the Austrian market.")}
                                 </p>
                                 <p>
-                                    On the flip side, we also benefit from imports, such as bananas and
-                                    coffee, but also in terms of energy, computers and software.
+                                    {t("On the flip side, we also benefit from imports, such as bananas and coffee, but also in terms of energy, computers and software.")}
                                 </p>
                                 <p>
-                                    Many international organisations (such as the United Nations, OPEC and the
-                                    OSCE) are based in Austria, while numerous international companies also
-                                    have their European or southeast European headquarters in this country.
+                                    {t("Many international organisations (such as the United Nations, OPEC and the OSCE) are based in Austria, while numerous international companies also have their European or southeast European headquarters in this country.")}
                                 </p>
                             </div>
                         </div>
@@ -637,19 +560,12 @@ const InternationalBusinessManagement = () => {
                                 fill="currentColor"/>
                         </svg>
                         <blockquote>
-                            <p className="text-2xl font-medium text-white dark:text-white">"On this programme you will
-                                have the opportunity to discover where your interests lie. You will gain a comprehensive
-                                overview of a range of industries and departments, putting you in a position to identify
-                                a company’s internal and external relationships. Foreign trade, marketing and sales,
-                                human resources, project business, or how about logistics? You decide on the focus of
-                                your degree with your choice of internship, electives and the topic of your bachelor
-                                paper."</p>
+                            <p className="text-2xl font-medium text-white dark:text-white">{t("On this programme you will have the opportunity to discover where your interests lie. You will gain a comprehensive overview of a range of industries and departments, putting you in a position to identify a company’s internal and external relationships. Foreign trade, marketing and sales, human resources, project business, or how about logistics? You decide on the focus of your degree with your choice of internship, electives and the topic of your bachelor paper.")}</p>
                         </blockquote>
                         <figcaption className="flex items-center justify-center mt-6 space-x-3">
                             <div className="flex items-center divide-x-2 divide-gray-500 dark:divide-gray-700">
-                                <div className="pr-3 font-medium text-white dark:text-white">Christopher Schwand</div>
-                                <div className="pl-3 text-sm font-light text-gray-200 dark:text-gray-400">Programme
-                                    director
+                                <div className="pr-3 font-medium text-white dark:text-white">{t("Christopher Schwand")}</div>
+                                <div className="pl-3 text-sm font-light text-gray-200 dark:text-gray-400">{t("Programme director")}
                                 </div>
                             </div>
                         </figcaption>
@@ -664,11 +580,10 @@ const InternationalBusinessManagement = () => {
                 className="min-h-[40vh] max-w-7xl mx-auto relative  py-12 px-4 sm:px-6 lg:px-8 "
             >
                 <PageIntro>
-                    <h2 className=" text-gray-800 mb-4 text-center h2-responsive">A formula for success: theoretical
-                        knowledge + practical experience</h2>
+                    <h2 className=" text-gray-800 mb-4 text-center h2-responsive">{t("A formula for success: theoretical knowledge + practical experience")}</h2>
                     <section className="mb-8 max-w-5xl mx-auto text-center">
                         <p className="text-gray-700 w-full leading-relaxed">
-                            The programme is built on three pillars.
+                            {t("The programme is built on three pillars.")}
                         </p>
                     </section>
                 </PageIntro>
@@ -684,27 +599,16 @@ const InternationalBusinessManagement = () => {
                         <div className="w-5/6 p-5">
                             <h4 className="font-roboto_slab text-2xl font-normal text-black">
                                 <span className="sr-only">1. </span>
-                                The basics
+                                {t("The basics")}
                             </h4>
                             <p className="text-base font-light mt-0 mb-4">
-                                Semesters 1-2
+                                {t("Semesters 1-2")}
                             </p>
                             <p className="mt-0 mb-4">
-                                At the beginning of your studies, you will gain an overview of
-                                business administration and economics and how to act sustainably in
-                                business. You will deal with subjects such as marketing, human
-                                resources management, accounting, logistics and law. Always with the
-                                opportunities and challenges in mind that come with
-                                internationalisation and international trade. Thus, we will start
-                                with a virtual journey around the world, with a wide variety of
-                                products and business sectors already in the first semester.
+                                {t("At the beginning of your studies, you will gain an overview of business administration and economics and how to act sustainably in business. You will deal with subjects such as marketing, human resources management, accounting, logistics and law. Always with the opportunities and challenges in mind that come with internationalisation and international trade. Thus, we will start with a virtual journey around the world, with a wide variety of products and business sectors already in the first semester.")}
                             </p>
                             <p className="mt-0 mb-4">
-                                Another important focus is developing an awareness of cultural
-                                differences. During the degree, you will acquire techniques for
-                                working as part of diverse teams. You can also select an additional
-                                foreign language, with a choice of Chinese, German, French, Italian
-                                or Spanish.
+                                {t("Another important focus is developing an awareness of cultural differences. During the degree, you will acquire techniques for working as part of diverse teams. You can also select an additional foreign language, with a choice of Chinese, German, French, Italian or Spanish.")}
                             </p>
                         </div>
                     </div>
@@ -721,22 +625,16 @@ const InternationalBusinessManagement = () => {
                         <div className="w-5/6 p-5">
                             <h4 className="font-roboto_slab text-2xl font-normal text-black">
                                 <span className="sr-only">1. </span>
-                                Gathering experience abroad
+                                {t("Gathering experience abroad")}
                             </h4>
                             <p className="text-base font-light mt-0 mb-4">
-                                Semesters 3-4
+                                {t("Semesters 3-4")}
                             </p>
                             <p className="mt-0 mb-4">
-                                Advanced language skills and a good awareness of how practices can vary from culture to
-                                culture are important ingredients for a successful international career.
+                                {t("Advanced language skills and a good awareness of how practices can vary from culture to culture are important ingredients for a successful international career.")}
                             </p>
                             <p className="mt-0 mb-4">
-                                Over the course of the programme, you will learn or improve your skills in your chosen
-                                foreign language – on top of your regular lectures, which are taught in English. You
-                                will spend semester 4 abroad, when you gain practical insights into the working methods
-                                of successful companies and how they function. You will also have the option of doing a
-                                semester abroad at one of our 170+ partner universities in semester 3. Our international
-                                spirit runs right through the programme!
+                                {t("Over the course of the programme, you will learn or improve your skills in your chosen foreign language – on top of your regular lectures, which are taught in English. You will spend semester 4 abroad, when you gain practical insights into the working methods of successful companies and how they function. You will also have the option of doing a semester abroad at one of our 170+ partner universities in semester 3. Our international spirit runs right through the programme!")}
                             </p>
                         </div>
                     </div>
@@ -753,30 +651,19 @@ const InternationalBusinessManagement = () => {
                         <div className="w-5/6 p-5">
                             <h4 className="font-roboto_slab text-2xl font-normal text-black">
                                 <span className="sr-only">1. </span>
-                                Advanced courses
+                                {t("Advanced courses")}
                             </h4>
                             <p className="text-base font-light mt-0 mb-4">
-                                Semesters 5-6
+                                {t("Semesters 5-6")}
                             </p>
                             <p className="mt-0 mb-4">
-                                The electives in semesters 5 and 6 are a major reason why graduates of this programme
-                                can look forward to such excellent career prospects. From entrepreneurship and
-                                digitalisation to trade, project management and foreign markets – you have the
-                                opportunity to tailor your degree to your personal interests through your choice of
-                                elective.
+                                {t("The electives in semesters 5 and 6 are a major reason why graduates of this programme can look forward to such excellent career prospects. From entrepreneurship and digitalisation to trade, project management and foreign markets – you have the opportunity to tailor your degree to your personal interests through your choice of elective.")}
                             </p>
                             <p className="mt-0 mb-4">
-                                In the electives, you will look at the instruments and tools you have studied during the
-                                programme from an interdisciplinary perspective and apply them in projects and realistic
-                                case studies.
+                                {t("In the electives, you will look at the instruments and tools you have studied during the programme from an interdisciplinary perspective and apply them in projects and realistic case studies.")}
                             </p>
                             <p className="mt-0 mb-4">
-                                You will also choose one of three specialisations, which each deal with a different
-                                export scenario – export of raw materials and goods, export of services, or
-                                megaprojects.
-                                In courses which build on what you’ve already learned, you will study advanced aspects
-                                of business administration and law and improve your computer and software skills. You
-                                will also develop your soft skills, working on areas such as negotiation techniques.
+                                {t("You will also choose one of three specialisations, which each deal with a different export scenario – export of raw materials and goods, export of services, or megaprojects. In courses which build on what you’ve already learned, you will study advanced aspects of business administration and law and improve your computer and software skills. You will also develop your soft skills, working on areas such as negotiation techniques.")}
                             </p>
                         </div>
                     </div>
@@ -796,11 +683,10 @@ const InternationalBusinessManagement = () => {
                     <div className="flex lg:flex-nowrap relative items-center flex-wrap">
 
                         <PageIntro>
-                            <h2 className=" text-gray-800 mb-4 text-center h2-responsive">Curriculum</h2>
+                            <h2 className=" text-gray-800 mb-4 text-center h2-responsive">{t("Curriculum")}</h2>
                             <section className="mb-8 max-w-5xl text-center">
                                 <p className="text-gray-700 leading-relaxed">
-                                    What can you expect from your studies? The curriculum provides an overview.
-                                    Click on the individual courses for further information.
+                                    {t("What can you expect from your studies? The curriculum provides an overview. Click on the individual courses for further information.")}
                                 </p>
                             </section>
                         </PageIntro>
@@ -818,7 +704,7 @@ const InternationalBusinessManagement = () => {
                                     className="bg-main text-white hover:text-white px-3"
                                     onClick={() => handleOpenStep(index)}
                                 >
-                                    <Typography variant="h6">{semester.title}</Typography>
+                                    <Typography variant="h6">{t(semester.title)}</Typography>
                                 </AccordionHeader>
                                 <AccordionBody className="px-3">
                                     <div className="flex justify-between p-2 border-b border-gray-300">
@@ -832,7 +718,7 @@ const InternationalBusinessManagement = () => {
                                     {semester.courses.map((course, courseIndex) => (
                                         <div key={courseIndex}
                                              className="flex justify-between p-2 border-b border-gray-300">
-                                            <span className="font-medium">{course.course}</span>
+                                            <span className="font-medium">{t(course.course)}</span>
                                             <span
                                                 className="text-gray-600">{`SWS: ${course.sws}, ECTS: ${course.ects}`}</span>
                                         </div>
@@ -858,13 +744,10 @@ const InternationalBusinessManagement = () => {
 
                     <div className="flex lg:flex-nowrap relative items-center flex-wrap">
                         <PageIntro>
-                            <h2 className=" text-gray-800 mb-4 text-center h2-responsive">Application and admissions –
-                                the next steps</h2>
+                            <h2 className=" text-gray-800 mb-4 text-center h2-responsive">{t("Application and admissions – the next steps")}</h2>
                             <section className="mb-8 max-w-5xl mx-auto text-center">
                                 <p className="text-gray-700 leading-relaxed">
-                                    You've found a course that's a perfect fit? Great – you’ve already taken the most
-                                    important
-                                    step! We’ve put together an overview to guide you through the next steps.
+                                    {t("You've found a course that's a perfect fit? Great – you’ve already taken the most important step! We’ve put together an overview to guide you through the next steps.")}
                                 </p>
                             </section>
                         </PageIntro>

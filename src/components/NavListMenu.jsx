@@ -5,11 +5,7 @@ import {
     Typography,
     IconButton,
     List,
-    ListItem,
-    Menu,
-    MenuHandler,
-    MenuList,
-    MenuItem,
+    ListItem
 } from "@material-tailwind/react";
 import {
     ChevronDownIcon,

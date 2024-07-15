@@ -45,7 +45,7 @@ const Homepage = () => {
                             className="mx-auto mt-10 grid max-w-xl grid-cols-4 items-center gap-x-20 gap-y-10 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-5">
                             <img
                                 className="col-span-2 max-h-28 w-full object-contain lg:col-span-1"
-                                src="/img.png"
+                                src="/logo-dark.png"
                                 alt="Transistor"
                                 width={158}
                                 height={48}
@@ -232,7 +232,7 @@ const Homepage = () => {
 
                 <Testimonials
                     className="mt-24 sm:mt-32 lg:mt-40 px-10"
-                    client={{name: "DR. AHMED MOHAMMED AZIZ ISMAIL", position: "Dean", logo: deanPic}}
+                    client={{name: "DR. AHMED mohaMed AZIZ ISMAIL", position: "Dean", logo: deanPic}}
                 >
                        <span className="text-3xl">{t('Explore global opportunities with us at IMC Krems Tashkent, where we prepare you for success in international business.')}</span>
                 </Testimonials>

@@ -2,13 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import {
     FaAward,
-    FaCalendarAlt,
-    FaGraduationCap,
-    FaHandsHelping,
-    FaLanguage,
-    FaMoneyBillAlt, FaMoneyCheckAlt,
-    FaRegMoneyBillAlt,
-    FaUser
+    FaGraduationCap,FaMoneyCheckAlt
 } from 'react-icons/fa';
 import PageIntro from "../components/PageIntro.jsx";
 import {
@@ -17,24 +11,17 @@ import {
     AccordionBody, Card,
 } from "@material-tailwind/react";
 import {Image} from "antd";
-import {IoIosTimer} from "react-icons/io";
-import {GrLanguage} from "react-icons/gr";
-import {AiOutlineSwap} from "react-icons/ai";
-import {GiDuration} from "react-icons/gi";
-import {TbSchoolBell} from "react-icons/tb";
 import {HashLink as Link} from "react-router-hash-link";
 import SectionSecond from "../components/SectionSecond.jsx";
 import imageMeeting from "/public/2023.jpg";
 import FadeIn from "../components/FadeIn.jsx";
 import {
     ArrowPathIcon, BookmarkIcon,
-    CloudArrowUpIcon,
-    FingerPrintIcon,
-    LifebuoyIcon,
-    LockClosedIcon
+    LifebuoyIcon
 } from '@heroicons/react/24/outline'
 import SectionThird from "../components/SectionThird.jsx";
 import {AcademicCapIcon, BanknotesIcon, ClockIcon, GlobeAltIcon} from "@heroicons/react/24/solid";
+import {useTranslation} from "react-i18next";
 
 const features = [
     {
@@ -78,7 +65,7 @@ function Icon({ id, open }) {
 
 
 const Foundation = () => {
-
+    const {t} = useTranslation();
     const [open, setOpen] = React.useState(1);
     const [openVideo, setOpenVideo] = React.useState(1)
     const [openStep, setOpenStep] = React.useState(1)
@@ -291,37 +278,37 @@ const Foundation = () => {
                                             id="anchor-menu"
                                         >
                                             <li className="nav-item">
-                                                <Link className="nav-link" to="/ibm#overview">Overview</Link>
+                                                <Link className="nav-link" to="/ibm#overview">{t("Overview")}</Link>
                                             </li>
                                             <li className="nav-item">
-                                                <Link className="nav-link" to="/ibm#curriculum">Curriculum</Link>
-                                            </li>
-                                            <li className="nav-item">
-                                                <Link className="nav-link" to="/ibm#key-features">Key features</Link>
-                                            </li>
-                                            <li className="nav-item">
-                                                <Link className="nav-link" to="/ibm#career-options">Career
-                                                    options</Link>
-                                            </li>
-                                            <li className="nav-item">
-                                                <Link className="nav-link" to="/ibm#videos">Videos</Link>
-                                            </li>
-                                            <li className="nav-item">
-                                                <Link className="nav-link" to="/ibm#information-events">Information
-                                                    events</Link>
+                                                <Link className="nav-link" to="/ibm#curriculum">{t("Curriculum")}</Link>
                                             </li>
                                             <li className="nav-item">
                                                 <Link className="nav-link"
-                                                      to="/ibm#application-and-admission"> Application and
-                                                    admission</Link>
+                                                      to="/ibm#key-features">{t("Key features")}</Link>
                                             </li>
                                             <li className="nav-item">
-                                                <Link className="nav-link" to="/ibm#advisory-service"> Advisory
-                                                    Service</Link>
+                                                <Link className="nav-link"
+                                                      to="/ibm#career-options">{t("Career options")}</Link>
+                                            </li>
+                                            <li className="nav-item">
+                                                <Link className="nav-link" to="/ibm#videos">{("Videos")}</Link>
+                                            </li>
+                                            <li className="nav-item">
+                                                <Link className="nav-link"
+                                                      to="/ibm#information-events">{t("Information events")}</Link>
+                                            </li>
+                                            <li className="nav-item">
+                                                <Link className="nav-link"
+                                                      to="/ibm#application-and-admission">{t("Application and admission")}</Link>
+                                            </li>
+                                            <li className="nav-item">
+                                                <Link className="nav-link"
+                                                      to="/ibm#advisory-service"> {t("Advisory Service")}</Link>
                                             </li>
                                         </ul>
                                         <a
-                                            className="gtm-subnav-btn-apply text-white btn border-radius-0 btn-warning waves-effect waves-light btn-lg"
+                                            className="gtm-subnav-btn-apply hidden lg:flex text-white btn border-radius-0 btn-warning waves-effect waves-light btn-lg"
                                             href="https://onboarding.fh-krems.ac.at/en"
                                             id="apply-online"
                                             target="_blank"
@@ -348,18 +335,14 @@ const Foundation = () => {
                                 </div>
                             </div>
                         </div>
-                        <PageIntro eyebrow="International Join Faculty between TSUE & IMC UAS Krems "
-                                   title="Foundation Programme">
+                        <PageIntro eyebrow={t("International Join Faculty between TSUE & IMC UAS Krems")}
+                                   title={t("Foundation Programme")}>
                         </PageIntro>
 
                     </div>
 
                     <section id="overview" className="mb-8 text-center max-w-5xl mx-auto">
-                        <h2 className="text-xl lg:text-2xl font-semibold text-gray-800 mb-4">At our double degree
-                            faculty, we understand that students come from diverse educational backgrounds and may
-                            require additional preparation before embarking on their chosen degree programs. Our
-                            Foundation Program is designed to bridge this gap, providing students with the essential
-                            skills and knowledge needed to succeed in higher education.</h2>
+                        <h2 className="text-xl lg:text-2xl font-semibold text-gray-800 mb-4">{t("At our double degree faculty, we understand that students come from diverse educational backgrounds and may require additional preparation before embarking on their chosen degree programs. Our Foundation Program is designed to bridge this gap, providing students with the essential skills and knowledge needed to succeed in higher education.")}</h2>
                         <br/>
                     </section>
 
@@ -370,13 +353,12 @@ const Foundation = () => {
                                 <div
                                     className="flex justify-center  px-9 py-5 w-full text-lg leading-5  bg-main text-slate-500">
                                     <div className="justify-center items-center flex w-10 h-10 bg-white  rounded-md">
-                                        <ClockIcon className="w-6 h-6 link-text"/>
+                                    <ClockIcon className="w-6 h-6 link-text"/>
                                     </div>
                                 </div>
-                                <div className="mt-6 text-md leading-5">Full-time</div>
+                                <div className="mt-6 text-md leading-5">{t("Full - time")}</div>
                                 <div className="mt-6 text-base leading-4">
-                                    Organisational <br/>
-                                    form
+                                    {t("Organisational form")}
                                 </div>
                             </div>
                             <div
@@ -387,9 +369,9 @@ const Foundation = () => {
                                         <GlobeAltIcon className="w-6 h-6 link-text"/>
                                     </div>
                                 </div>
-                                <div className="mt-6 text-md leading-5">English</div>
+                                <div className="mt-6 text-md leading-5">{t("English")}</div>
                                 <div className="mt-6 text-base leading-5">
-                                    Language
+                                    {t("Language")}
                                 </div>
                             </div>
                             <div
@@ -402,7 +384,7 @@ const Foundation = () => {
                                 </div>
                                 <div className="mt-6 text-md leading-5">2 semesters</div>
                                 <div className="mt-6 text-base leading-5">
-                                    Duration
+                                    {t("Duration")}
                                 </div>
                             </div>
                             <div
@@ -415,23 +397,23 @@ const Foundation = () => {
                                 </div>
                                 <div className="mt-6 text-md leading-5">16 800 000 som</div>
                                 <div className="mt-6 text-base leading-5">
-                                    Study fee
+                                    {t("Study fee")}
                                 </div>
                             </div>
                         </div>
                     </section>
 
                     <section className="mb-8 max-w-5xl mx-auto">
-                        <h2 className=" text-gray-800 mb-4 text-center h2-responsive">Program Overview</h2>
-                        <SectionThird title="Program Overview" image={{src: imageMeeting, shape: 1}}>
+                        <h2 className=" text-gray-800 mb-4 text-center h2-responsive">{t("Program Overview")}</h2>
+                        <SectionThird title={t("Program Overview")} image={{src: imageMeeting, shape: 1}}>
                             <div className="space-y-6 text-lg text-neutral-600">
                                 <p>
-                                    The Foundation Program at our double degree faculty is a comprehensive, one-year preparatory course aimed at equipping students with the academic and personal skills necessary for university-level study. This program is ideal for students who:
+                                    {t("The Foundation Program at our double degree faculty is a comprehensive, one-year preparatory course aimed at equipping students with the academic and personal skills necessary for university-level study. This program is ideal for students who:")}
                                 </p>
                                 <p>
-                                    <strong className="text-gray-800">1) Need to meet the entry requirements for their desired degree program</strong> <br/>
-                                    <strong className="text-gray-800">2) Wish to improve their English language proficiency</strong> <br/>
-                                    <strong className="text-gray-800">3) Seek to build a strong academic foundation in their field of interest</strong> <br/>
+                                    <strong className="text-gray-800">{t("1) Need to meet the entry requirements for their desired degree program")}</strong> <br/>
+                                    <strong className="text-gray-800">{t("2) Wish to improve their English language proficiency")}</strong> <br/>
+                                    <strong className="text-gray-800">{t("3) Seek to build a strong academic foundation in their field of interest")}</strong> <br/>
                                 </p>
                             </div>
                         </SectionThird>
@@ -451,11 +433,10 @@ const Foundation = () => {
                             <div className="flex lg:flex-nowrap relative items-center flex-wrap">
 
                                 <PageIntro>
-                                    <h2 className=" text-gray-800 mb-4 text-center h2-responsive">Curriculum</h2>
+                                    <h2 className=" text-gray-800 mb-4 text-center h2-responsive">{t("Curriculum")}</h2>
                                     <section className="mb-8 max-w-5xl text-center">
                                         <p className="text-gray-700 leading-relaxed">
-                                            What can you expect from your studies? The curriculum provides an overview.
-                                            Click on the individual courses for further information.
+                                            {t("What can you expect from your studies? The curriculum provides an overview. Click on the individual courses for further information.")}
                                         </p>
                                     </section>
                                 </PageIntro>
@@ -466,18 +447,17 @@ const Foundation = () => {
                                            icon={<Icon id={1} open={open}/>}>
                                     <AccordionHeader className="bg-main text-white hover:text-white px-3"
                                                      onClick={() => handleOpen(1)}>
-                                        <Typography variant="h5"> Semester 1</Typography>
+                                        <Typography variant="h5"> {t("Semester 1")}</Typography>
                                     </AccordionHeader>
                                     <AccordionBody className="px-3">
                                         <ul className="">
-                                            <li className="mb-2 text-lg">Business English 1 (Intensive English
-                                                1)
+                                            <li className="mb-2 text-lg">{t("Business English 1 (Intensive English 1)")}
                                             </li>
-                                            <li className="mb-2 text-lg">Mathematics</li>
-                                            <li className="mb-2 text-lg">Introduction To Economics</li>
-                                            <li className="mb-2 text-lg">Introduction to Management</li>
-                                            <li className="mb-2 text-lg">ICT</li>
-                                            <li className="mb-2 text-lg">Social Studies 1</li>
+                                            <li className="mb-2 text-lg">{t("Mathematics")}</li>
+                                            <li className="mb-2 text-lg">{t("Introduction To Economics")}</li>
+                                            <li className="mb-2 text-lg">{t("Introduction to Management")}</li>
+                                            <li className="mb-2 text-lg">{t("ICT")}</li>
+                                            <li className="mb-2 text-lg">{t("Social Studies 1")}</li>
                                         </ul>
 
                                     </AccordionBody>
@@ -486,20 +466,18 @@ const Foundation = () => {
                                            icon={<Icon id={1} open={open}/>}>
                                     <AccordionHeader className="bg-main text-white hover:text-white px-3"
                                                      onClick={() => handleOpen(2)}>
-                                        <Typography variant="h5"> Semester 2</Typography>
+                                        <Typography variant="h5"> {t("Semester 2")}</Typography>
                                     </AccordionHeader>
                                     <AccordionBody className="px-3">
                                         <ul className="">
-                                            <li className="mb-2 text-lg">Business English 2 (Intensive English
-                                                2)
+                                            <li className="mb-2 text-lg">{t("Business English 2 (Intensive English 2)")}
                                             </li>
-                                            <li className="mb-2 text-lg">Statistics</li>
-                                            <li className="mb-2 text-lg">Introduction To Finance and
-                                                Accounting
+                                            <li className="mb-2 text-lg">{t("Statistics")}</li>
+                                            <li className="mb-2 text-lg">{t("Introduction To Finance and Accounting")}
                                             </li>
-                                            <li className="mb-2 text-lg">German 1</li>
-                                            <li className="mb-2 text-lg">Social Studies 2</li>
-                                            <li className="mb-2 text-lg">Academic Writing</li>
+                                            <li className="mb-2 text-lg">{t("German 1")}</li>
+                                            <li className="mb-2 text-lg">{t("Social Studies 2")}</li>
+                                            <li className="mb-2 text-lg">{t("Academic Writing")}</li>
                                         </ul>
                                     </AccordionBody>
                                 </Accordion>
@@ -513,13 +491,10 @@ const Foundation = () => {
                             <div className="bg-white py-10 mb-10 sm:py-5">
                                 <div className="mx-auto max-w-7xl px-6 lg:px-8">
                                     <div className="text-center">
-                                        <h2 className=" text-gray-800 mb-4 text-center h2-responsive">Key Features</h2>
+                                        <h2 className=" text-gray-800 mb-4 text-center h2-responsive">{t("Key Features")}</h2>
                                         <p className="text-lg text-gray-700 mb-8 max-w-3xl mx-auto">
-                                            Tailored Curriculum: Our curriculum is carefully crafted to address the
-                                            specific
-                                            needs of students, offering courses in English language, mathematics,
-                                            science, and
-                                            other relevant subjects.
+                                            {t("Tailored Curriculum")}
+                                            {t("Our curriculum is carefully crafted to address the specific needs of students, offering courses in English language, mathematics, science, and other relevant subjects.")}
                                         </p>
                                     </div>
                                     <div className="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
@@ -529,12 +504,11 @@ const Foundation = () => {
                                                     <dt className="text-base font-semibold leading-7 text-gray-900">
                                                         <div
                                                             className="absolute left-0 top-0 mr-4 flex h-12 w-12 items-center justify-center rounded-lg bg-main">
-                                                            <feature.icon aria-hidden="true"
-                                                                          className="h-7 w-7 text-white"/>
+                                                            <feature.icon aria-hidden="true" className="h-7 w-7 text-white"/>
                                                         </div>
-                                                        {feature.name}
+                                                        {t(feature.name)}
                                                     </dt>
-                                                    <dd className="mt-2 text-base leading-7 text-gray-600">{feature.description}</dd>
+                                                    <dd className="mt-2 text-base leading-7 text-gray-600">{t(feature.description)}</dd>
                                                 </div>
                                             ))}
                                         </dl>
@@ -553,14 +527,11 @@ const Foundation = () => {
                                         <FadeIn>
                                             <Typography variant="h1"
                                                         className="text-4xl font-bold text-white mb-6 text-center">
-                                                Pathway to Degree Programs
+                                                {t("Pathway to Degree Programs")}
                                             </Typography>
                                             <div className="max-w-3xl mx-auto text-center text-white text-xl">
-                                                Upon successful completion of the Foundation Program, students are
-                                                guaranteed admission to their chosen degree program at IMC Krems,
-                                                provided they meet the specific entry requirements. This seamless
-                                                transition ensures that students are well-prepared and confident as they
-                                                embark on their undergraduate studies.
+                                                {t("Upon successful completion of the Foundation Program, students are guaranteed admission to their chosen degree program at IMC Krems, provided they meet the specific entry requirements.")}
+                                                {t("This seamless transition ensures that students are well-prepared and confident as they embark on their undergraduate studies.")}
                                             </div>
                                         </FadeIn>
                                     </div>
@@ -570,12 +541,11 @@ const Foundation = () => {
 
                             <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-10">
                                 <PageIntro>
-                                    <h2 className=" text-gray-800 mb-4 text-center h2-responsive">Program Structure</h2>
-                                    <section className="mb-8 max-w-5xl text-center">
+                                    <h2 className=" text-gray-800 mb-4 text-center h2-responsive">{t("Program Structure")}</h2>
+                                    <section className="mb-8 max-w-5xl mx-auto text-center">
                                         <p className="text-gray-700 leading-relaxed">
-                                            The Foundation Program is structured to provide a balanced mix of core and
-                                            elective courses, allowing students to tailor their studies to their
-                                            academic goals. Key components of the program include:
+                                            {t("The Foundation Program is structured to provide a balanced mix of core and elective courses, allowing students to tailor their studies to their academic goals.")}
+                                            {t("Key components of the program include:")}
                                         </p>
                                     </section>
                                 </PageIntro>
@@ -585,10 +555,9 @@ const Foundation = () => {
                                             <FaGraduationCap className="text-4xl text-white  mx-auto"/>
                                         </div>
                                         <Typography variant="h3" className="text-xl font-semibold text-center mb-4">
-                                            Core Courses
+                                            {t("Core Courses")}
                                         </Typography>
-                                        These courses focus on essential academic skills, including English language
-                                        proficiency, critical thinking, and academic writing.
+                                        {t("These courses focus on essential academic skills, including English language proficiency, critical thinking, and academic writing.")}
                                     </Card>
 
                                     <Card className="p-6 bg-gray-50 shadow-lg">
@@ -596,10 +565,9 @@ const Foundation = () => {
                                             <FaAward className="text-4xl text-white  mx-auto"/>
                                         </div>
                                         <Typography variant="h3" className="text-xl font-semibold text-center mb-4">
-                                            Project Work
+                                            {t("Project Work")}
                                         </Typography>
-                                        Students engage in project-based learning, developing research and
-                                        problem-solving skills.
+                                        {t("Students engage in project-based learning, developing research and problem-solving skills.")}
                                     </Card>
 
                                     <Card className="p-6 bg-gray-50 shadow-lg">
@@ -607,10 +575,9 @@ const Foundation = () => {
                                             <FaMoneyCheckAlt className="text-4xl text-white  mx-auto"/>
                                         </div>
                                         <Typography variant="h3" className="text-xl font-semibold text-center mb-4">
-                                            Assessments
+                                            {t("Assessments")}
                                         </Typography>
-                                        Regular assessments ensure that students are progressing and meeting the
-                                        required academic standards
+                                        {t("Regular assessments ensure that students are progressing and meeting the required academic standards.")}
                                     </Card>
                                 </div>
                             </div>
@@ -633,11 +600,10 @@ const Foundation = () => {
 
                     <div className="flex lg:flex-nowrap relative items-center flex-wrap">
                         <PageIntro>
-                            <h2 className=" text-gray-800 mb-4 text-center h2-responsive">Student Support Services</h2>
+                            <h2 className=" text-gray-800 mb-4 text-center h2-responsive">{t("Student Support Services")}</h2>
                             <section className="mb-8 max-w-5xl text-center">
                                 <p className="text-gray-700 leading-relaxed">
-                                    We are committed to supporting our students throughout their academic journey. The
-                                    Foundation Program includes access to a range of support services, such as:
+                                    We are committed to supporting our students throughout their academic journey. The Foundation Program includes access to a range of support services, such as:
                                 </p>
                             </section>
                         </PageIntro>
@@ -669,10 +635,10 @@ const Foundation = () => {
                                 >
                                     <AccordionHeader className="bg-main text-white hover:text-white px-3"
                                                      onClick={() => toggleSection(section.id)}>
-                                        <Typography variant="h6">{section.title}</Typography>
+                                        <Typography variant="h6">{t(section.title)}</Typography>
                                     </AccordionHeader>
                                     <AccordionBody className="px-3 text-md">
-                                        {section.content}
+                                        {t(section.content)}
                                     </AccordionBody>
                                 </Accordion>
                             ))}
