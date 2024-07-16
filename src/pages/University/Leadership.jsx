@@ -5,122 +5,59 @@ import { useTranslation } from 'react-i18next';
 const Leadership = () => {
     const { t } = useTranslation();
 
+    const leaders = [
+        {
+            name: "Tulkin Teshabaev",
+            title: "Rector of Tashkent State University of Economics",
+            image: "/Teshabayev_To'lqin_Zakirovich.jpg"
+        },
+        {
+            name: "Dr. Udo Brändle",
+            title: "CEO of IMC University of Applied Sciences Krems",
+            image: "/web.udo.braendle.jpg"
+        },
+        {
+            name: "Prof. Mehmonov Sultonali Umaraliyevich",
+            title: "First Vice-Rector for Academic, TSUE",
+            image: "/Professors/img_2.png"
+        },
+        {
+            name: "Prof.(FH) Mag. Dr. Martin Waiguny",
+            title: "Academic Head, IMC University of Applied Science, Krems, Austria",
+            image: "/Professors/img_1.png"
+        },
+        {
+            name: "Dr. Christian Kümmel",
+            title: "Program Director International Business Management",
+            image: "/web.christian.kuemmel.jpg"
+        },
+        {
+            name: "Jens Peter Ennen",
+            title: "Program Director Tourism and Leisure Management",
+            image: "/web.jens.ennen.jpg"
+        },
+        {
+            name: "Ahmed mohaMed Aziz Ismail",
+            title: "Dean of the international Joint Education Faculty of TSUE and IMC Krems",
+            image: "/Fv2tHlmaMAIwATY.jpg"
+        },
+    ];
+
     return (
         <>
             <PageIntro eyebrow={t("Leadership")} title={t("Leadership: Guiding the Path of Excellence at TSUE and IMC Krems")}>
             </PageIntro>
-            <div className="flex flex-wrap mb-5">
-                <div className="w-full max-w-full px-3 mb-6  mx-auto">
-                    <div
-                        className="relative mx-auto break-words min-w-0 bg-clip-border rounded-[.95rem] border border-dashed border-stone-200 bg-white m-5">
-
-                        <div className="flex-auto block py-8 px-9">
-                            <div>
-                                <div className="grid grid-cols-1 lg:grid-cols-5 w-full">
-                                    <div className="flex flex-col mr-5 text-center mb-11 lg:mr-16">
-                                        <div className="inline-block mb-4 relative shrink-0 rounded-[.95rem]">
-                                            <img
-                                                className="inline-block  object-cover shrink-0 rounded-[.95rem] w-[150px] h-[150px]"
-                                                src="/Teshabayev_To'lqin_Zakirovich.jpg"
-                                                alt={t("avatar image")}
-                                            />
-                                        </div>
-                                        <div className="text-center">
-                                            <a href="javascript:void(0)"
-                                               className="text-dark font-semibold hover:text-primary text-[1.25rem] transition-colors duration-200 ease-in-out">{t("Tulkin Teshabaev")}</a>
-                                            <span className="block font-medium text-muted">{t("Rector of Tashkent State University of Economics")}</span>
-                                        </div>
-                                    </div>
-                                    <div className="flex flex-col mr-5 text-center mb-11 lg:mr-16">
-                                        <div className="inline-block mb-4 relative shrink-0 rounded-[.95rem]">
-                                            <img
-                                                className="inline-block  object-cover shrink-0 rounded-[.95rem] w-[150px] h-[150px]"
-                                                src="/web.udo.braendle.jpg"
-                                                alt={t("avatar image")}
-                                            />
-                                        </div>
-                                        <div className="text-center">
-                                            <a href="javascript:void(0)"
-                                               className="text-dark font-semibold hover:text-primary text-[1.25rem] transition-colors duration-200 ease-in-out">{t("Dr. Udo Brändle")}</a>
-                                            <span className="block font-medium text-muted">{t("CEO of IMC University of Applied Sciences Krems")}</span>
-                                        </div>
-                                    </div>
-                                    <div className="flex flex-col mr-5 text-center mb-11 lg:mr-16">
-                                        <div className="inline-block mb-4 relative shrink-0 rounded-[.95rem]">
-                                            <img
-                                                className="inline-block  object-cover shrink-0 rounded-[.95rem] w-[150px] h-[150px]"
-                                                src="/Professors/img_2.png"
-                                                alt={t("avatar image")}
-                                            />
-                                        </div>
-                                        <div className="text-center">
-                                            <a href="javascript:void(0)"
-                                               className="text-dark font-semibold hover:text-primary text-[1.25rem] transition-colors duration-200 ease-in-out">{t("Prof. Mehmonov Sultonali Umaraliyevich")}</a>
-                                            <span className="block font-medium text-muted">{t("First Vice-Rector for Academic, TSUE")}</span>
-                                        </div>
-                                    </div>
-                                    <div className="flex flex-col mr-5 text-center mb-11 lg:mr-16">
-                                        <div className="inline-block mb-4 relative shrink-0 rounded-[.95rem]">
-                                            <img
-                                                className="inline-block  object-cover shrink-0 rounded-[.95rem] w-[150px] h-[150px]"
-                                                src="/Professors/img_1.png"
-                                                alt={t("avatar image")}
-                                            />
-                                        </div>
-                                        <div className="text-center">
-                                            <a href="javascript:void(0)"
-                                               className="text-dark font-semibold hover:text-primary text-[1.25rem] transition-colors duration-200 ease-in-out">{t("Prof.(FH) Mag. Dr. Martin Waiguny")}</a>
-                                            <span className="block font-medium text-muted">{t("Academic Head, IMC University of Applied Science, Krems, Austria")}</span>
-                                        </div>
-                                    </div>
-
-                                    <div className="flex flex-col mr-5 text-center mb-11 lg:mr-16">
-                                        <div className="inline-block mb-4 relative shrink-0 rounded-[.95rem]">
-                                            <img
-                                                className="inline-block  object-cover shrink-0 rounded-[.95rem] w-[150px] h-[150px]"
-                                                src="/web.christian.kuemmel.jpg"
-                                                alt={t("avatar image")}
-                                            />
-                                        </div>
-                                        <div className="text-center">
-                                            <a href="javascript:void(0)"
-                                               className="text-dark font-semibold hover:text-primary text-[1.25rem] transition-colors duration-200 ease-in-out">{t("Dr. Christian Kümmel")}</a>
-                                            <span className="block font-medium text-muted">{t("Program Director International Business Management")}</span>
-                                        </div>
-                                    </div>
-                                    <div className="flex flex-col mr-5 text-center mb-11 lg:mr-16">
-                                        <div className="inline-block mb-4 relative shrink-0 rounded-[.95rem]">
-                                            <img
-                                                className="inline-block  object-cover shrink-0 rounded-[.95rem] w-[150px] h-[150px]"
-                                                src="/web.jens.ennen.jpg"
-                                                alt={t("avatar image")}
-                                            />
-                                        </div>
-                                        <div className="text-center">
-                                            <a href="javascript:void(0)"
-                                               className="text-dark font-semibold hover:text-primary text-[1.25rem] transition-colors duration-200 ease-in-out">{t("Jens Peter Ennen")}</a>
-                                            <span className="block font-medium text-muted">{t("Program Director Tourism and Leisure Management")}</span>
-                                        </div>
-                                    </div>
-                                    <div className="flex flex-col mr-5 text-center mb-11 lg:mr-16">
-                                        <div className="inline-block mb-4 relative shrink-0 rounded-[.95rem]">
-                                            <img
-                                                className="inline-block object-cover shrink-0 rounded-[.95rem] w-[150px] h-[150px]"
-                                                src="/Fv2tHlmaMAIwATY.jpg"
-                                                alt={t("avatar image")}
-                                            />
-                                        </div>
-                                        <div className="text-center">
-                                            <a href="javascript:void(0)"
-                                               className="text-dark font-semibold hover:text-primary text-[1.25rem] transition-colors duration-200 ease-in-out">{t("Ahmed Mohamed Aziz Ismail")}</a>
-                                            <span className="block font-medium text-muted">{t("Dean of the international Joint Education Faculty of TSUE and IMC Krems")}</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+           
+            <div className="flex flex-wrap mb-5 justify-center">
+                {leaders.map((leader, index) => (
+                    <div key={index} className="relative max-w-[270px] rounded overflow-hidden shadow-lg my-4 mx-4">
+                        <img className="w-full object-cover w-[270px] h-[270px]" src={leader.image} alt={t("avatar image")} />
+                        <div className="absolute bottom-0 left-0 right-0 portrait-bg bg-opacity-50 px-6 py-2">
+                            <div className="font-bold text-sm portrait-top-text">{leader.name}</div>
+                            <div className="portrait-bot-text">{leader.title}</div>
                         </div>
                     </div>
-                </div>
+                ))}
             </div>
         </>
     );

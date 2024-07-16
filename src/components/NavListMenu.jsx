@@ -97,10 +97,11 @@ export function NavbarWithMegaMenu() {
                     </Button>
                     </Link>
                 </div>
+               <div className="flex lg:hidden items-center gap-1">
+               <LanguageSelector/>
                 <IconButton
                     variant="text"
                     color="blue-gray"
-                    className="lg:hidden"
                     onClick={() => setOpenNav(!openNav)}
                 >
                     {openNav ? (
@@ -109,9 +110,17 @@ export function NavbarWithMegaMenu() {
                         <Bars3Icon className="h-6 w-6" strokeWidth={2} />
                     )}
                 </IconButton>
+               </div>
             </div>
             <Collapse open={openNav}>
                 <NavList />
+                <div className=" lg:hidden">
+                <Link to="https://docs.google.com/forms/d/e/1FAIpQLSfslvtJO2i1Tfo2xFpebn_rQtX8GPVSpHGYKbAXj9a4s-YZ2Q/viewform">
+                    <Button type="primary" size="sm" block>
+                        {t("applyNow")}
+                    </Button>
+                    </Link>
+                </div>
                 {/*<div className="flex w-full flex-nowrap items-center gap-2 lg:hidden">*/}
                 {/*    <Button variant="outlined" size="sm" color="blue-gray" fullWidth>*/}
                 {/*        Log In*/}

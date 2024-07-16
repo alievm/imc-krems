@@ -182,7 +182,7 @@ export function NavListMenu2() {
                                                         color="blue-gray"
                                                         className="flex gap-3 items-center capitalize  text-sm font-bold leading-tight"
                                                     >
-                                                        Bachelor proograms
+                                                         {t("Bachelor programs")}
                                                     <ChevronDownIcon
                                                         strokeWidth={2.5}
                                                         className={`h-3.5 w-3.5 transition-transform ${
@@ -260,8 +260,8 @@ export function NavListMenu2() {
             <div className="block lg:hidden">
                 <Collapse open={isMobileMenuOpen}>
                     {/* Перечислите пункты для мобильного меню */}
-                    <button onClick={toggleOpenSub}>
-                        <MenuItem className="flex items-center gap-3 rounded-lg">
+                    <button className="w-full" onClick={toggleOpenSub}>
+                        <MenuItem className="flex items-center gap-3 rounded-lg ">
                             {/* Иконка и название пункта */}
                             <div className="flex items-center justify-center rounded-lg !bg-blue-gray-50 p-2 ">
                                 {" "}
@@ -277,7 +277,7 @@ export function NavListMenu2() {
                                     color="blue-gray"
                                     className="flex items-center text-sm font-bold"
                                 >
-                                    {t("International joint faculty between TSUE and IMC Krems")}
+                                    {t("Bachelor programs")}
                                 </Typography>
                                 {/* Описание пункта */}
                                 <Typography

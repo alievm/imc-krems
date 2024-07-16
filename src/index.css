@@ -91,6 +91,26 @@ ant-collapse-header {
     color: #798591;
 }
 
+.portrait-top-text {
+    font-size: 15px;
+    font-weight: 500;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+    line-height: 18px;
+    padding-bottom: 5px;
+    color: black;
+}
+.portrait-bot-text {
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 15px;
+    padding-top: 5px;
+    color: black;
+}
+
+.portrait-bg {
+    background: rgba(118, 134, 147, 0.75);
+}
+
 .ant-btn-primary {
     background: #798591 !important;
     border-color: #798591 !important;

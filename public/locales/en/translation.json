@@ -1,5 +1,6 @@
 {
   "applyNow": "Apply Now",
+  "Bachelor programs": "Bachelor programs",
   "Empowering Global Minds": "Empowering Global Minds",
   "Join IMC Krems Tashkent for an unparalleled international education experience in business and tourism management": "Join IMC Krems Tashkent for an unparalleled international education experience in business and tourism management",
   "Student exchange partner universities": "Student exchange partner universities",
@@ -53,14 +54,14 @@
   "Program Director International Business Management": "Program Director International Business Management",
   "Jens Peter Ennen": "Jens Peter Ennen",
   "Program Director Tourism and Leisure Management": "Program Director Tourism and Leisure Management",
-  "Ahmed Mohamed Aziz Ismail": "Ahmed Mohamed Aziz Ismail",
+  "Ahmed mohaMed Aziz Ismail": "Ahmed mohaMed Aziz Ismail",
   "Dean of the international Joint Education Faculty of TSUE and IMC Krems": "Dean of the International Double Degree Faculty of TSUE and IMC Krems",
   "Partners": "Partners",
   "Strategic Partnerships: Building Bridges with Global Leaders": "Strategic Partnerships: Building Bridges with Global Leaders",
   "Partner Universities": "Partner Universities",
   "Partner Organizations": "Partner Organizations",
-  "professorAhmedMohamedAzizIsmail": {
-    "name": "Prof. Ahmed Mohamed Aziz Ismail",
+  "professorAhmedmohaMedAzizIsmail": {
+    "name": "Prof. Ahmed mohaMed Aziz Ismail",
     "role": "Dean of the International Joint Education Faculty of TSUE and IMC Krems"
   },
   "mrBahromjonUrmanov": {
@@ -130,7 +131,7 @@
   "administrationDescription": "Program’s administration is responsible for the discipline and strategic management of the university. Dual nature of the program means that the administration is run by the stakeholders of both parties. While the bodies from TSUE ensure the smooth run of program, an Austrian Program Director makes sure that criteria are met by TSUE side and regulates the program ensuring the consistency.",
   "meetOurLeadership": "Meet our leadership",
   "leadershipDescription": "Discover the distinguished leaders guiding the International Joint Education Faculty of TSUE and IMC Krems.",
-  "profAhmedMohamedAzizIsmail": "Prof. Ahmed Mohamed Aziz Ismail",
+  "profAhmedmohaMedAzizIsmail": "Prof. Ahmed mohaMed Aziz Ismail",
   "deanTitle": "Dean of the International Joint Education Faculty of TSUE and IMC Krems",
   "mrBahromjonUrmanov": "Mr. Bahromjon Urmanov",
   "headOfDepartmentTitle": "Head of International Business Management Department",

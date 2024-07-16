@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
 
 const languages = [
-  { code: 'uz', lang: 'O\'zb', flag: 'fi-uz' },
-  { code: 'en', lang: 'Eng', flag: 'fi-gb' },
+  { code: 'uz', lang: 'O\'zb', flag: '/uz.svg' },
+  { code: 'en', lang: 'Eng', flag: '/uk.svg' },
 ];
 
 function LanguageSelector() {
@@ -29,7 +29,8 @@ function LanguageSelector() {
         onClick={toggleMenu}
         className='flex items-center text-xs space-x-1 focus:outline-none uppercase gap-1'
       >
-        <span className={`fi ${languages.find(lang => lang.code === i18n.language)?.flag} `} />
+        {/* <span className={`fi ${languages.find(lang => lang.code === i18n.language)?.flag} `} /> */}
+        <img className='w-5 h-5' src={languages.find(lang => lang.code === i18n.language)?.flag} alt='flag' />
         {languages.find(lang => lang.code === i18n.language)?.lang}
         <span className='down-icon'>
           <svg
@@ -45,7 +46,7 @@ function LanguageSelector() {
         </span>
       </button>
       {isOpen && (
-        <div className='absolute z-[996] top-full mt-2 max-w-xs bg-white border border-gray-200 shadow-lg'>
+        <div className='absolute z-[996] top-full mt-2 w-[80px] bg-white border border-gray-200 shadow-lg'>
           <ul>
             {languages.map(lng => (
               <li
@@ -53,7 +54,7 @@ function LanguageSelector() {
                 onClick={() => changeLanguage(lng.code)}
                 className={`text-sm flex text-gray-800 hover:bg-gray-100 py-1 px-4 cursor-pointer gap-1 ${lng.code === i18n.language ? 'selected' : ''}`}
               >
-                <span className={`fi ${lng.flag}`} />
+              <img className='w-5 h-5' src={lng.flag} alt={`${lng.lang} flag`} />
                 {lng.lang}
               </li>
             ))}

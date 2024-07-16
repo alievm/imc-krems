@@ -1,5 +1,6 @@
 {
   "applyNow": "Hujjat Topshirish",
+  "Bachelor programs": "Bakalavriat dasturlari",
   "Empowering Global Minds": "Global Aql-Zakovatni Kuchaytirish",
   "Join IMC Krems Tashkent for an unparalleled international education experience in business and tourism management": "Biznes va turizm boshqaruvida tengsiz xalqaro ta'lim tajribasini olish uchun IMC Krems Tashkentga qo'shiling",
   "Student exchange partner universities": "Talabalar almashinuvi bo'yicha hamkor universitetlar",
@@ -56,7 +57,7 @@
   "Program Director International Business Management": "Xalqaro Biznes Boshqaruvning Dasturi Direktori",
   "Jens Peter Ennen": "Jens Peter Ennen",
   "Program Director Tourism and Leisure Management": "Turizm va Dam Ovqat Boshqaruv Dasturi Direktori",
-  "Ahmed Mohamed Aziz Ismail": "Ahmed Mohamed Aziz Ismail",
+  "Ahmed mohaMed Aziz Ismail": "Ahmed mohaMed Aziz Ismail",
   "Dean of the international Joint Education Faculty of TSUE and IMC Krems": "TSUE va IMC Kremsning xalqaro jamoaviy ta'lim fakulteti dekani",
 
   "Partners": "Hamkorlar",
@@ -64,8 +65,8 @@
   "Partner Universities": "Hamkor universitetlar",
   "Partner Organizations": "Hamkor tashkilotlar",
 
-  "professorAhmedMohamedAzizIsmail": {
-    "name": "Prof. Ahmed Mohamed Aziz Ismail",
+  "professorAhmedmohaMedAzizIsmail": {
+    "name": "Prof. Ahmed mohaMed Aziz Ismail",
     "role": "TSUE va IMC Krems xalqaro o'quv yuritish fakulteti dekani"
   },
   "mrBahromjonUrmanov": {
@@ -136,7 +137,7 @@
   "administrationDescription": "Dastur ma'muriyati universitetning intizomiy va strategik boshqaruvi uchun javobgardir. Dastur dual tabiatga ega bo'lgani sababli ma'muriyat har ikkala tomon manfaatdor tomonidan boshqariladi. TSUE tomonidan dastur silliq ishlashini ta'minlaydi, avstriyalik dastur direktori TSUE tomonidan kiritilgan mezonlarga amal qilinishini va dasturning izchilligini ta'minlaydi.",
   "meetOurLeadership": "Bizning rahbarlarimiz bilan tanishing",
   "leadershipDescription": "TSUE va IMC Krems xalqaro qo'shma ta'lim fakultetini boshqarayotgan nufuzli rahbarlar bilan tanishing.",
-  "profAhmedMohamedAzizIsmail": "Prof. Ahmed Mohamed Aziz Ismail",
+  "profAhmedmohaMedAzizIsmail": "Prof. Ahmed mohaMed Aziz Ismail",
   "deanTitle": "TSUE va IMC Krems xalqaro qo'shma ta'lim fakulteti dekani",
   "mrBahromjonUrmanov": "Mr. Bahromjon Urmanov",
   "headOfDepartmentTitle": "Xalqaro biznes boshqaruvi bo'limi boshlig'i",

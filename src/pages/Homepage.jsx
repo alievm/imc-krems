@@ -87,14 +87,14 @@ const Homepage = () => {
                         <div className="flex justify-center lg:w-1/2 lg:justify-end lg:pr-12">
                             <FadeIn className="w-[23.75rem] flex-none lg:w-[30rem]">
                                 <StylizedImage
-                                    src="/img_10.png"
+                                    src="/35.jpg"
                                     sizes="(min-width: 1024px) 31rem, 31rem"
                                     className="justify-center lg:justify-end"
                                 />
                             </FadeIn>
                         </div>
                         {/* List item */}
-                        <List className="mt-16 text-3xl lg:mt-0 lg:w-1/2 lg:min-w-[33rem] lg:pl-4">
+                        <List className="mt-16 text-3xl px-10 lg:mt-0 lg:w-1/2 lg:min-w-[33rem] lg:pl-4">
                             <ListItem title="International Business Management">
                                 Global skills for dynamic business leadership.
                             </ListItem>
@@ -167,8 +167,8 @@ const Homepage = () => {
                             <div className="flex flex-wrap flex-col  lg:w-[35%] w-full max-md:ml-0 max-md:w-full">
                                 <img
                                     loading="lazy"
-                                    src="/img_6.png"
-                                    className="grow w-full rounded-xl aspect-[1.04] max-md:mt-10 max-md:max-w-full"
+                                    src="/34.jpg"
+                                    className="grow w-full object-cover rounded-xl aspect-[1.04] max-md:mt-10 max-md:max-w-full"
                                 />
                             </div>
                             <div className="flex flex-col flex-wrap ml-5 lg:w-[45%] w-full max-md:ml-0 max-md:w-full">
