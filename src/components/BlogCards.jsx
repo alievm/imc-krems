@@ -51,7 +51,7 @@ const BlogCards = () => {
                                             className="grow w-full rounded-lg object-cover aspect-[1.59] max-md:mt-6"
                                         />
                                     </div>
-                                    <div className="flex flex-col ml-5 w-full lg:w-[44%] max-md:ml-0 max-md:w-full">
+                                    <div className="flex flex-col ml-1 w-full lg:w-[44%] max-md:ml-0 max-md:w-full">
                                         <div
                                             className="flex flex-col text-sm font-semibold leading-5 max-md:mt-6">
                                             <div className="mt-3 text-lg leading-7 text-gray-900">
@@ -81,13 +81,13 @@ const BlogCards = () => {
                                 src={news.path}
                                 className="w-full object-cover rounded-xl aspect-[2.44] max-md:max-w-full"
                             />
-                            <div className="mt-8 text-gray-500 max-md:max-w-full">
+                            <div className="mt-1 text-gray-500 max-md:max-w-full">
                                 {formatDate(news.created_at)}
                             </div>
-                            <div className="mt-3 text-xl leading-8 text-gray-900 max-md:max-w-full">
+                            <div className="mt-1 text-xl leading-8 text-gray-900 max-md:max-w-full">
                                 {news.title}
                             </div>
-                            <div className="mt-3 text-base font-light leading-6 text-gray-500 max-md:max-w-full">
+                            <div className="mt-1 text-base font-light leading-6 text-gray-500 max-md:max-w-full">
                                 {news.description}
                             </div>
                         </div>

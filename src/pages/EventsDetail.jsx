@@ -9,8 +9,9 @@ import {Spin} from "antd";
 import { BsTelegram } from 'react-icons/bs';
 import SocialMediaWhite from '../components/SocialMediaWhite.jsx';
 import SideNewsPanel from '../components/SideNewsPanel.jsx';
+import SideEventsPanel from '../components/SideEventsPanel.jsx';
 
-const NewsDetail = () => {
+const EventsDetail = () => {
     const { id } = useParams(); // Get the id parameter from URL path
     const [news, setNews] = useState(null);
 
@@ -85,10 +86,10 @@ const NewsDetail = () => {
 
                 </div>
 
-                <SideNewsPanel/>
+                <SideEventsPanel/>
             </motion.div>
         </>
     );
 };
 
-export default NewsDetail;
+export default EventsDetail;

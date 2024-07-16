@@ -172,6 +172,7 @@ export const navListMenuItems6 = [
         title: "Events",
         description: "Stay updated with our latest events.",
         icon: SquaresPlusIcon,
+        url: '/news-events'
     },
     {
         title: "Campus life",

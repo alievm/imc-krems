@@ -95,11 +95,11 @@ const Homepage = () => {
                         </div>
                         {/* List item */}
                         <List className="mt-16 text-3xl px-10 lg:mt-0 lg:w-1/2 lg:min-w-[33rem] lg:pl-4">
-                            <ListItem title="International Business Management">
-                                Global skills for dynamic business leadership.
+                            <ListItem title={t("International Business Management")}>
+                                {t("Global skills for dynamic business leadership.")}
                             </ListItem>
-                            <ListItem title="Tourism and Leisure management">
-                                Crafting experiences in the world of hospitality.
+                            <ListItem title={t("Tourism and Leisure management")}>
+                               {t(" Crafting experiences in the world of hospitality.")}
                             </ListItem>
                         </List>
                     </div>

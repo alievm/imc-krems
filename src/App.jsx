@@ -32,6 +32,8 @@ import FAQ from "./pages/FAQ.jsx";
 import EntryRequirements from "./pages/EntryRequirements.jsx";
 import KTATPage from "./pages/KTATPage.jsx";
 import Foundation from "./pages/Foundation.jsx";
+import NewsEvents from "./pages/NewsEvents.jsx";
+import EventsDetail from "./pages/EventsDetail.jsx";
 
 function App() {
 
@@ -68,8 +70,10 @@ function App() {
               <Route path="/entry-requirements"  element={<EntryRequirements/>} />
               <Route path="/faq"  element={<FAQ/>} />
               <Route path="/ktat"  element={<KTATPage/>} />
+              <Route path="/news-events"  element={<NewsEvents/>} />
               <Route path="/exchange-program"  element={<ExchangeProgram/>} />
               <Route path="/news/:id" element={<NewsDetail/>} />
+              <Route path="/events/:id" element={<EventsDetail/>} />
           </Route>
       </Routes>
   )

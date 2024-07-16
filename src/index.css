@@ -107,6 +107,41 @@ ant-collapse-header {
     color: black;
 }
 
+.news-detail-h1 {
+    border-bottom: 1px solid #e7e9ed;
+    color: #44494f;
+    font-family: "DIN Pro";
+    font-size: 1.5625rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 130%;
+    margin-top: 12px;
+    padding-bottom: 12px;
+}
+
+.tg-bg {
+    background-image: url('./assets/tg-bg.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 4px;
+    color: #fff;
+    margin-top: 28px;
+    padding: 20px 24px;
+}
+
+.tg-bg button {
+    background: #fff;
+    border: none;
+    border-radius: 4px;
+    color: #798591;
+    font-size: .8125rem;
+    font-weight: 500;
+    line-height: 20px;
+    margin-top: 11px;
+    padding: 4px 10px;
+    transition: all .3s;
+}
+
 .portrait-bg {
     background: rgba(118, 134, 147, 0.75);
 }
