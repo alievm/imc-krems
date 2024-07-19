@@ -100,6 +100,7 @@ export const navListMenuItems3 = [
         title: "Library",
         description: "Explore our extensive library resources.",
         icon: GlobeAmericasIcon,
+        url: 'https://unilibrary.uz'
     },
 ];
 
@@ -164,6 +165,7 @@ export const navListMenuItems5 = [
         title: "Students Career centre",
         description: "Get career support and resources.",
         icon: Bars4Icon,
+        url: '/student-career'
     },
 ];
 
@@ -173,11 +175,6 @@ export const navListMenuItems6 = [
         description: "Stay updated with our latest events.",
         icon: SquaresPlusIcon,
         url: '/news-events'
-    },
-    {
-        title: "Campus life",
-        description: "Explore life on campus.",
-        icon: UserGroupIcon,
     },
     {
         title: "Policy",

@@ -34,6 +34,8 @@ import KTATPage from "./pages/KTATPage.jsx";
 import Foundation from "./pages/Foundation.jsx";
 import NewsEvents from "./pages/NewsEvents.jsx";
 import EventsDetail from "./pages/EventsDetail.jsx";
+import StudentCareer from "./components/StudentCareer.jsx";
+import GraduationCeremony from "./pages/GraduationCeremony.jsx";
 
 function App() {
 
@@ -74,6 +76,8 @@ function App() {
               <Route path="/exchange-program"  element={<ExchangeProgram/>} />
               <Route path="/news/:id" element={<NewsDetail/>} />
               <Route path="/events/:id" element={<EventsDetail/>} />
+              <Route path="/student-career" element={<StudentCareer/>} />
+              <Route path="/graduation-ceremony" element={<GraduationCeremony/>} />
           </Route>
       </Routes>
   )

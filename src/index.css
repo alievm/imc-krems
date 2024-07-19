@@ -97,14 +97,14 @@ ant-collapse-header {
     border-bottom: 1px solid rgba(0, 0, 0, 0.5);
     line-height: 18px;
     padding-bottom: 5px;
-    color: black;
+    color: white;
 }
 .portrait-bot-text {
     font-size: 13px;
     font-weight: 500;
     line-height: 15px;
     padding-top: 5px;
-    color: black;
+    color: white;
 }
 
 .news-detail-h1 {
@@ -218,6 +218,9 @@ ant-collapse-header {
 }
 .profile-card-bg6 {
     background-image: url(./assets/header-incoming-exchange-studierende.jpg);
+}
+.profile-card-bg7 {
+    background-image: url(./assets/header-vermietungen.jpg);
 }
 
 

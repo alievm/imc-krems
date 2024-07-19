@@ -19,11 +19,11 @@ const Values = () => {
                 <SectionIntro
                     title={t("ABOUT_TSUE")}
                 >
-                    <p>
+                    <p className="text-base">
                         {t("TSUE_DETAILS")}
                     </p>
                 </SectionIntro>
-                <img height="400" width="400" src="/img_6.png" />
+                <img className="will-change-auto" height="500" width="500" src="/image_2024-07-18_15-36-07.png" />
             </div>
         </div>
     );

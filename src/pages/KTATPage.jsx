@@ -24,11 +24,11 @@ const KTATPage = () => {
                     initial={{opacity: 0}}
                     animate={{opacity: 1}}
                     exit={{opacity: 0}}
-                    className=" relative  px-4 sm:px-6 lg:px-8 flex justify-center items-center"
+                    className=" relative   px-4 sm:px-6 lg:px-8 flex justify-center items-center"
                 >
                     <div
                         className="absolute h-full w-full z-[-999] bg-[radial-gradient(#000_1px,transparent_1px)] [background-size:16px_16px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_70%,transparent_100%)]"></div>
-                    <div className="max-w-full w-full bg-white p-6 ">
+                    <div className="max-w-6xl mx-auto w-full bg-white p-6 ">
                         <div className="lg:flex-nowrap relative items-center flex-wrap">
                             <img className="h-[50vh] w-full object-cover z-[10]"
                                  src="/teaser-10-gruende-fuer-krems.jpg"/>

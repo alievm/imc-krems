@@ -50,7 +50,7 @@ const Leadership = () => {
            
             <div className="flex flex-wrap mb-5 justify-center">
                 {leaders.map((leader, index) => (
-                    <div key={index} className="relative max-w-[270px] rounded overflow-hidden shadow-lg my-4 mx-4">
+                    <div key={index} className="relative max-w-[270px]  rounded overflow-hidden shadow-lg my-4 mx-4">
                         <img className="w-full object-cover w-[270px] h-[270px]" src={leader.image} alt={t("avatar image")} />
                         <div className="absolute bottom-0 left-0 right-0 portrait-bg bg-opacity-50 px-6 py-2">
                             <div className="font-bold text-sm portrait-top-text">{leader.name}</div>

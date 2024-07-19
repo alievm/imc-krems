@@ -175,7 +175,7 @@ const Homepage = () => {
                                 <div className="flex flex-col self-stretch my-auto max-md:mt-10 max-md:max-w-full">
                                     <img
                                         loading="lazy"
-                                        src="/logo122.svg"
+                                        src="/logo12223.svg"
                                         className="max-w-full  w-72"
                                     />
                                     <div className="mt-11 text-lg leading-7 text-black max-md:mt-10 max-md:max-w-full">

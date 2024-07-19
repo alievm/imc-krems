@@ -70,7 +70,7 @@ export function NavListMenu() {
                 <MenuHandler>
                     <Typography as="div" variant="small" className="font-medium">
                         <ListItem
-                            className="flex items-center gap-2 py-2 pr-4 font-medium text-gray-900"
+                            className="flex items-center focus:bg-white gap-2 py-2 pr-4 font-medium text-gray-900"
                             selected={isMenuOpen || isMobileMenuOpen}
                             onClick={() => setIsMobileMenuOpen((cur) => !cur)}
                         >
@@ -108,7 +108,7 @@ const menuItems = [
         link: "/ibm"
     },
     {
-        title: "Tourism and Leisure Management bachelor degree programme",
+        title: "Tourism and Leisure Management",
         link: "/tlm"
     },
 
@@ -137,7 +137,7 @@ export function NavListMenu2() {
                 <MenuHandler>
                     <Typography as="div" variant="small" className="font-medium">
                         <ListItem
-                            className="flex items-center gap-2 py-2 pr-4 font-medium text-gray-900"
+                            className="flex items-center focus:bg-white focus:bg-white gap-2 py-2 pr-4 font-medium text-gray-900"
                             selected={isMenuOpen || isMobileMenuOpen}
                             onClick={() => setIsMobileMenuOpen((cur) => !cur)}
                         >
@@ -192,21 +192,12 @@ export function NavListMenu2() {
                                                     </Typography>
                                                 </Button>
                                             </MenuHandler>
-                                            <MenuList className="hidden w-[36rem] grid-cols-7 gap-3 overflow-visible lg:grid">
-                                                <Card
-                                                    shadow={false}
-                                                    className="col-span-3 bg-[#798591] outline-none outline-0 text-white flex h-full w-full items-center justify-center rounded-lg p-4"
-                                                >
-                                                    <img src="/university1.svg"/>
-                                                    <Typography className="mt-1 text-center" variant="h5">
-                                                        {t("Programs Menu")}
-                                                    </Typography>
-                                                </Card>
-                                                <ul className="col-span-4 outline-none outline-0 flex w-full flex-col gap-1">
+                                            <MenuList className="hidden w-[23rem] grid-cols-7 gap-3 overflow-visible lg:grid">
+                                                <ul className="col-span-7 divide-y-2 outline-none outline-0 flex w-full flex-col gap-1">
                                                     {menuItems.map(({ title, description, link }) => (
-                                                        <Link to={link} key={title}>
+                                                        <a href={link} key={title}>
                                                             <MenuItem>
-                                                                <Typography variant="h6" color="blue-gray" className="mb-1  leading-tight">
+                                                                <Typography variant="h6" color="blue-gray" className="mb-1 text-sm  leading-tight">
                                                                     {t(title)}
                                                                 </Typography>
                                                                 <Typography
@@ -217,7 +208,7 @@ export function NavListMenu2() {
                                                                     {t(description)}
                                                                 </Typography>
                                                             </MenuItem>
-                                                        </Link>
+                                                        </a>
                                                     ))}
 
                                                 </ul>
@@ -227,7 +218,7 @@ export function NavListMenu2() {
                             </MenuItem>
                         </a>
                         {/* Другие пункты меню */}
-                        <Link to="/foundation">
+                        <a href="/foundation">
                             <MenuItem className="flex items-center gap-3 rounded-lg">
                                 <div className="flex items-center justify-center rounded-lg !bg-blue-gray-50 p-2 ">
                                     {" "}
@@ -252,7 +243,7 @@ export function NavListMenu2() {
                                     </Typography>
                                 </div>
                             </MenuItem>
-                        </Link>
+                        </a>
                     </ul>
                 </MenuList>
             </Menu>
@@ -291,7 +282,7 @@ export function NavListMenu2() {
                     </button>
                     <Collapse open={openSub}>
                         {menuItems.map(({ title, description, link }) => (
-                            <Link to={link} key={title}>
+                            <a href={link} key={title}>
                                 <MenuItem className="flex items-center gap-3 rounded-lg">
                                     {/* Menu item content */}
                                     <div className="flex items-center justify-center rounded-lg !bg-blue-gray-50 p-2">
@@ -311,12 +302,12 @@ export function NavListMenu2() {
                                         </Typography>
                                     </div>
                                 </MenuItem>
-                            </Link>
+                            </a>
                         ))}
                     </Collapse>
 
                     {/* Другие пункты мобильного меню */}
-                    <Link to="/foundation">
+                    <a href="/foundation">
                         <MenuItem className="flex items-center gap-3 rounded-lg">
                             {/* Иконка и название пункта */}
                             <div className="flex items-center justify-center rounded-lg !bg-blue-gray-50 p-2 ">
@@ -344,7 +335,7 @@ export function NavListMenu2() {
                                 </Typography>
                             </div>
                         </MenuItem>
-                    </Link>
+                    </a>
                 </Collapse>
             </div>
         </React.Fragment>
@@ -360,7 +351,7 @@ export function NavListMenu3() {
 
     const renderItems = navListMenuItems3.map(
         ({ icon, title, description, url }, key) => (
-            <Link to={url} key={key}>
+            <a href={url} key={key}>
                 <MenuItem className="flex items-center gap-3 rounded-lg">
                     <div className="flex items-center justify-center rounded-lg !bg-blue-gray-50 p-2 ">
                         {" "}
@@ -385,7 +376,7 @@ export function NavListMenu3() {
                         </Typography>
                     </div>
                 </MenuItem>
-            </Link>
+            </a>
         ),
     );
 
@@ -401,7 +392,7 @@ export function NavListMenu3() {
                 <MenuHandler>
                     <Typography as="div" variant="small" className="font-medium">
                         <ListItem
-                            className="flex items-center gap-2 py-2 pr-4 font-medium text-gray-900"
+                            className="flex focus:bg-white items-center gap-2 py-2 pr-4 font-medium text-gray-900"
                             selected={isMenuOpen || isMobileMenuOpen}
                             onClick={() => setIsMobileMenuOpen((cur) => !cur)}
                         >
@@ -441,7 +432,7 @@ export function NavListMenu4() {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
     const renderItems = navListMenuItems4.map(
         ({ icon, title, description, url }, key) => (
-            <Link to={url} key={key}>
+            <a href={url} key={key}>
                 <MenuItem className="flex items-center gap-3 rounded-lg">
                     <div className="flex items-center justify-center rounded-lg !bg-blue-gray-50 p-2 ">
                         {" "}
@@ -466,7 +457,7 @@ export function NavListMenu4() {
                         </Typography>
                     </div>
                 </MenuItem>
-            </Link>
+            </a>
         ),
     );
 
@@ -482,7 +473,7 @@ export function NavListMenu4() {
                 <MenuHandler>
                     <Typography as="div" variant="small" className="font-medium">
                         <ListItem
-                            className="flex items-center gap-2 py-2 pr-4 font-medium text-gray-900"
+                            className="flex items-center focus:bg-white gap-2 py-2 pr-4 font-medium text-gray-900"
                             selected={isMenuOpen || isMobileMenuOpen}
                             onClick={() => setIsMobileMenuOpen((cur) => !cur)}
                         >
@@ -521,7 +512,7 @@ export function NavListMenu5() {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
     const renderItems = navListMenuItems5.map(
         ({ icon, title, description, url }, key) => (
-            <Link to={url} key={key}>
+            <a href={url} key={key}>
                 <MenuItem className="flex items-center gap-3 rounded-lg">
                     <div className="flex items-center justify-center rounded-lg !bg-blue-gray-50 p-2 ">
                         {" "}
@@ -546,7 +537,7 @@ export function NavListMenu5() {
                         </Typography>
                     </div>
                 </MenuItem>
-            </Link>
+            </a>
         ),
     );
 
@@ -562,7 +553,7 @@ export function NavListMenu5() {
                 <MenuHandler>
                     <Typography as="div" variant="small" className="font-medium">
                         <ListItem
-                            className="flex items-center gap-2 py-2 pr-4 font-medium text-gray-900"
+                            className="flex focus:bg-white items-center gap-2 py-2 pr-4 font-medium text-gray-900"
                             selected={isMenuOpen || isMobileMenuOpen}
                             onClick={() => setIsMobileMenuOpen((cur) => !cur)}
                         >
@@ -602,7 +593,7 @@ export function NavListMenu6() {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false);
     const renderItems = navListMenuItems6.map(
         ({ icon, title, description, url }, key) => (
-            <Link to={url} key={key}>
+            <a href={url} key={key}>
                 <MenuItem className="flex items-center gap-3 rounded-lg">
                     <div className="flex items-center justify-center rounded-lg !bg-blue-gray-50 p-2 ">
                         {" "}
@@ -627,7 +618,7 @@ export function NavListMenu6() {
                         </Typography>
                     </div>
                 </MenuItem>
-            </Link>
+            </a>
         ),
     );
 
@@ -643,7 +634,7 @@ export function NavListMenu6() {
                 <MenuHandler>
                     <Typography as="div" variant="small" className="font-medium">
                         <ListItem
-                            className="flex items-center gap-2 py-2 pr-4 font-medium text-gray-900"
+                            className="flex   items-center gap-2 py-2 pr-4 font-medium text-gray-900"
                             selected={isMenuOpen || isMobileMenuOpen}
                             onClick={() => setIsMobileMenuOpen((cur) => !cur)}
                         >

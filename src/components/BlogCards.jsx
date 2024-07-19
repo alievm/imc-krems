@@ -29,8 +29,8 @@ const BlogCards = () => {
         return formattedDate;
     };
     return (
-        <div className="flex my-16 max-w-7xl mx-auto flex-col  px-8 max-md:px-5">
-            <h2 className="text-center text-2xl font-semibold leading-8 text-gray-900">
+        <div className="flex my-16 max-w-7xl mx-auto flex-col bg-main rounded-xl py-4  px-8 max-md:px-5">
+            <h2 className="text-center text-2xl font-semibold leading-8 text-white">
                 {t('Our recent blogs')}
             </h2>
             <div className="mt-8 max-md:max-w-full">
@@ -54,11 +54,11 @@ const BlogCards = () => {
                                     <div className="flex flex-col ml-1 w-full lg:w-[44%] max-md:ml-0 max-md:w-full">
                                         <div
                                             className="flex flex-col text-sm font-semibold leading-5 max-md:mt-6">
-                                            <div className="mt-3 text-lg leading-7 text-gray-900">
+                                            <div className="mt-3 text-lg leading-7 text-gray-100">
                                                 {news.title.slice(0, 30)}
                                                 {news.title.length > 30 && '...'}
                                             </div>
-                                            <div className="mt-2 text-base font-light leading-6 text-gray-500">
+                                            <div className="mt-2 text-base  leading-6 text-white">
                                                 {news.description.slice(0, 75)}
                                                 {news.description.length > 75 && '...'}
                                             </div>
@@ -81,13 +81,13 @@ const BlogCards = () => {
                                 src={news.path}
                                 className="w-full object-cover rounded-xl aspect-[2.44] max-md:max-w-full"
                             />
-                            <div className="mt-1 text-gray-500 max-md:max-w-full">
+                            <div className="mt-1 text-gray-100 max-md:max-w-full">
                                 {formatDate(news.created_at)}
                             </div>
-                            <div className="mt-1 text-xl leading-8 text-gray-900 max-md:max-w-full">
+                            <div className="mt-1 text-xl leading-8 text-gray-100 max-md:max-w-full">
                                 {news.title}
                             </div>
-                            <div className="mt-1 text-base font-light leading-6 text-gray-500 max-md:max-w-full">
+                            <div className="mt-1 text-base  leading-6 text-white max-md:max-w-full">
                                 {news.description}
                             </div>
                         </div>

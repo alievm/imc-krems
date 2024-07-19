@@ -9,7 +9,7 @@ const VideoHeader = () => {
             <div className="overlay"></div>
             <video src="/video.mp4" autoPlay loop muted/>
             <div className="content text-center">
-                <img className="h-24" src="/logo1222.svg" />
+                <img className="h-32" src="/logo12222.svg" />
                 <FadeInStagger>
                     <FadeIn>
                         <h1 className="text-6xl font-bold ">{t('Empowering Global Minds')}</h1>

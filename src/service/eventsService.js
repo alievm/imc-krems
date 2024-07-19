@@ -11,3 +11,13 @@ export const getEvents = async () => {
     }
 };
 
+export const getGraduationCeremony = async () => {
+    try {
+        const response = await apiClient.get('/graduation-ceremony'); // Make the GET request to the endpoint
+        return response.data; // Return the data from the response
+    } catch (error) {
+        console.error('Error fetching news data:', error); // Log any errors
+        throw error; // Re-throw the error for further handling
+    }
+};
+

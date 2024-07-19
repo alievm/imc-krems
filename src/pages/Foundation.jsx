@@ -246,8 +246,8 @@ const Foundation = () => {
                 <div
                     className="absolute h-full w-full z-[-999] bg-[radial-gradient(#000_1px,transparent_1px)] [background-size:16px_16px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_70%,transparent_100%)]"></div>
                 <div className="max-w-full w-full bg-white p-6 rounded-lg shadow-xl">
-                    <div className="lg:flex-nowrap relative items-center flex-wrap">
-                        <img className="h-[50vh] w-full object-cover z-[10]"
+                    <div className="lg:flex-nowrap  relative items-center flex-wrap">
+                        <img className="h-[50vh] w-full object-cover  z-[10] mb-10"
                              src="/header-zertifizierungen.jpg"/>
                         <div
                             className="z-front text-center"

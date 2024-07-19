@@ -15,3 +15,4 @@ export const getVacancies = async (page = 1, perPage = 10) => {
     }
 };
 
+

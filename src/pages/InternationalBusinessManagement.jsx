@@ -42,7 +42,7 @@ const InternationalBusinessManagement = () => {
     const {t} = useTranslation();
     const [open, setOpen] = React.useState(1);
     const [openVideo, setOpenVideo] = React.useState(1)
-    const [openStep, setOpenStep] = React.useState(1)
+    const [openStep, setOpenStep] = React.useState()
     const [expandedSectionId, setExpandedSectionId] = React.useState(1); // Состояние для открытого аккордеона
 
     const toggleSection = (id) => {
@@ -52,7 +52,7 @@ const InternationalBusinessManagement = () => {
 
     const handleOpen = (value) => setOpen(open === value ? 0 : value);
     const handleOpenStep = (index) => {
-        setOpenStep(openStep === index ? 0 : index);
+        setOpenStep((prevIndex) => (prevIndex === index ? null : index));
     };
     const handleOpenVideo = (value) => setOpenVideo(openVideo === value ? 0 : value);
 

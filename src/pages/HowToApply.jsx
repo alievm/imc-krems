@@ -13,8 +13,8 @@ const { Step } = Steps;
 const HowToApply = () => {
     const {t} = useTranslation();
     return (
-        <div className="px-4 py-8 bg-gray-100">
-            <div className="max-w-full mx-auto">
+        <div className="px-4  py-8 bg-gray-100">
+            <div className="max-w-6xl mx-auto">
                 <div
                     className="relative h-60 bg-cover bg-center rounded-lg profile-card-bg5 overflow-hidden shadow-lg mb-8">
                     <div className="absolute inset-0 bg-black opacity-50"/>
