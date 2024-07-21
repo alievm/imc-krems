@@ -1,0 +1,10 @@
+Options -MultiViews
+RewriteEngine On
+
+# Serve files from the "static" directory directly
+RewriteCond %{REQUEST_URI} ^/assets/
+RewriteRule ^assets/(.*)$ dist/assets/$1 [L]
+
+# Handle client-side routing
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^ dist/index.html [QSA,L]
