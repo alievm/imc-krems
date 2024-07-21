@@ -36,6 +36,7 @@ import NewsEvents from "./pages/NewsEvents.jsx";
 import EventsDetail from "./pages/EventsDetail.jsx";
 import StudentCareer from "./components/StudentCareer.jsx";
 import GraduationCeremony from "./pages/GraduationCeremony.jsx";
+import {Gallery} from "./pages/Gallery.jsx";
 
 function App() {
 
@@ -77,6 +78,7 @@ function App() {
               <Route path="/news/:id" element={<NewsDetail/>} />
               <Route path="/events/:id" element={<EventsDetail/>} />
               <Route path="/student-career" element={<StudentCareer/>} />
+              <Route path="/gallery" element={<Gallery/>} />
               <Route path="/graduation-ceremony" element={<GraduationCeremony/>} />
           </Route>
       </Routes>
