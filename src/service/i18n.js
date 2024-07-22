@@ -8,10 +8,13 @@ const i18nConfig = {
   lng: 'en',
   fallbackLng: "en",
   returnObjects: true,
+  backend: {
+    loadPath: '/locales/{{lng}}/{{ns}}.json', // Путь к файлам локализации
+  },
 };
 
 i18next
-  .use(i18nextBrowserLanguageDetector)
-  .use(initReactI18next)
-  .use(Backend)
-  .init(i18nConfig);
+    .use(i18nextBrowserLanguageDetector)
+    .use(initReactI18next)
+    .use(Backend)
+    .init(i18nConfig);
