@@ -80,11 +80,6 @@ export const navListMenuItems2 = [
 
 export const navListMenuItems3 = [
     {
-        title: "Students union",
-        description: "Get involved with the student union.",
-        icon: SquaresPlusIcon,
-    },
-    {
         title: "Internship",
         description: "Find internship programs and opportunities.",
         icon: Bars4Icon,
@@ -176,11 +171,6 @@ export const navListMenuItems6 = [
         description: "Stay updated with our latest events.",
         icon: SquaresPlusIcon,
         url: '/news-events'
-    },
-    {
-        title: "Policy",
-        description: "Understand our policies.",
-        icon: Bars4Icon,
     },
     {
         title: "Gallery",
