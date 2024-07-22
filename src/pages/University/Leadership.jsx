@@ -7,7 +7,7 @@ import img3 from "../../assets/Professors/img_2.png"
 import img4 from "../../assets/Professors/img_1.png"
 import img5 from "../../assets/web.christian.kuemmel.jpg"
 import img6 from "../../assets/web.jens.ennen.jpg"
-import img7 from "../../assets/Fv2tHlmaMAIwATY.jpg"
+import img7 from "../../assets/deandean.jpg"
 
 const Leadership = () => {
     const { t } = useTranslation();
@@ -34,6 +34,11 @@ const Leadership = () => {
             image: img4
         },
         {
+            name: "Ahmed Mohamed Aziz Ismail",
+            title: "Dean of the international Joint Education Faculty of TSUE and IMC Krems",
+            image: img7
+        },
+        {
             name: "Dr. Christian Kümmel",
             title: "Program Director International Business Management",
             image: img5
@@ -43,11 +48,7 @@ const Leadership = () => {
             title: "Program Director Tourism and Leisure Management",
             image: img6
         },
-        {
-            name: "Ahmed mohaMed Aziz Ismail",
-            title: "Dean of the international Joint Education Faculty of TSUE and IMC Krems",
-            image: img7
-        },
+
     ];
 
     return (
