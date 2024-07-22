@@ -1,6 +1,6 @@
 import React from "react";
 import SectionSecond from "./SectionSecond.jsx";
-import imageMeeting from "/public/2023.jpg";
+import imageMeeting from "../assets/2023.jpg";
 import { useTranslation } from 'react-i18next';
 
 const Deliver = () => {

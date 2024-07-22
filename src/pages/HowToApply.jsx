@@ -4,9 +4,8 @@ import { FormOutlined, FileTextOutlined, CloudUploadOutlined, CheckCircleOutline
 import {FaBriefcase} from "react-icons/fa";
 import {RiHourglassLine} from "react-icons/ri";
 import {MdOutlineAttachEmail} from "react-icons/md";
-import video from "/public/grafik_standorte_international_2023.mp4"
 import {useTranslation} from "react-i18next";
-
+import gif from "../assets/grafik_standorte_international_2023.gif"
 const { Title, Paragraph } = Typography;
 const { Step } = Steps;
 
@@ -157,7 +156,7 @@ const HowToApply = () => {
                                 </div>
 
 
-                                <img src="/grafik_standorte_international_2023.gif"/>
+                                <img src={gif}/>
                             </div>
                         </div>
 

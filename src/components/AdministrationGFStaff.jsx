@@ -2,6 +2,24 @@ import React from 'react';
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
+import img1 from "../assets/dean.png"
+import img2 from "../assets/head.png"
+import img3 from "../assets/anonym.jpg"
+import img4 from "../assets/deanDep.jfif"
+
+import professor1 from "../assets/Professors/1.jpg";
+import professor2 from "../assets/Professors/2.jpg";
+import professor3 from "../assets/Professors/3.png";
+import professor4 from "../assets/Professors/4.jpg";
+import professor5 from "../assets/Professors/5.png";
+import professor6 from "../assets/Professors/6.jpg";
+import professor7 from "../assets/Professors/7.jpg";
+import professor8 from "../assets/Professors/8.jpg";
+import professor9 from "../assets/Professors/9.jpg";
+import professorImg from "../assets/Professors/img.png";
+import professor11 from "../assets/Professors/11.png";
+import professor12 from "../assets/Professors/12.png";
+
 const AdministrationGFStaff = () => {
     const { t } = useTranslation();
 
@@ -9,22 +27,22 @@ const AdministrationGFStaff = () => {
         {
             name: 'Prof. Ahmed mohaMed Aziz Ismail',
             role: <>{t('deanTitle')}</>,
-            imageUrl: '/dean.png',
+            imageUrl: img1,
         },
         {
             name: 'Mr. Bahromjon Urmanov',
             role: <>{t('headOfDepartmentTitle')}</>,
-            imageUrl: '/head.png',
+            imageUrl: img2,
         },
         {
             name: 'Mr. Samandarboy Sulaymanov',
             role: <>{t('deputyDeanTitle')}</>,
-            imageUrl: '/anonym.jpg',
+            imageUrl: img3,
         },
         {
             name: 'Ms. Durdona Uktamova',
             role: <>{t('deputyDeanTitle2')}</>,
-            imageUrl: '/deanDep.jfif',
+            imageUrl: img4,
         }
     ];
 
@@ -32,76 +50,77 @@ const AdministrationGFStaff = () => {
         {
             name: 'Durdona Bahodirova',
             role: 'Senior teacher of German language',
-            imageUrl: '/Professors/1.jpg',
+            imageUrl: professor1,
             link: '/professors/bakhodirova'
         },
         {
             name: 'Aziza Usmanova',
             role: 'Lecture assistant',
-            imageUrl: '/Professors/2.jpg',
+            imageUrl: professor2,
             link: '/professors/usmanova'
         },
         {
             name: 'Durdona Davletova',
             role: 'Lecture assistant',
-            imageUrl: '/Professors/3.png',
+            imageUrl: professor3,
             link: '/professors/davletova'
         },
         {
             name: 'Dildora KHODJAEVA',
             role: 'Indologist and specialist of CSAS',
-            imageUrl: '/Professors/4.jpg',
+            imageUrl: professor4,
             link: '/professors/khodjaeva'
         },
         {
             name: 'Giyasov Farkhod',
             role: 'Assistant Professor',
-            imageUrl: '/Professors/5.png',
+            imageUrl: professor5,
             link: '/professors/giyasov'
         },
         {
             name: 'Dr. Haneen Allataifeh',
             role: 'Associate Professor',
-            imageUrl: '/Professors/6.jpg',
+            imageUrl: professor6,
             link: '/professors/haneen'
         },
         {
             name: 'Kholmatova Kibriyo',
             role: 'German teacher',
-            imageUrl: '/Professors/7.jpg',
+            imageUrl: professor7,
             link: '/professors/kibriyo'
         },
         {
             name: 'Mehrangiz Narzullaeva',
             role: 'Assistant lecture',
-            imageUrl: '/Professors/8.jpg',
+            imageUrl: professor8,
             link: '/professors/mehrangiz'
         },
         {
             name: 'Dr. Munisa Toirova',
             role: 'Associate Professor',
-            imageUrl: '/Professors/9.jpg',
+            imageUrl: professor9,
             link: '/professors/toirova'
         },
         {
             name: 'Bekzod Rozimov',
             role: 'Assistant',
-            imageUrl: '/Professors/img.png',
+            imageUrl: professorImg,
             link: '/professors/ruzimov'
         },
         {
             name: 'Dr. Muhammad Eid Balbaa',
             role: 'Associate Professor',
-            imageUrl: '/Professors/11.png',
+            imageUrl: professor11,
             link: '/professors/balbaa'
         },
         {
             name: 'Dr. Bahromjon Urmanov Numanovich',
             role: 'Senior Lecturer',
-            imageUrl: '/Professors/12.png',
+            imageUrl: professor12,
             link: '/professors/urmanov'
         },
     ];
+
 
     return (
         <div className="bg-white py-24 sm:py-32">

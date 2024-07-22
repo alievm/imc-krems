@@ -24,7 +24,7 @@ import {
 import {Link} from "react-router-dom";
 import LanguageSelector from "./languageSelector.jsx";
 import {useTranslation} from "react-i18next";
-
+import logo from "../assets/logo12223.svg";
 
 
 
@@ -84,7 +84,7 @@ export function NavbarWithMegaMenu() {
                 <div className="flex items-center gap-2">
                     {/*<img src="/logo-oz.svg" width="60" height="60"/>*/}
                     {/*<h1><span className="line-1">Tashkent State</span> <br/>University of Economics</h1>*/}
-                    <img src="/logo12223.svg" className="w-56"  />
+                    <img src={logo} className="w-56"  />
                 </div>
                 <div className="hidden lg:block">
                     <NavList/>

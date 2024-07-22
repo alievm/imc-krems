@@ -1,20 +1,22 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import {FaGraduationCap, FaLanguage, FaMoneyBillAlt, FaRegMoneyBillAlt} from 'react-icons/fa';
 import PageIntro from "../components/PageIntro.jsx";
 import {Typography,   Accordion,
     AccordionHeader,
     AccordionBody,} from "@material-tailwind/react";
 import {Image} from "antd";
-import {IoIosTimer} from "react-icons/io";
-import {GrLanguage} from "react-icons/gr";
-import {AiOutlineSwap} from "react-icons/ai";
-import {GiDuration} from "react-icons/gi";
-import {TbSchoolBell} from "react-icons/tb";
 import {HashLink as Link} from "react-router-hash-link";
 import {AcademicCapIcon, BanknotesIcon, ClockIcon, GlobeAltIcon} from "@heroicons/react/24/solid/index.js";
 import {CalendarDaysIcon} from "@heroicons/react/16/solid/index.js";
 import {useTranslation} from "react-i18next";
+
+
+import header from "../assets/header-studium-tourism-and-leisure-management-vollzeit.jpg"
+import img from "../assets/csm_tourism-and-leisure-management-vollzeit-leicht-erklaert-1_0ac7aca5fb.jpg"
+import img2 from "../assets/csm_tourism-and-leisure-management-vollzeit-leicht-erklaert-2_b7347c38e3.jpg"
+import img3 from "../assets/csm_tourism-and-leisure-management-vollzeit-leicht-erklaert-3_d4b24def9a.jpg"
+
+import logoDark from "../assets/logo-dark.png"
 
 
 const CUSTOM_ANIMATION = {
@@ -267,7 +269,7 @@ const TLM = () => {
                 <div className="max-w-full w-full bg-white p-6 rounded-lg shadow-xl">
                     <div className="lg:flex-nowrap relative items-center flex-wrap">
                         <img className="h-[50vh] w-full object-cover z-[10] mb-10"
-                             src="/header-studium-tourism-and-leisure-management-vollzeit.jpg"/>
+                             src={header}/>
                         <div
                             className="z-front text-center"
                             id="section-nav"
@@ -529,11 +531,11 @@ const TLM = () => {
                     >
                         <div className="flex justify-center w-full gap-3 flex-wrap">
                             <Image className="object-cover" width={300} height={200}
-                                   src="/csm_tourism-and-leisure-management-vollzeit-leicht-erklaert-1_0ac7aca5fb.jpg"/>
+                                   src={img}/>
                             <Image className="object-cover" width={300} height={200}
-                                   src="/csm_tourism-and-leisure-management-vollzeit-leicht-erklaert-2_b7347c38e3.jpg"/>
+                                   src={img2}/>
                             <Image className="object-cover" width={300} height={200}
-                                   src="/csm_tourism-and-leisure-management-vollzeit-leicht-erklaert-3_d4b24def9a.jpg"/>
+                                   src={img3}/>
                         </div>
 
                     </Image.PreviewGroup>
@@ -641,7 +643,7 @@ const TLM = () => {
                             <div
                                 className="relative overflow-hidden rounded-lg border bg-white select-none hover:shadow hover:shadow-gray-200 p-2">
                                 <div className="flex h-[280px] flex-col justify-between rounded-md p-6">
-                                    <img className="w-36" src="/logo-dark.png"/>
+                                    <img className="w-36" src={logoDark}/>
                                     <div className="space-y-2">
                                         <h3 className="font-bold">{t("Studying and working the international way")}</h3>
                                         <p className="text-sm text-muted-foreground">{t("Linguistically, you'll grow by leaps and bounds by perfecting your English skills – after all, the lectures are held in English and you’ll be studying with classmates from all over the world.")}
@@ -653,7 +655,7 @@ const TLM = () => {
                             <div
                                 className="relative overflow-hidden rounded-lg border bg-white select-none hover:shadow hover:shadow-gray-200 p-2">
                                 <div className="flex h-[280px] flex-col justify-between rounded-md p-6">
-                                    <img className="w-36" src="/logo-dark.png"/>
+                                    <img className="w-36" src={logoDark}/>
                                     <div className="space-y-2">
                                         <h3 className="font-bold">{t("Ideally equipped for the globalised world")}</h3>
                                         <p className="text-sm">{t("Your training will be concluded with a sharp focus on an increasingly important set of soft skills. They’ll help you to become a confident and self-assured tourism professional.")} </p>
@@ -664,7 +666,7 @@ const TLM = () => {
                             <div
                                 className="relative overflow-hidden rounded-lg border bg-white select-none hover:shadow hover:shadow-gray-200 p-2">
                                 <div className="flex h-[280px] flex-col justify-between rounded-md p-6">
-                                    <img className="w-36" src="/logo-dark.png"/>
+                                    <img className="w-36" src={logoDark}/>
                                     <div className="space-y-2">
                                         <h3 className="font-bold">{t("Discover your interests")}</h3>
                                         <p className="text-sm">{t("One in ten jobs worldwide is directly linked to tourism – a good argument for pursuing a career in this sector. The Krems bachelor programme centres on the operational aspects of this fast-growing industry.")}

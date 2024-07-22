@@ -2,6 +2,8 @@ import React from 'react';
 import SocialMedia from "../SocialMedia.jsx";
 import SocialMediaWhite from "../SocialMediaWhite.jsx";
 import {HiLocationMarker} from "react-icons/hi";
+import img from "../../assets/logo12222.svg"
+
 
 const Footer = () => {
     return (
@@ -13,7 +15,7 @@ const Footer = () => {
                         <a href="https://pagedone.io/" className="flex justify-center lg:justify-start">
                             <img
                                 loading="lazy"
-                                src="/logo12222.svg"
+                                src={img}
                                 className="max-w-full  w-72"
                             />
                         </a>

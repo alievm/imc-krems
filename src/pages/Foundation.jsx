@@ -12,8 +12,7 @@ import {
 } from "@material-tailwind/react";
 import {Image} from "antd";
 import {HashLink as Link} from "react-router-hash-link";
-import SectionSecond from "../components/SectionSecond.jsx";
-import imageMeeting from "/public/2023.jpg";
+import imageMeeting from "../assets/2023.jpg";
 import FadeIn from "../components/FadeIn.jsx";
 import {
     ArrowPathIcon, BookmarkIcon,
@@ -22,6 +21,10 @@ import {
 import SectionThird from "../components/SectionThird.jsx";
 import {AcademicCapIcon, BanknotesIcon, ClockIcon, GlobeAltIcon} from "@heroicons/react/24/solid";
 import {useTranslation} from "react-i18next";
+import header from "../assets/header-zertifizierungen.jpg"
+import img1 from "../assets/csm_tourism-and-leisure-management-vollzeit-leicht-erklaert-1_0ac7aca5fb.jpg"
+import img2 from "../assets/csm_tourism-and-leisure-management-vollzeit-leicht-erklaert-2_b7347c38e3.jpg"
+import img3 from "../assets/csm_tourism-and-leisure-management-vollzeit-leicht-erklaert-3_d4b24def9a.jpg"
 
 const features = [
     {
@@ -248,7 +251,7 @@ const Foundation = () => {
                 <div className="max-w-full w-full bg-white p-6 rounded-lg shadow-xl">
                     <div className="lg:flex-nowrap  relative items-center flex-wrap">
                         <img className="h-[50vh] w-full object-cover  z-[10] mb-10"
-                             src="/header-zertifizierungen.jpg"/>
+                             src={header}/>
                         <div
                             className="z-front text-center"
                             id="section-nav"
@@ -519,8 +522,7 @@ const Foundation = () => {
                             </div>
 
                             <header
-                                className="relative max-w-7xl mx-auto w-full bg-cover bg-center h-screen lg:h-96 rounded-2xl overflow-hidden"
-                                style={{backgroundImage: 'url("/csm_teaser-events-am-imc-campus-krems_072f067ee3.jpg")'}}>
+                                className="relative max-w-7xl mx-auto w-full bg-cover bg-center h-screen lg:h-96 rounded-2xl overflow-hidden bg-foundation">
                                 <div className="absolute inset-0 bg-black opacity-50"></div>
                                 <div className="absolute inset-0 flex items-center justify-center">
                                     <div className="relative p-8">
@@ -615,11 +617,11 @@ const Foundation = () => {
                     >
                         <div className="flex justify-center w-full gap-3 flex-wrap">
                             <Image className="object-cover" width={300} height={200}
-                                   src="/csm_tourism-and-leisure-management-vollzeit-leicht-erklaert-1_0ac7aca5fb.jpg"/>
+                                   src={img1}/>
                             <Image className="object-cover" width={300} height={200}
-                                   src="/csm_tourism-and-leisure-management-vollzeit-leicht-erklaert-2_b7347c38e3.jpg"/>
+                                   src={img2}/>
                             <Image className="object-cover" width={300} height={200}
-                                   src="/csm_tourism-and-leisure-management-vollzeit-leicht-erklaert-3_d4b24def9a.jpg"/>
+                                   src={img3}/>
                         </div>
 
                     </Image.PreviewGroup>

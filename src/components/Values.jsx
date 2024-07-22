@@ -1,7 +1,7 @@
 import React from "react";
 import GridPattern from "./GridPattern";
 import SectionIntro from "./SectionIntro";
-import { GridList, GridListItem } from "./GridList";
+import img from "../assets/image_2024-07-18_15-36-07.png"
 import { useTranslation } from 'react-i18next';
 
 const Values = () => {
@@ -23,7 +23,7 @@ const Values = () => {
                         {t("TSUE_DETAILS")}
                     </p>
                 </SectionIntro>
-                <img className="will-change-auto" height="500" width="500" src="/image_2024-07-18_15-36-07.png" />
+                <img className="will-change-auto" height="500" width="500" src={img} />
             </div>
         </div>
     );

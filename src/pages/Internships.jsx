@@ -6,9 +6,13 @@ import {motion} from "framer-motion";
 import PageIntro from "../components/PageIntro.jsx";
 import {Image} from "antd";
 import Section from "../components/Section.jsx";
-import imageWhiteboard from "../../public/2023.jpg";
+import imageWhiteboard from "../assets/2023.jpg";
 import { FaGlobe, FaHandsHelping, FaUsers, FaBriefcase } from 'react-icons/fa';
 import {useTranslation} from "react-i18next";
+import img1 from "../assets/Partners/moi.png"
+import img2 from "../assets/Partners/01.jpg"
+import img3 from "../assets/Partners/Coca-Cola-logo.png"
+import img4 from "../assets/Partners/hilton.svg"
 
 const Internships = () => {
     const {t} = useTranslation();
@@ -61,8 +65,7 @@ const Internships = () => {
                         </div>
                     </div>
 
-                    <header className="relative bg-cover bg-center h-96"
-                            style={{backgroundImage: 'url("/teaser-rund-um-den-imc-campus-krems.jpg")'}}>
+                    <header className="relative bg-cover bg-center h-96 bg-intern">
                         <div className="absolute inset-0 bg-black opacity-60"></div>
                         <div className="absolute inset-0 flex items-center justify-center">
                             <div className="text-center max-w-3xl text-white">
@@ -88,31 +91,31 @@ const Internships = () => {
                         className="mx-auto mt-10 grid max-w-xl py-10 grid-cols-4 items-center gap-x-20 gap-y-10 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10  lg:max-w-7xl lg:mx-auto lg:grid-cols-4">
                         <img
                             className="col-span-2 max-h-40 w-full object-contain lg:col-span-1"
-                            src="/Partners/moi.png"
+                            src={img1}
                             alt="Transistor"
                             height={58}
                         />
                         <img
                             className="col-span-2 max-h-20 w-full object-contain lg:col-span-1"
-                            src="/Partners/01.jpg"
+                            src={img2}
                             alt="Reform"
                             height={48}
                         />
                         <img
                             className="col-span-2 max-h-20 w-full object-contain lg:col-span-1"
-                            src="/Partners/Coca-Cola-logo.png"
+                            src={img3}
                             alt="Tuple"
                             height={48}
                         />
                         <img
                             className="col-span-2 max-h-20 w-full object-contain sm:col-start-2 lg:col-span-1"
-                            src="/Partners/hilton.svg"
+                            src={img4}
                             alt="SavvyCal"
                             height={48}
                         />
                     </div>
 
-                    <Section title="Industry Experience" image={{src: imageWhiteboard, shape: 1}}>
+                    <Section title="Industry Experience">
                         <div className="space-y-6 text-base text-neutral-600">
                             <p>
                                 {t('industryExperienceDescription')}

@@ -1,21 +1,18 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import {FaGraduationCap, FaLanguage, FaMoneyBillAlt, FaRegMoneyBillAlt} from 'react-icons/fa';
 import PageIntro from "../components/PageIntro.jsx";
 import {Typography,   Accordion,
     AccordionHeader,
     AccordionBody,} from "@material-tailwind/react";
 import {Image} from "antd";
-import {IoIosTimer} from "react-icons/io";
-import {GrLanguage} from "react-icons/gr";
-import {AiOutlineSwap} from "react-icons/ai";
-import {GiDuration} from "react-icons/gi";
-import {TbSchoolBell} from "react-icons/tb";
 import { HashLink as Link } from 'react-router-hash-link';
 import {AcademicCapIcon, BanknotesIcon, ClockIcon, GlobeAltIcon} from "@heroicons/react/24/solid/index.js";
 import {CalendarDaysIcon} from "@heroicons/react/16/solid/index.js";
 import {useTranslation} from "react-i18next";
-
+import header from "../assets/header-studium-export-oriented-management.jpg"
+import img from "../assets/1.jpg"
+import img2 from "../assets/2.jpg"
+import img3 from "../assets/3.jpg"
 
 const CUSTOM_ANIMATION = {
     mount: { scale: 1 },
@@ -269,7 +266,7 @@ const InternationalBusinessManagement = () => {
                 <div className="max-w-full w-full bg-white p-6 rounded-lg shadow-xl">
                     <div className="lg:flex-nowrap relative items-center flex-wrap">
                         <img className="h-[50vh] w-full object-cover z-[10]  mb-10"
-                             src="/header-studium-export-oriented-management.jpg"/>
+                             src={header}/>
                         <div
                             className="z-front text-center"
                             id="section-nav"
@@ -541,9 +538,9 @@ const InternationalBusinessManagement = () => {
                         }}
                     >
                         <div className="flex justify-center w-full gap-3 flex-wrap">
-                            <Image className="object-cover" width={300} height={200} src="/1.jpg"/>
-                            <Image className="object-cover" width={300} height={200} src="/2.jpg"/>
-                            <Image className="object-cover" width={300} height={200} src="/3.jpg"/>
+                            <Image className="object-cover" width={300} height={200} src={img}/>
+                            <Image className="object-cover" width={300} height={200} src={img2}/>
+                            <Image className="object-cover" width={300} height={200} src={img3}/>
                         </div>
 
                     </Image.PreviewGroup>

@@ -13,6 +13,10 @@ import React from "react";
 import PageIntro from "../components/PageIntro.jsx";
 import {useTranslation} from "react-i18next";
 import {Step} from "@material-tailwind/react";
+import header from "../assets/teaser-10-gruende-fuer-krems.jpg"
+import gif from "../assets/grafik_standorte_international_2023.gif"
+
+
 const { Title, Paragraph } = Typography;
 
 const KTATPage = () => {
@@ -31,7 +35,7 @@ const KTATPage = () => {
                     <div className="max-w-6xl mx-auto w-full bg-white p-6 ">
                         <div className="lg:flex-nowrap relative items-center flex-wrap">
                             <img className="h-[50vh] w-full object-cover z-[10]"
-                                 src="/teaser-10-gruende-fuer-krems.jpg"/>
+                                 src={header}/>
                             <PageIntro eyebrow={t('Learn about KTAT initiatives')}
                                        title={t("About KTAT")}>
                               <div className="text-center">
@@ -265,7 +269,7 @@ const KTATPage = () => {
                                         </div>
 
 
-                                        <img src="/grafik_standorte_international_2023.gif"/>
+                                        <img src={gif}/>
                                     </div>
                                 </div>
                                 <Paragraph className="text-center text-xl">

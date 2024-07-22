@@ -5,7 +5,7 @@ import { FaGraduationCap, FaAward, FaMoneyCheckAlt } from 'react-icons/fa';
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import PageIntro from "../components/PageIntro.jsx";
-import imageMeeting from "../../public/2023.jpg";
+import header from "../assets/header-zugangsvoraussetzung.jpg"
 
 const Scholarship = () => {
     const { t } = useTranslation();
@@ -24,7 +24,7 @@ const Scholarship = () => {
                 {/* Main content */}
                 <div className="max-w-full w-full bg-white p-6">
                     <div className="lg:flex-nowrap relative items-center flex-wrap">
-                        <img className="h-[50vh] w-full object-cover z-[10]" src="/header-zugangsvoraussetzung.jpg" />
+                        <img className="h-[50vh] w-full object-cover z-[10]" src={header} />
                         <PageIntro title={t("Scholarships")}>
                             <div className="text-center">
                                 {t("At our double degree faculty, we believe in rewarding academic excellence and supporting students in their pursuit of higher education. Our scholarship programs are designed to recognize and reward outstanding academic performance, ensuring that financial barriers do not hinder talented students from achieving their full potential.")}
@@ -37,7 +37,7 @@ const Scholarship = () => {
             {/* Scholarship Opportunities section */}
             <div className="container mx-auto p-10">
                 <FadeIn>
-                    <header className="relative w-full bg-cover bg-center h-96 rounded-2xl overflow-hidden" style={{backgroundImage: 'url("/csm_teaser-events-am-imc-campus-krems_072f067ee3.jpg")'}}>
+                    <header className="relative w-full bg-cover bg-center h-96 rounded-2xl overflow-hidden bg-scholar">
                         <div className="absolute inset-0 bg-black opacity-50"></div>
                         <div className="absolute inset-0 flex items-center justify-center">
                             <div className="relative p-8">

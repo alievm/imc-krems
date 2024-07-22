@@ -1,16 +1,10 @@
 import React, { useState, useEffect } from "react";
 import PageIntro from "../../components/PageIntro.jsx";
-import {getNews} from "../../service/newsService.js";
 import {getVacancies} from "../../service/vacancyService.jsx";
 import {Alert, Button, Pagination, Spin} from "antd";
 import {motion} from "framer-motion";
-import {HashLink as Link} from "react-router-hash-link";
-import {IoIosTimer} from "react-icons/io";
-import {GrLanguage} from "react-icons/gr";
-import {TbSchoolBell} from "react-icons/tb";
-import {AiOutlineSwap} from "react-icons/ai";
-import {FaRegMoneyBillAlt} from "react-icons/fa";
-import {Typography} from "@material-tailwind/react";
+import img from "../../assets/header-career-center (1).jpg"
+
 import {useTranslation} from "react-i18next";
 
 const Careers = () => {
@@ -62,7 +56,7 @@ const Careers = () => {
 
                     <div className="lg:flex-nowrap relative items-center flex-wrap">
                         <img className="h-[50vh] w-full object-cover z-[10]"
-                             src="/header-career-center (1).jpg"/>
+                             src={img}/>
                         <PageIntro
                                    title={t('imcKremsVacancies')}>
                         </PageIntro>

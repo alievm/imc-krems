@@ -2,6 +2,20 @@ import React from 'react';
 import PageIntro from "../../components/PageIntro.jsx";
 import { Tooltip } from "@material-tailwind/react";
 import {useTranslation} from "react-i18next";
+import img1 from "../../assets/Partners/logo.png"
+import img2 from "../../assets/Partners/Logo_WBH_RGB_1.png"
+import img3 from "../../assets/img_2.png"
+import img4 from "../../assets/Partners/banner-horizontal-black-en.png"
+import img5 from "../../assets/Partners/Lund_university_L_CMYK.svg"
+import img6 from "../../assets/Partners/unnamed-removebg-preview (1).png"
+import img7 from "../../assets/img_3.png"
+import img8 from "../../assets/img_1.png"
+
+import img9 from "../../assets/Partners/british-council-1 1.png"
+import img10 from "../../assets/Partners/pngegg.png"
+import img11 from "../../assets/Partners/Coca_Cola_İçecek_logosu.png"
+
+
 
 const Partners = () => {
     const {t} = useTranslation();
@@ -22,7 +36,7 @@ const Partners = () => {
                     >
                         <span
                             className="flex justify-center items-center border border-solid border-gray-200 shadow-sm h-24 rounded-2xl">
-                            <img src="/Partners/logo.png" className="h-16"/>
+                            <img src={img1} className="h-16"/>
                         </span>
 
                     </Tooltip>
@@ -35,7 +49,7 @@ const Partners = () => {
                         }}
                     >
                         <a href="#" className="flex justify-center items-center border border-solid border-gray-200 shadow-sm h-24 rounded-2xl">
-                            <img src="/Partners/Logo_WBH_RGB_1.png" className="h-12" />
+                            <img src={img2} className="h-12" />
                         </a>
                     </Tooltip>
 
@@ -48,7 +62,7 @@ const Partners = () => {
                         }}
                     >
                         <a href="#" className="flex justify-center items-center border border-solid border-gray-200 shadow-sm h-24 rounded-2xl">
-                            <img src="/img_2.png" className="h-14" />
+                            <img src={img3} className="h-14" />
                         </a>
                     </Tooltip>
 
@@ -61,7 +75,7 @@ const Partners = () => {
                         }}
                     >
                         <a href="#" className="flex justify-center items-center border border-solid border-gray-200 shadow-sm h-24 rounded-2xl">
-                            <img src="/Partners/banner-horizontal-black-en.png" className="h-14" />
+                            <img src={img4} className="h-14" />
                         </a>
                     </Tooltip>
 
@@ -74,7 +88,7 @@ const Partners = () => {
                         }}
                     >
                         <a href="#" className="flex justify-center items-center border border-solid border-gray-200 shadow-sm h-24 rounded-2xl">
-                            <img src="/Partners/Lund_university_L_CMYK.svg" className="h-14" />
+                            <img src={img5} className="h-14" />
                         </a>
                     </Tooltip>
 
@@ -87,7 +101,7 @@ const Partners = () => {
                         }}
                     >
                         <a href="#" className="flex justify-center items-center border border-solid border-gray-200 shadow-sm h-24 rounded-2xl">
-                            <img src="/Partners/unnamed-removebg-preview%20(1).png" className="h-20" />
+                            <img src={img6} className="h-20" />
                         </a>
                     </Tooltip>
 
@@ -100,7 +114,7 @@ const Partners = () => {
                         }}
                     >
                         <a href="#" className="flex justify-center items-center border border-solid border-gray-200 shadow-sm h-24 rounded-2xl">
-                            <img src="/img_3.png" className="h-16" />
+                            <img src={img7} className="h-16" />
                         </a>
                     </Tooltip>
 
@@ -112,7 +126,7 @@ const Partners = () => {
                         }}
                     >
                         <a href="#" className="flex justify-center items-center border border-solid border-gray-200 shadow-sm h-24 rounded-2xl">
-                            <img src="/img_1.png" className="h-16" />
+                            <img src={img8} className="h-16" />
                         </a>
                     </Tooltip>
                 </div>
@@ -132,7 +146,7 @@ const Partners = () => {
                         }}
                     >
                         <a href="#" className="flex justify-center items-center border border-solid border-gray-200 shadow-sm h-24 rounded-2xl">
-                            <img src="/Partners/british-council-1%201.png" className="h-16" />
+                            <img src={img9} className="h-16" />
                         </a>
                     </Tooltip>
 
@@ -145,7 +159,7 @@ const Partners = () => {
                         }}
                     >
                         <a href="#" className="flex justify-center items-center border border-solid border-gray-200 shadow-sm h-24 rounded-2xl">
-                            <img src="/Partners/pngegg.png" className="h-20" />
+                            <img src={img10} className="h-20" />
                         </a>
                     </Tooltip>
 
@@ -158,7 +172,7 @@ const Partners = () => {
                         }}
                     >
                         <a href="#" className="flex justify-center items-center border border-solid border-gray-200 shadow-sm h-24 rounded-2xl">
-                            <img src="/Partners/Coca_Cola_İçecek_logosu.png" className="h-20" />
+                            <img src={img11} className="h-20" />
                         </a>
                     </Tooltip>
                 </div>

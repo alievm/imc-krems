@@ -1,6 +1,6 @@
 import React from "react";
 import Section from "./Section";
-import imageWhiteboard from "/public/2023.jpg";
+import imageWhiteboard from "../assets/2023.jpg";
 import { useTranslation } from 'react-i18next';
 
 const Discover = () => {

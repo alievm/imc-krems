@@ -1,6 +1,13 @@
 import React from 'react';
 import PageIntro from "../../components/PageIntro.jsx";
 import { useTranslation } from 'react-i18next';
+import img1 from "../../assets/Teshabayev_To'lqin_Zakirovich.jpg"
+import img2 from "../../assets/web.udo.braendle.jpg"
+import img3 from "../../assets/Professors/img_2.png"
+import img4 from "../../assets/Professors/img_1.png"
+import img5 from "../../assets/web.christian.kuemmel.jpg"
+import img6 from "../../assets/web.jens.ennen.jpg"
+import img7 from "../../assets/Fv2tHlmaMAIwATY.jpg"
 
 const Leadership = () => {
     const { t } = useTranslation();
@@ -9,37 +16,37 @@ const Leadership = () => {
         {
             name: "Tulkin Teshabaev",
             title: "Rector of Tashkent State University of Economics",
-            image: "/Teshabayev_To'lqin_Zakirovich.jpg"
+            image: img1
         },
         {
             name: "Dr. Udo Brändle",
             title: "CEO of IMC University of Applied Sciences Krems",
-            image: "/web.udo.braendle.jpg"
+            image: img2
         },
         {
             name: "Prof. Mehmonov Sultonali Umaraliyevich",
             title: "First Vice-Rector for Academic, TSUE",
-            image: "/Professors/img_2.png"
+            image: img3
         },
         {
             name: "Prof.(FH) Mag. Dr. Martin Waiguny",
             title: "Academic Head, IMC University of Applied Science, Krems, Austria",
-            image: "/Professors/img_1.png"
+            image: img4
         },
         {
             name: "Dr. Christian Kümmel",
             title: "Program Director International Business Management",
-            image: "/web.christian.kuemmel.jpg"
+            image: img5
         },
         {
             name: "Jens Peter Ennen",
             title: "Program Director Tourism and Leisure Management",
-            image: "/web.jens.ennen.jpg"
+            image: img6
         },
         {
             name: "Ahmed mohaMed Aziz Ismail",
             title: "Dean of the international Joint Education Faculty of TSUE and IMC Krems",
-            image: "/Fv2tHlmaMAIwATY.jpg"
+            image: img7
         },
     ];
 

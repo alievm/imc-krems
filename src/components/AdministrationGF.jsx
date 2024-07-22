@@ -1,6 +1,6 @@
 import React from "react";
 import Section from "./Section";
-import imageMeeting from "/public/2023.jpg";
+import imageMeeting from "../assets/2023.jpg";
 import List, { ListItem } from "./List";
 import SectionSecond from "./SectionSecond.jsx";
 import {useTranslation} from "react-i18next";

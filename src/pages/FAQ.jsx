@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import {Accordion, AccordionBody, AccordionHeader} from "@material-tailwind/react";
 import PageIntro from "../components/PageIntro.jsx";
 import {useTranslation} from "react-i18next";
-
+import header from "../assets/header-besonderheiten.jpg"
 const { Panel } = Collapse;
 const { Title, Paragraph } = Typography;
 
@@ -83,7 +83,7 @@ const FAQ = () => {
                     <div className="max-w-full w-full bg-white p-6 ">
                         <div className="lg:flex-nowrap relative items-center flex-wrap">
                             <img className="h-[50vh] w-full object-cover z-[10]"
-                                 src="/header-besonderheiten.jpg"/>
+                                 src={header}/>
                             <PageIntro
                                 title="Frequently asked questions">
                             </PageIntro>

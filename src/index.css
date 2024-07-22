@@ -205,6 +205,18 @@ ant-collapse-header {
     background-size: cover;
 }
 
+.bg-foundation {
+    background-image: url(./assets/csm_teaser-events-am-imc-campus-krems_072f067ee3.jpg);
+    background-size: cover;
+}.bg-intern {
+    background-image: url(./assets/teaser-rund-um-den-imc-campus-krems.jpg);
+    background-size: cover;
+}
+.bg-scholar {
+    background-image: url(./assets/csm_teaser-events-am-imc-campus-krems_072f067ee3.jpg);
+    background-size: cover;
+}
+
 .profile-card-bg3 {
     background-image: url(./assets/header-alumni.jpg);
     background-size: cover;

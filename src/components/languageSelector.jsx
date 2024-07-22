@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { useTranslation } from 'react-i18next';
+import imgUz from '../assets/uz.svg'
+import imgUk from '../assets/uk.svg'
 
 const languages = [
-  { code: 'uz', lang: 'O\'zb', flag: '/uz.svg' },
-  { code: 'en', lang: 'Eng', flag: '/uk.svg' },
+  { code: 'uz', lang: 'O\'zb', flag: imgUz },
+  { code: 'en', lang: 'Eng', flag:  imgUk},
 ];
 
 function LanguageSelector() {

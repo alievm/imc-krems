@@ -1,6 +1,7 @@
 import React from "react";
 import FadeIn from "./FadeIn";
 import StylizedImage from "./StylizedImage";
+import img31 from "../assets/31.jpg";
 
 const SectionSecond = ({ title, image, children }) => {
     return (
@@ -10,8 +11,8 @@ const SectionSecond = ({ title, image, children }) => {
                     <FadeIn className="  z-[1]  flex-none ">
                     <div class="grid min-h-[140px] w-full place-items-center overflow-x-scroll rounded-lg p-6 lg:overflow-visible">
         <img
-          class="object-cover object-center rounded-full h-96 w-96"
-          src="/31.jpg"
+          className="object-cover object-center rounded-full h-96 w-96"
+          src={img31}
           alt="nature image"
         />
       </div>

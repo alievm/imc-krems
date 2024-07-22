@@ -1,32 +1,28 @@
-// components/Homepage.js
-
 import React from 'react';
-import {Card, Input, Typography} from "@material-tailwind/react";
 import FadeIn, { FadeInStagger} from "../components/FadeIn.jsx";
-import GridPattern from "../components/GridPattern.jsx";
 import StylizedImage from "../components/StylizedImage.jsx";
 import List, { ListItem } from "../components/List.jsx";
 import Testimonials from "../components/Testimonials.jsx";
-import deanPic from "/ma.jpg";
-import foundPic from "/fs.jpg";
+import deanPic from "../assets/ma.jpg";
 import StatsSection from "../components/StatsSection.jsx";
-import {Badge, Carousel, Button} from "antd";
 import VideoHeader from "../components/VideoHeader.jsx";
-import ScrollToTopButton from "../components/ScrollToTopButton.jsx";
-import {AiOutlineAlignRight} from "react-icons/ai";
-import {LuMoveRight} from "react-icons/lu";
-import {HiOutlineArrowLongRight} from "react-icons/hi2";
 import NewsCards from "../components/NewsCards.jsx";
 import BlogCards from "../components/BlogCards.jsx";
 import {useTranslation} from "react-i18next";
-const contentStyle = {
-    height: '160px',
-    color: '#fff',
-    lineHeight: '160px',
-    textAlign: 'center',
-    background: '#364d79',
-};
 
+import logoDark from "../assets/logo-dark.png"
+import img1 from "../assets/img_1.png"
+import img2 from "../assets/img_2.png"
+import img3 from "../assets/img_3.png"
+import img7 from "../assets/img_7.png"
+import img8 from "../assets/img_8.png"
+import img5 from "../assets/img_5.png"
+import img9 from "../assets/img_9.png"
+import imgScale from "../assets/35.jpg"
+import achieve1 from "../assets/Group-1.png"
+import achieve2 from "../assets/Layer1.png"
+import img34 from "../assets/34.jpg"
+import univer from "../assets/univer.jpg"
 
 const Homepage = () => {
     const {t} = useTranslation();
@@ -45,35 +41,35 @@ const Homepage = () => {
                             className="mx-auto mt-10 grid max-w-xl grid-cols-4 items-center gap-x-20 gap-y-10 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-5">
                             <img
                                 className="col-span-2 max-h-28 w-full object-contain lg:col-span-1"
-                                src="/logo-dark.png"
+                                src={logoDark}
                                 alt="Transistor"
                                 width={158}
                                 height={48}
                             />
                             <img
                                 className="col-span-2 max-h-28 w-full object-contain lg:col-span-1"
-                                src="/img_1.png"
+                                src={img1}
                                 alt="Reform"
                                 width={158}
                                 height={48}
                             />
                             <img
                                 className="col-span-2 max-h-28 w-full object-contain lg:col-span-1"
-                                src="/img_2.png"
+                                src={img2}
                                 alt="Tuple"
                                 width={158}
                                 height={48}
                             />
                             <img
                                 className="col-span-2 max-h-28 w-full object-contain sm:col-start-2 lg:col-span-1"
-                                src="/img_3.png"
+                                src={img3}
                                 alt="SavvyCal"
                                 width={158}
                                 height={48}
                             />
                             <img
                                 className="col-span-2 col-start-2 max-h-28 w-full object-contain sm:col-start-auto lg:col-span-1"
-                                src="/img_7.png"
+                                src={img7}
                                 alt="Statamic"
                                 width={158}
                                 height={48}
@@ -87,7 +83,7 @@ const Homepage = () => {
                         <div className="flex justify-center lg:w-1/2 lg:justify-end lg:pr-12">
                             <FadeIn className="w-[23.75rem] flex-none lg:w-[30rem]">
                                 <StylizedImage
-                                    src="/35.jpg"
+                                    src={imgScale}
                                     sizes="(min-width: 1024px) 31rem, 31rem"
                                     className="justify-center lg:justify-end"
                                 />
@@ -125,7 +121,7 @@ const Homepage = () => {
                         <div className="grid grid-cols-1 lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 text-center">
                             <FadeInStagger>
                                 <div className="w-full px-4 mb-8 md:mb-0">
-                                    <img src="/Group-1.png" alt="Build designs that scale" className="mx-auto h-24 mb-4"/>
+                                    <img src={achieve1} alt="Build designs that scale" className="mx-auto h-24 mb-4"/>
                                     <FadeIn>
                                         <h2 className="text-xl md:text-xl font-semibold mb-2">{t('Seamless Application Process')}</h2>
                                     </FadeIn>
@@ -141,7 +137,7 @@ const Homepage = () => {
                             </FadeInStagger>
                             <FadeInStagger>
                                 <div className="w-full px-4">
-                                    <img src="/Layer1.png" alt="Customize your workflow" className="mx-auto h-24 mb-4"/>
+                                    <img src={achieve2} alt="Customize your workflow" className="mx-auto h-24 mb-4"/>
                                     <FadeIn>
                                         <h2 className="text-xl md:text-xl font-semibold mb-2">{t('Welcome to IMC Krems Tashkent')}</h2>
                                     </FadeIn>
@@ -167,7 +163,7 @@ const Homepage = () => {
                             <div className="flex flex-wrap flex-col  lg:w-[35%] w-full max-md:ml-0 max-md:w-full">
                                 <img
                                     loading="lazy"
-                                    src="/34.jpg"
+                                    src={img34}
                                     className="grow w-full object-cover rounded-xl aspect-[1.04] max-md:mt-10 max-md:max-w-full"
                                 />
                             </div>
@@ -175,8 +171,8 @@ const Homepage = () => {
                                 <div className="flex flex-col self-stretch my-auto max-md:mt-10 max-md:max-w-full">
                                     <img
                                         loading="lazy"
-                                        src="/logo12223.svg"
-                                        className="max-w-full  w-72"
+                                        src={logoDark}
+                                        className="max-w-full  w-48"
                                     />
                                     <div className="mt-11 text-lg leading-7 text-black max-md:mt-10 max-md:max-w-full">
                                         {t('Since the very early days of its establishment, the Joint degree program between TSUE and IMC Krems has been building its way up to the bright future. We care about each student who wants to reach their goals. We support and guide you in your path to the great success that you are yet to achieve. Our dedicated team always stays focused on discovering and shaping your unique skills.')}
@@ -216,7 +212,7 @@ const Homepage = () => {
                                  data-wow-duration="3s">
                                 {/* Replace this with your actual image or video */}
                                 <img
-                                    src="/univer.jpg"
+                                    src={univer}
                                     alt="Design Example"
                                     className='rounded-xl'
                                     height="390" width="390"
@@ -247,21 +243,21 @@ const Homepage = () => {
                             className="mx-auto mt-10 grid max-w-xl grid-cols-4 items-center gap-x-20 gap-y-10 sm:max-w-xl sm:grid-cols-6 sm:gap-x-10 lg:mx-0 lg:max-w-none lg:grid-cols-3">
                             <img
                                 className="col-span-2 max-h-28 w-full object-contain lg:col-span-1"
-                                src="/img_8.png"
+                                src={img8}
                                 alt="Transistor"
                                 width={158}
                                 height={48}
                             />
                             <img
                                 className="col-span-2 max-h-20 w-full object-contain lg:col-span-1"
-                                src="/img_5.png"
+                                src={img5}
                                 alt="Reform"
                                 width={158}
                                 height={48}
                             />
                             <img
                                 className="col-span-2 max-h-16 w-full object-contain lg:col-span-1"
-                                src="/img_9.png"
+                                src={img9}
                                 alt="Tuple"
                                 width={158}
                                 height={48}

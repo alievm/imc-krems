@@ -2,9 +2,7 @@ import { Typography, Divider, Card } from 'antd';
 import { motion } from 'framer-motion';
 import React, { useEffect } from 'react';
 import PageIntro from "../components/PageIntro.jsx";
-import {MdOutlineAttachEmail} from "react-icons/md";
-import {PhoneOutlined} from "@ant-design/icons";
-import {RiHourglassLine} from "react-icons/ri";
+import img from "../assets/header-online-bewerbung.jpg"
 import {useTranslation} from "react-i18next";
 const { Title, Paragraph } = Typography;
 
@@ -39,7 +37,7 @@ const EntryRequirements = () => {
                     <div className="max-w-full w-full bg-white p-6 ">
                         <div className="lg:flex-nowrap relative items-center flex-wrap">
                             <img className="h-[50vh] w-full object-cover z-[10]"
-                                 src="/header-online-bewerbung.jpg"/>
+                                 src={img}/>
                             <PageIntro
                                        title={t('entryRequirements')}>
                             </PageIntro>
@@ -68,7 +66,7 @@ const EntryRequirements = () => {
 };
 
 const EntryRequirementCard = ({program, englishRequirement, additionalRequirements}) => (
-    <Card className="entry-card hover:shadow-md p-4 rounded-lg border border-gray-200">
+    <Card className="entry-card text-center hover:shadow-md p-4 rounded-lg border border-gray-200">
         <Title level={2}>{program}</Title>
         <Paragraph className="text-xl">
             <span className="text-xl" dangerouslySetInnerHTML={{__html: englishRequirement}}/>

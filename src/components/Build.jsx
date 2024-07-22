@@ -1,8 +1,8 @@
 import React from "react";
 import Section from "./Section";
-import img from "/public/1 photo.jpg";
-import img2 from "/public/2 photo.jpg";
-import img3 from "/public/3 photo.jpg";
+import img from "../assets/1 photo.jpg";
+import img2 from "../assets/2 photo.jpg";
+import img3 from "../assets/3 photo.jpg";
 import Blockquote from "./Blockquote";
 import { useTranslation } from 'react-i18next';
 
