@@ -160,6 +160,7 @@ export const navListMenuItems5 = [
         title: "Graduation ceremony",
         description: "Celebrate your achievements at our graduation ceremony.",
         icon: SquaresPlusIcon,
+        url: '/graduation-ceremony'
     },
     {
         title: "Students Career centre",
@@ -185,5 +186,6 @@ export const navListMenuItems6 = [
         title: "Gallery",
         description: "View our photo gallery.",
         icon: SunIcon,
+        url: '/gallery'
     },
 ];

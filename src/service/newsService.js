@@ -12,6 +12,15 @@ export const getNews = async () => {
         throw error; // Re-throw the error for further handling
     }
 };
+export const getExchange = async () => {
+    try {
+        const response = await apiClient.get('/exchange-program'); // Make the GET request to the endpoint
+        return response.data.data; // Return the data from the response
+    } catch (error) {
+        console.error('Error fetching news data:', error); // Log any errors
+        throw error; // Re-throw the error for further handling
+    }
+};
 
 
 // Function to get news data from the API

@@ -11,7 +11,7 @@ const Footer = () => {
             <div className="mx-auto max-w-7xl container max-w-full px-6 lg:px-8">
                 <div
                     className="grid grid-cols-1 sm:grid-cols-4 lg:grid-cols-2 gap-4 lg:gap-8 py-14 max-w-xl mx-auto sm:max-w-2xl md:max-w-4xl lg:max-w-full">
-                    <div className="col-span-full mb-10 lg:col-span-1 lg:mb-0">
+                    <div className="col-span-full lg:text-left text-center mb-10 lg:col-span-1 lg:mb-0">
                         <a href="https://pagedone.io/" className="flex justify-center lg:justify-start">
                             <img
                                 loading="lazy"
@@ -21,10 +21,12 @@ const Footer = () => {
                         </a>
                         <p className="pt-8 text-sm text-gray-100 lg:max-w-xs text-center lg:text-left">Pioneering,
                             open-minded, appreciative. That's what we stand for as a university</p>
-                        <p className="my-5 text-sm text-gray-100 lg:max-w-xs text-center lg:text-left flex items-center gap-1">
+                        <p className="my-5 text-sm text-gray-100 lg:max-w-xs lg:justify-start justify-center flex items-center gap-1">
                             <HiLocationMarker size="20"/>
                             49 Islam Karimov Street, Tashkent</p>
-                        <SocialMediaWhite/>
+                        <div className="flex items-center lg:justify-start justify-center">
+                            <SocialMediaWhite/>
+                        </div>
                     </div>
                     <iframe
                         src="https://yandex.ru/map-widget/v1/?um=constructor%3A0d66005c330fcfecfa8bd43d6741d26e68713377b7bd52e263224a977fb94dee&amp;source=constructor"
