@@ -36,7 +36,7 @@ const faqData = [
     { id: 24, question: "Where can I transfer after the first year?", answer: "After the first year, you will receive a foundation certificate, which allows you to apply to international universities and continue your studies from the second year." },
     { id: 25, question: "Where are you located?", answer: "49 Islam Karimov Street, Chilanzar District, Tashkent City, near Hilton Hotel." },
     { id: 26, question: "Is an IELTS certificate required for admission?", answer: "No, it is not required. If you don't have an IELTS certificate, you can take the internal exam to enter the first year." },
-    { id: 27, question: "Do you have phone numbers?", answer: "+998903939099, +998909691011, +998909990989, +998900169099" }
+    { id: 27, question: "Do you have phone numbers?", answer: "+998943670440, +998943870440, +998943970440" }
 ];
 
 
