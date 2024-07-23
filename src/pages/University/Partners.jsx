@@ -3,7 +3,7 @@ import PageIntro from "../../components/PageIntro.jsx";
 import { Tooltip } from "@material-tailwind/react";
 import {useTranslation} from "react-i18next";
 import img1 from "../../assets/Partners/logo.png"
-import img2 from "../../assets/Partners/Logo_WBH_RGB_1.png"
+import img2 from "../../assets/host-logo.svg"
 import img3 from "../../assets/img_2.png"
 import img4 from "../../assets/Partners/banner-horizontal-black-en.png"
 import img5 from "../../assets/Partners/Lund_university_L_CMYK.svg"
@@ -49,7 +49,7 @@ const Partners = () => {
                         }}
                     >
                         <a href="#" className="flex justify-center items-center border border-solid border-gray-200 shadow-sm h-24 rounded-2xl">
-                            <img src={img2} className="h-12" />
+                            <img src={img2} className="h-20" />
                         </a>
                     </Tooltip>
 

@@ -42,7 +42,7 @@ export function StatsSection() {
             description: t("5 years of commitment to academic brilliance and innovative education at IMC Krems Tashkent."),
         },
         {
-            count: <Statistic valueStyle={{ fontSize: '30px' }} suffix="+" value={3} formatter={formatter} />,
+            count: <Statistic valueStyle={{ fontSize: '30px' }} suffix="+" value={2} formatter={formatter} />,
             title: t("PROGRAMS"),
             description: t("Choose from 2 programs, tailored to shape future leaders in a global context."),
         },

@@ -228,7 +228,7 @@ const Homepage = () => {
 
                 <Testimonials
                     className="mt-24 sm:mt-32 lg:mt-40 px-10"
-                    client={{name: "DR. AHMED mohaMed AZIZ ISMAIL", position: "Dean", logo: deanPic}}
+                    client={{name: "Dr. Ahmed Mohamed Aziz Ismail", position: "Dean", logo: deanPic}}
                 >
                        <span className="text-3xl">{t('Explore global opportunities with us at IMC Krems Tashkent, where we prepare you for success in international business.')}</span>
                 </Testimonials>
