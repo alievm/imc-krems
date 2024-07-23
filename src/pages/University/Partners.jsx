@@ -42,7 +42,7 @@ const Partners = () => {
                     </Tooltip>
                     {/* Hochschule Bremen City University of Applied Sciences */}
                     <Tooltip
-                        content="Hochschule Bremen City University of Applied Sciences"
+                        content="Stralsund University of Applied Sciences - Hochschule Stralsund"
                         animate={{
                             mount: { scale: 1, y: 0 },
                             unmount: { scale: 0, y: 25 },
