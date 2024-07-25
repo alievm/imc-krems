@@ -67,20 +67,7 @@ const EventsDetail = () => {
                     <section className="my-8">
                         {/* <h2 className="text-xl lg:text-2xl font-semibold text-gray-800 mb-4">Description</h2> */}
                         <p className="text-gray-700 text-lg leading-relaxed">
-                            The skills profile for graduates of the bachelor program “Export-Oriented Management” is
-                            equivalent to level 1 of the EHEA qualifications framework (2018) and the knowledge and
-                            skills
-                            profile for level 6 of the EQF-LLL (2008), covering knowledge and understanding, applying
-                            knowledge and understanding, integrating both of these areas to solve problems in new
-                            contexts
-                            or in the absence of full information, reflecting on personal actions from a social and
-                            ethical
-                            perspective, communication skills and self-directed learning. The profile also maps onto
-                            Bloom’s
-                            taxonomy of cognitive learning objectives. The qualifications to be achieved in the degree
-                            program and the skills profile for graduates are described below in the program profile
-                            prepared
-                            in accordance with the ECTS Users’ Guide 2015.
+                            {news.description}
                         </p>
                     </section>
 
