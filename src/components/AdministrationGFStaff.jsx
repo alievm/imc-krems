@@ -19,7 +19,7 @@ import professor9 from "../assets/Professors/9.jpg";
 import professorImg from "../assets/Professors/img.png";
 import professor11 from "../assets/Professors/11.png";
 import professor12 from "../assets/Professors/12.png";
-import professor13 from "../assets/photo_2024-07-22_17-54-47.jpg";
+import professor13 from "../assets/Mrs.Maha.png";
 
 const AdministrationGFStaff = () => {
     const { t } = useTranslation();
