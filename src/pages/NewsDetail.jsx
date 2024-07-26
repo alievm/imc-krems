@@ -51,7 +51,7 @@ const NewsDetail = () => {
                 </div>
                 <div className=" rounded overflow-hidden shadow-lg  relative">
             <img
-                className="w-full object-cover max-h-[400px] object-top rounded"
+                className="w-full  lg:min-h-[400px] object-top rounded"
                 src={news.path}
                 alt={news.title}
             />

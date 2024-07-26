@@ -147,7 +147,7 @@ const StudyFees = () => {
                                 <div
                                     className="mt-4 flex items-center justify-center text-5xl font-extrabold text-black">
                                     <span>{t('studyFees.imcPrograms.fee')}</span><span
-                                    className="ml-3 text-xl font-medium text-black/50">$ / per year</span>
+                                    className="ml-3 text-xl font-medium text-black/50"> / per year</span>
                                 </div>
                                 <div className="mt-6">
                                     <div className="rounded-md shadow">

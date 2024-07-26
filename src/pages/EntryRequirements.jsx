@@ -69,9 +69,9 @@ const EntryRequirementCard = ({program, englishRequirement, additionalRequiremen
     <Card className="entry-card text-center hover:shadow-md p-4 rounded-lg border border-gray-200">
         <Title level={2}>{program}</Title>
         <Paragraph className="text-xl">
-            <span className="text-xl" dangerouslySetInnerHTML={{__html: englishRequirement}}/>
+            <span className="text-xl" dangerouslySetInnerHTML={{__html: englishRequirement}}/> <br/>
+            <span className="text-xl" dangerouslySetInnerHTML={{__html: additionalRequirements}}/>
         </Paragraph>
-        <Paragraph lassName="text-xl">{additionalRequirements}</Paragraph>
     </Card>
 );
 

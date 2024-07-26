@@ -306,7 +306,7 @@
   "ielts5OrAbove": "IELTS 5.0 (CEFR B2) and above: has to do \"Speaking test\"\n ",
   "belowIelts5": "Below IELTS 5.0: KTAT (English, Math, Logic, Speaking Test)",
   "passKtatOrSpeakingTest": "All others have to do \"KTAT\" exam",
-  "secondYearProgram": "Second Year Program",
+  "secondYearProgram": "Bachelor Program",
   "ielts5_5OrAbove": "Minimum IELTS 5.5 with Foundation certificate",
   "passInterview": "Pass an interview with IMC University Program Directors",
   "studyFees": {
@@ -325,7 +325,7 @@
       "durationDetails": "22 weeks",
       "language": "English",
       "semesters": "6 Semesters",
-      "fee": "$2300 USD",
+      "fee": "29 450 000 UZS",
       "applyNow": "Apply now"
     }
   },

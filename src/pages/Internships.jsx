@@ -14,6 +14,12 @@ import img2 from "../assets/Partners/01.jpg"
 import img3 from "../assets/Partners/Coca-Cola-logo.png"
 import img4 from "../assets/Partners/hilton.svg"
 
+
+import img11 from "../assets/12.jpg";
+import img12 from "../assets/11.jpg";
+import img13 from "../assets/13.jpg";
+import img from "../assets/S3.png";
+
 const Internships = () => {
     const {t} = useTranslation();
     return (
@@ -115,7 +121,7 @@ const Internships = () => {
                         />
                     </div>
 
-                    <Section title="Industry Experience">
+                    <Section title="Industry Experience" img={img11} img2={img12} img3={img13}>
                         <div className="space-y-6 text-base text-neutral-600">
                             <p>
                                 {t('industryExperienceDescription')}

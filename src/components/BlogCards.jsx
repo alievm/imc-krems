@@ -3,6 +3,7 @@ import { getNews} from "../service/newsService.js";// Импортируем ф�
 import { formatDistanceToNow, parseISO } from 'date-fns';
 import { enUS } from 'date-fns/locale';
 import {useTranslation} from "react-i18next";
+import {getEvents} from "../service/eventsService.js";
 
 // Предположим, что news.created_at имеет формат даты-времени (например, '2024-06-28T10:30:00')
 const BlogCards = () => {

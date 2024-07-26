@@ -3,6 +3,7 @@ import { HiOutlineArrowLongRight } from "react-icons/hi2";
 import {Alert, Button, Spin} from "antd";
 import {getNews} from "../service/newsService.js";
 import {Link} from "react-router-dom";
+import {getEvents} from "../service/eventsService.js";
 
 // Define the news data array
 const NewsCards = () => {
@@ -15,7 +16,7 @@ const NewsCards = () => {
         const fetchData = async () => {
             try {
                 setLoading(true);
-                const data = await getNews();
+                const data = await getEvents();
                 setNewsData(data.data); // Assuming news items are in the 'data' field
             } catch (error) {
                 setError(error.message);
