@@ -419,7 +419,7 @@ const TLM = () => {
                                         <BanknotesIcon className="w-6 h-6 link-text"/>
                                     </div>
                                 </div>
-                                <div className="mt-6 text-md leading-5">2300$</div>
+                                <div className="mt-6 text-md leading-5">29 450 000 sum</div>
                                 <div className="mt-6 text-base leading-5">
                                     {t("Study fee")}
                                 </div>
