@@ -15,10 +15,12 @@ import img3 from "../assets/Partners/Coca-Cola-logo.png"
 import img4 from "../assets/Partners/hilton.svg"
 
 
-import img11 from "../assets/12.jpg";
-import img12 from "../assets/11.jpg";
-import img13 from "../assets/13.jpg";
+import img11 from "../assets/18.jpg";
+import img12 from "../assets/19.jpg";
+import img13 from "../assets/20.jpg";
 import img from "../assets/S3.png";
+import img22 from "../assets/13.jpg"
+import SectionSingle from "../components/SectionSingle.jsx";
 
 const Internships = () => {
     const {t} = useTranslation();
@@ -121,7 +123,7 @@ const Internships = () => {
                         />
                     </div>
 
-                    <Section title="Industry Experience" img={img11} img2={img12} img3={img13}>
+                    <SectionSingle title="Industry Experience"  img={img22}>
                         <div className="space-y-6 text-base text-neutral-600">
                             <p>
                                 {t('industryExperienceDescription')}
@@ -136,9 +138,9 @@ const Internships = () => {
                                 <br/>
                             </p>
                         </div>
-                    </Section>
+                    </SectionSingle>
                     <div className="my-10">
-                        <Section title="Internships in Top Dubai Hotels" image={{src: imageWhiteboard, shape: 1}}>
+                        <Section title="Internships in Top Dubai Hotels" img={img11} img2={img12} img3={img13}>
                             <div className="space-y-6 text-base text-neutral-600">
                                 <p>
                                     {t('dubaiHotelsIntro')}

@@ -4,6 +4,7 @@ import { formatDistanceToNow, parseISO } from 'date-fns';
 import { enUS } from 'date-fns/locale';
 import {useTranslation} from "react-i18next";
 import {getEvents} from "../service/eventsService.js";
+import {Link} from "react-router-dom";
 
 // Предположим, что news.created_at имеет формат даты-времени (например, '2024-06-28T10:30:00')
 const BlogCards = () => {
@@ -41,6 +42,7 @@ const BlogCards = () => {
                     <div className="flex flex-col w-full  lg:w-6/12 max-md:ml-0 max-md:w-full">
                         <div className="flex flex-col gap-3 grow justify-center max-md:mt-8 max-md:max-w-full">
                             {newsData.slice(1, 3).map((news) => (
+                                <Link to={`/news/${news.id}`}>
                             <div className="max-md:max-w-full">
                                 <div
                                     className="flex flex-wrap  lg:flex-nowrap gap-5 max-md:flex-col max-md:gap-0">
@@ -60,13 +62,14 @@ const BlogCards = () => {
                                                 {news.title.length > 30 && '...'}
                                             </div>
                                             <div className="mt-2 text-base  leading-6 text-white">
-                                                {news.description.slice(0, 75)}
-                                                {news.description.length > 75 && '...'}
+                                                {news.description.slice(0, 130)}
+                                                {news.description.length > 130 && '...'}
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                                </Link>
                                 ))}
                         </div>
                     </div>
@@ -75,23 +78,27 @@ const BlogCards = () => {
                     {/*LATEST POST HERE */}
                     <div className="flex flex-col w-full lg:w-6/12  max-md:ml-0 max-md:w-full">
                         {newsData.slice(0, 1).map((news) => (
-                        <div
-                            className="flex flex-col grow self-stretch text-sm font-semibold leading-5 max-md:mt-8 max-md:max-w-full">
-                            <img
-                                loading="lazy"
-                                src={news.path}
-                                className="w-full object-cover rounded-xl aspect-[2.44] max-md:max-w-full"
-                            />
-                            <div className="mt-1 text-gray-100 max-md:max-w-full">
-                                {formatDate(news.created_at)}
+                            <Link to={`/news/${news.id}`}>
+                            <div
+                                className="flex flex-col grow self-stretch text-sm font-semibold leading-5 max-md:mt-8 max-md:max-w-full">
+                                <img
+                                    loading="lazy"
+                                    src={news.path}
+                                    className="w-full object-cover rounded-xl aspect-[2.44] max-md:max-w-full"
+                                />
+                                <div className="mt-1 text-gray-100 max-md:max-w-full">
+                                    {formatDate(news.created_at)}
+                                </div>
+                                <div className="mt-1 text-xl leading-8 text-gray-100 max-md:max-w-full">
+                                    {news.title}
+                                </div>
+                                <div className="mt-1 text-base leading-6 text-white max-md:max-w-full">
+                                    {news.description.length > 100
+                                        ? `${news.description.substring(0, 250)}...`
+                                        : news.description}
+                                </div>
                             </div>
-                            <div className="mt-1 text-xl leading-8 text-gray-100 max-md:max-w-full">
-                                {news.title}
-                            </div>
-                            <div className="mt-1 text-base  leading-6 text-white max-md:max-w-full">
-                                {news.description}
-                            </div>
-                        </div>
+                            </Link>
                         ))}
                     </div>
                 </div>
