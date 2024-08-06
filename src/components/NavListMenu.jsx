@@ -84,7 +84,9 @@ export function NavbarWithMegaMenu() {
                 <div className="flex items-center gap-2">
                     {/*<img src="/logo-oz.svg" width="60" height="60"/>*/}
                     {/*<h1><span className="line-1">Tashkent State</span> <br/>University of Economics</h1>*/}
+                    <Link to="/">
                     <img src={logo} className="w-56"  />
+                    </Link>
                 </div>
                 <div className="hidden lg:block">
                     <NavList/>
