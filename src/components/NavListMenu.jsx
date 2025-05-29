@@ -93,7 +93,7 @@ export function NavbarWithMegaMenu() {
                 </div>
                 <div className="hidden gap-2 lg:flex lg:items-center">
                    <LanguageSelector/>
-                    <Link to="https://docs.google.com/forms/d/e/1FAIpQLSfslvtJO2i1Tfo2xFpebn_rQtX8GPVSpHGYKbAXj9a4s-YZ2Q/viewform">
+                    <Link to="https://docs.google.com/forms/d/e/1FAIpQLSfUHK0HqlDRRqYHXcf8WGdyTwPVXGnHb4IzKfjn6pM8kSnrVA/viewform?usp=sharing&ouid=104952933179531110614">
                     <Button type="primary" size="sm">
                         {t("applyNow")}
                     </Button>
